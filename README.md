@@ -150,7 +150,7 @@ best = grades[grades.grade == "A"].merge(
 
 ```python
 from datasets import load_dataset
-ds = load_dataset("<hf-username>/ingredient-evidence-register", "grades")
+ds = load_dataset("vallydia/ingredient-evidence-register", "grades")
 ```
 
 More in [`examples/`](examples/).
@@ -166,7 +166,7 @@ More in [`examples/`](examples/).
 ```bibtex
 @dataset{vallydia_ingredient_evidence_register,
   title     = {Vallydia Ingredient-Evidence Register},
-  author    = {Bilenko, Yakiv},
+  author    = {Bilenko, Jacob},
   year      = {2026},
   publisher = {Vallydia},
   version   = {1.0.0},

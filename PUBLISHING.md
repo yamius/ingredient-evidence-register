@@ -1,50 +1,30 @@
 # Publishing checklist
 
-The build is done and committed. These steps need accounts and toggles, so they are yours.
-Order matters only in step 5 (the Zenodo DOI loop) — the rest are independent.
-
-Throughout, `<org>` is the GitHub owner you publish under (`yamius`, or a Vallydia org).
+Status of each step is marked below. Order matters only in the Zenodo DOI loop.
 
 ---
 
-## 1. GitHub
+## 1. GitHub — DONE
 
-Create an **empty public** repo named `ingredient-evidence-register`, then push:
+Published at **https://github.com/yamius/ingredient-evidence-register** (public, `main`, v1.0.0).
 
-```bash
-git init
-git add .
-git commit -m "v1.0.0 — initial dataset release"
-git branch -M main
-git remote add origin https://github.com/<org>/ingredient-evidence-register.git
-git push -u origin main
-```
+`register-source/` (the MDX input from the private site repo) is gitignored and was **not** pushed. Only the derived dataset and the generator are public.
 
-**A repo under a Vallydia org reads as more credible than one under a personal account** — and it is easier to hand over later. Worth the two minutes if you plan to keep this alive.
+## 2. ORCID — DONE
 
-Note: `register-source/` (the MDX input pulled from the private site repo) is gitignored and is **not** pushed. Only the derived dataset and the generator go public.
+Jacob Bilenko, [0009-0009-1636-8487](https://orcid.org/0009-0009-1636-8487), recorded in `CITATION.cff` and `.zenodo.json`. Zenodo will forward the DOI to the ORCID record automatically once it is minted.
 
-## 2. ORCID (recommended, ~5 minutes)
+## 3. Hugging Face — mirror to `vallydia`
 
-Register at [orcid.org](https://orcid.org/register). Then add your iD to:
-- `CITATION.cff` → uncomment the `orcid:` line under `authors`.
-- `.zenodo.json` → add `"orcid": "0000-0000-0000-0000"` to the creator object.
-
-Why bother: it makes the authorship citable and machine-resolvable, and Zenodo will auto-forward the DOI to your ORCID record. It is the difference between a dataset by "someone" and a dataset by a specific, verifiable person.
-
-## 3. Hugging Face
-
-Create an account, then a **dataset** repo:
+The dataset repo is `huggingface.co/datasets/vallydia/ingredient-evidence-register`.
 
 ```bash
 pip install huggingface_hub
-huggingface-cli login
-huggingface-cli upload <hf-username>/ingredient-evidence-register . . --repo-type=dataset
+huggingface-cli login          # paste a write token from huggingface.co/settings/tokens
+huggingface-cli upload vallydia/ingredient-evidence-register . . --repo-type=dataset
 ```
 
 The YAML frontmatter at the top of `README.md` is what makes HF render this as a proper dataset card with a data viewer; Croissant JSON-LD is auto-generated from the Parquet files. Nothing else to configure.
-
-Afterwards, replace `<hf-username>` in the README usage example with the real one.
 
 ## 4. Kaggle
 

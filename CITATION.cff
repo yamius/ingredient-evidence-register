@@ -5,9 +5,9 @@ abstract: "An evidence-graded open reference dataset of cosmetic and research in
 type: dataset
 authors:
   - family-names: Bilenko
-    given-names: Yakiv
+    given-names: Jacob
+    orcid: "https://orcid.org/0009-0009-1636-8487"
     website: "https://vallydia.com"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add once registered (PUBLISHING.md step 2)
 repository-code: "https://github.com/yamius/ingredient-evidence-register"
 url: "https://vallydia.com"
 keywords:

@@ -11,7 +11,7 @@ Data: Vallydia Ingredient-Evidence Register (https://vallydia.com), CC-BY-4.0.
 
 import mlcroissant as mlc
 
-REPO = "<hf-username>/ingredient-evidence-register"   # set after publishing (PUBLISHING.md step 3)
+REPO = "vallydia/ingredient-evidence-register"
 CROISSANT_URL = f"https://huggingface.co/api/datasets/{REPO}/croissant"
 
 dataset = mlc.Dataset(CROISSANT_URL)

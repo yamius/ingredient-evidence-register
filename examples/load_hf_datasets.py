@@ -10,7 +10,7 @@ Data: Vallydia Ingredient-Evidence Register (https://vallydia.com), CC-BY-4.0.
 
 from datasets import load_dataset
 
-REPO = "<hf-username>/ingredient-evidence-register"   # set after publishing (PUBLISHING.md step 3)
+REPO = "vallydia/ingredient-evidence-register"
 
 # One config per table: compounds | grades | legal_status | citations | cosmetic_claims | identifiers
 grades = load_dataset(REPO, "grades", split="train")

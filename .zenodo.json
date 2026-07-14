@@ -5,8 +5,9 @@
   "description": "<p>An evidence-graded open reference dataset of 85 cosmetic and research ingredients. Each compound carries per-outcome A&ndash;F evidence grades (graded on consistency of evidence &times; magnitude/quality), DOI-verified citations, legal status by region, WADA status, machine-readable cosmetic-claims maps (both permitted and forbidden claim wordings), and chemical identifiers (CAS / PubChem CID / InChIKey / SMILES) with explicit confidence and provenance.</p><p>Scope is appearance and evidence only: the dataset contains no dosing, administration or commerce information by design. Grades are Vallydia's own evidence assessment, not third-party certification.</p><p>Published in JSONL, JSON, CSV and Parquet, plus a retrieval-oriented text corpus. Attribution: Vallydia Ingredient-Evidence Register (https://vallydia.com), CC-BY-4.0.</p>",
   "creators": [
     {
-      "name": "Bilenko, Yakiv",
-      "affiliation": "Vallydia"
+      "name": "Bilenko, Jacob",
+      "affiliation": "Vallydia",
+      "orcid": "0009-0009-1636-8487"
     }
   ],
   "keywords": [
