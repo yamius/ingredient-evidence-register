@@ -20,6 +20,8 @@ keywords:
 license: CC-BY-4.0
 version: 1.0.0
 date-released: "2026-07-14"
-# identifiers:                      # add the Zenodo DOI after the first GitHub release
-#   - type: doi
-#     value: 10.5281/zenodo.XXXXXXX
+identifiers:
+  # Concept DOI — always resolves to the latest version. Cite this one.
+  - type: doi
+    value: 10.5281/zenodo.21364453
+    description: "Concept DOI for all versions of the Vallydia Ingredient-Evidence Register"

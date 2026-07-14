@@ -33,6 +33,9 @@ configs:
 
 # Vallydia Ingredient-Evidence Register
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21364453.svg)](https://doi.org/10.5281/zenodo.21364453)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 An open, evidence-graded reference dataset of **85 cosmetic and research ingredients** — peptides, small molecules, proteins and blends — published by [Vallydia](https://vallydia.com) under CC-BY-4.0.
 
 Most ingredient databases tell you what a compound *is*. This one tells you **how good the evidence actually is**, outcome by outcome, and says so honestly when the answer is "we don't know" or "it was tested and it failed".
@@ -163,6 +166,10 @@ More in [`examples/`](examples/).
 
 ## Citation
 
+Cite the **concept DOI** — it always resolves to the latest version:
+
+> Bilenko, J. (2026). *Vallydia Ingredient-Evidence Register* (Version 1.0.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453
+
 ```bibtex
 @dataset{vallydia_ingredient_evidence_register,
   title     = {Vallydia Ingredient-Evidence Register},
@@ -170,12 +177,11 @@ More in [`examples/`](examples/).
   year      = {2026},
   publisher = {Vallydia},
   version   = {1.0.0},
+  doi       = {10.5281/zenodo.21364453},
   url       = {https://vallydia.com},
   note      = {CC-BY-4.0}
 }
 ```
-
-<!-- After the first GitHub release, Zenodo mints a DOI — add it here and in CITATION.cff (see PUBLISHING.md). -->
 
 ---
 
