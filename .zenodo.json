@@ -1,0 +1,38 @@
+{
+  "title": "Vallydia Ingredient-Evidence Register",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "description": "<p>An evidence-graded open reference dataset of 85 cosmetic and research ingredients. Each compound carries per-outcome A&ndash;F evidence grades (graded on consistency of evidence &times; magnitude/quality), DOI-verified citations, legal status by region, WADA status, machine-readable cosmetic-claims maps (both permitted and forbidden claim wordings), and chemical identifiers (CAS / PubChem CID / InChIKey / SMILES) with explicit confidence and provenance.</p><p>Scope is appearance and evidence only: the dataset contains no dosing, administration or commerce information by design. Grades are Vallydia's own evidence assessment, not third-party certification.</p><p>Published in JSONL, JSON, CSV and Parquet, plus a retrieval-oriented text corpus. Attribution: Vallydia Ingredient-Evidence Register (https://vallydia.com), CC-BY-4.0.</p>",
+  "creators": [
+    {
+      "name": "Bilenko, Yakiv",
+      "affiliation": "Vallydia"
+    }
+  ],
+  "keywords": [
+    "cosmetics",
+    "skincare",
+    "ingredients",
+    "evidence grading",
+    "peptides",
+    "dermatology",
+    "cheminformatics",
+    "open data"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://vallydia.com",
+      "relation": "isDerivedFrom",
+      "resource_type": "other",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://vallydia.com/methodology",
+      "relation": "isDocumentedBy",
+      "resource_type": "other",
+      "scheme": "url"
+    }
+  ],
+  "version": "1.0.0",
+  "language": "eng"
+}

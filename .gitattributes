@@ -1,0 +1,5 @@
+# Store and check out every file byte-for-byte, with no line-ending conversion.
+# The dataset ships checksums.sha256 over the data and image files: if Git rewrote LF to
+# CRLF on a Windows checkout, every checksum would fail on a fresh clone and the build
+# would stop being reproducible. Verbatim is non-negotiable here.
+* -text

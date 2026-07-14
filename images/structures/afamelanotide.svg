@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img">
+  <style>
+    .t { font: 600 26px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; }
+    .s { font: 400 15px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; opacity: .65; }
+    .k { font: 500 16px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; opacity: .6; }
+    .v { font: 400 16px ui-monospace, "SF Mono", Consolas, monospace; fill: currentColor; }
+    .n { font: 400 14px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; opacity: .7; }
+    .b { fill: none; stroke: currentColor; stroke-opacity: .22; stroke-width: 1.5; }
+  </style>
+  <rect class="b" x="12" y="12" width="616" height="456" rx="14"/>
+  <text x="40" y="70" class="t">Afamelanotide (Scenesse / Melanotan-1)</text>
+  <text x="40" y="98" class="s">afamelanotide</text>
+  <line x1="40" y1="124" x2="600" y2="124" stroke="currentColor" stroke-opacity=".18"/>
+  <text x="40" y="170" class="k">Class</text><text x="270" y="170" class="v">peptide</text><text x="40" y="216" class="k">Molecular formula</text><text x="270" y="216" class="v">C78H111N21O19</text><text x="40" y="262" class="k">Heavy atoms</text><text x="270" y="262" class="v">118</text><text x="40" y="308" class="k">Molecular weight</text><text x="270" y="308" class="v">1646.9 g/mol</text><text x="40" y="354" class="k">InChIKey</text><text x="270" y="354" class="v">UAHFGYDRQSXQEB-LEBBXHLNSA-N</text>
+  <text x="40" y="422" class="n">Large peptide — 2D structure not shown</text>
+  <text x="40" y="444" class="n">(a 2D depiction at this size is unreadable and misleading)</text>
+</svg>

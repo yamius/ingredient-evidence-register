@@ -1,0 +1,247 @@
+slug,name,claim_type,claim_text
+ahk-cu,AHK-Cu (Copper Tripeptide-3),allowed,"for **fuller-, thicker-looking** hair"
+ahk-cu,AHK-Cu (Copper Tripeptide-3),allowed,healthier-**looking** hair and scalp.
+ahk-cu,AHK-Cu (Copper Tripeptide-3),forbidden,grows / regrows hair
+ahk-cu,AHK-Cu (Copper Tripeptide-3),forbidden,treats / prevents hair loss
+ahk-cu,AHK-Cu (Copper Tripeptide-3),forbidden,stimulates hair follicles
+ahk-cu,AHK-Cu (Copper Tripeptide-3),forbidden,increases hair density / count
+ahk-cu,AHK-Cu (Copper Tripeptide-3),forbidden,extends the anagen phase
+alpha-arbutin,Alpha Arbutin,allowed,"for the appearance of a more even, brighter-looking complexion"
+alpha-arbutin,Alpha Arbutin,allowed,helps reduce the look of dark spots
+alpha-arbutin,Alpha Arbutin,allowed,gentle brightening support for sensitive skin
+alpha-arbutin,Alpha Arbutin,allowed,for a more uniform-looking tone
+alpha-arbutin,Alpha Arbutin,forbidden,bleaches skin
+alpha-arbutin,Alpha Arbutin,forbidden,releases hydroquinone
+alpha-arbutin,Alpha Arbutin,forbidden,as effective as hydroquinone
+alpha-arbutin,Alpha Arbutin,forbidden,treats melasma
+alpha-arbutin,Alpha Arbutin,forbidden,cures hyperpigmentation
+alpha-arbutin,Alpha Arbutin,forbidden,inhibits tyrosinase
+alpha-arbutin,Alpha Arbutin,forbidden,skin-whitening
+argireline,Argireline (Acetyl Hexapeptide-8),allowed,helps reduce the **appearance** of expression lines
+argireline,Argireline (Acetyl Hexapeptide-8),allowed,for smoother-looking skin around the eyes and forehead
+argireline,Argireline (Acetyl Hexapeptide-8),allowed,targets the **look** of fine lines
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,topical botox
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,botox in a jar
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,botox alternative
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,relaxes muscles
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,inhibits muscle contraction
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,reduces neurotransmitter/acetylcholine release
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,freezes wrinkles
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,by function
+argireline,Argireline (Acetyl Hexapeptide-8),forbidden,the proposed mechanism
+azelaic-acid,Azelaic Acid,allowed,"for the appearance of a clearer, more even complexion"
+azelaic-acid,Azelaic Acid,allowed,helps reduce the look of dark spots and blemishes
+azelaic-acid,Azelaic Acid,allowed,"for calmer, less red-looking skin"
+azelaic-acid,Azelaic Acid,allowed,"supports a smoother-looking, more uniform tone"
+azelaic-acid,Azelaic Acid,forbidden,treats acne
+azelaic-acid,Azelaic Acid,forbidden,treats rosacea
+azelaic-acid,Azelaic Acid,forbidden,treats melasma
+azelaic-acid,Azelaic Acid,forbidden,cures dark spots
+azelaic-acid,Azelaic Acid,forbidden,inhibits tyrosinase
+azelaic-acid,Azelaic Acid,forbidden,anti-inflammatory
+azelaic-acid,Azelaic Acid,forbidden,antibacterial
+azelaic-acid,Azelaic Acid,forbidden,reverses aging
+azelaic-acid,Azelaic Acid,forbidden,anti-wrinkle
+bakuchiol,Bakuchiol,allowed,"for the appearance of smoother, more refined-looking skin"
+bakuchiol,Bakuchiol,allowed,helps improve the look of fine lines
+bakuchiol,Bakuchiol,allowed,for the appearance of a more even complexion
+bakuchiol,Bakuchiol,allowed,"supports the look of firmer, healthy-looking skin"
+bakuchiol,Bakuchiol,allowed,a gentle alternative for the appearance of aging skin
+bakuchiol,Bakuchiol,allowed,antioxidant
+bakuchiol,Bakuchiol,forbidden,natural retinol
+bakuchiol,Bakuchiol,forbidden,plant retinol
+bakuchiol,Bakuchiol,forbidden,as effective as retinol (implies clinical equivalence beyond appearance)
+bakuchiol,Bakuchiol,forbidden,treats wrinkles
+bakuchiol,Bakuchiol,forbidden,stimulates collagen synthesis
+bakuchiol,Bakuchiol,forbidden,reverses aging
+bakuchiol,Bakuchiol,forbidden,retinoid alternative for treatment
+bakuchiol,Bakuchiol,forbidden,safe during pregnancy (implies medical safety claim)
+bakuchiol,Bakuchiol,forbidden,treats acne
+bakuchiol,Bakuchiol,forbidden,anti-inflammatory
+ceramides,Ceramides,allowed,"supports the appearance of a healthy, resilient-looking skin barrier"
+ceramides,Ceramides,allowed,helps skin look and feel hydrated and comfortable
+ceramides,Ceramides,allowed,"for the appearance of smoother, less-flaky skin"
+ceramides,Ceramides,allowed,helps reduce the look of dryness and tightness
+ceramides,Ceramides,allowed,replenishes skin's feel of moisture
+ceramides,Ceramides,forbidden,repairs the skin barrier
+ceramides,Ceramides,forbidden,treats eczema
+ceramides,Ceramides,forbidden,treats atopic dermatitis
+ceramides,Ceramides,forbidden,heals damaged skin
+ceramides,Ceramides,forbidden,restores the lipid barrier
+ceramides,Ceramides,forbidden,reduces inflammation
+ceramides,Ceramides,forbidden,anti-inflammatory
+ceramides,Ceramides,forbidden,cures dryness
+ectoin,Ectoin,allowed,supports the appearance of a healthy skin barrier
+ectoin,Ectoin,allowed,"for the appearance of hydrated, comfortable-feeling skin"
+ectoin,Ectoin,allowed,helps reduce the look of redness
+ectoin,Ectoin,allowed,for the appearance of skin that feels calm and soothed
+ectoin,Ectoin,allowed,antioxidant
+ectoin,Ectoin,forbidden,treats atopic dermatitis
+ectoin,Ectoin,forbidden,treats eczema
+ectoin,Ectoin,forbidden,repairs the skin barrier
+ectoin,Ectoin,forbidden,anti-inflammatory
+ectoin,Ectoin,forbidden,reduces inflammation
+ectoin,Ectoin,forbidden,reverses aging
+ectoin,Ectoin,forbidden,builds collagen
+ectoin,Ectoin,forbidden,replaces retinol
+exosomes,Exosomes,allowed,delivers antioxidants that help defend the look of skin against daily stress
+exosomes,Exosomes,allowed,"helps skin look and feel calm, comfortable, and hydrated"
+exosomes,Exosomes,allowed,"a lightweight delivery ingredient for a supported, healthy-looking complexion"
+exosomes,Exosomes,allowed,supports the appearance of a resilient skin surface
+exosomes,Exosomes,forbidden,regenerates skin
+exosomes,Exosomes,forbidden,repairs or renews tissue
+exosomes,Exosomes,forbidden,reverses ageing
+exosomes,Exosomes,forbidden,stimulates collagen
+exosomes,Exosomes,forbidden,treats or heals any condition
+exosomes,Exosomes,forbidden,FDA-approved
+exosomes,Exosomes,forbidden,anti-inflammatory (as a drug claim)
+ghk-cu,GHK-Cu (Copper Tripeptide-1),allowed,"for the appearance of firmer, smoother-looking skin"
+ghk-cu,GHK-Cu (Copper Tripeptide-1),allowed,helps improve the look of fine lines
+ghk-cu,GHK-Cu (Copper Tripeptide-1),allowed,"for a more even, radiant-looking complexion"
+ghk-cu,GHK-Cu (Copper Tripeptide-1),allowed,antioxidant
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,stimulates collagen synthesis
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,wound healing
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,heals
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,repairs skin
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,increases skin density/thickness
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,appearance of denser-looking skin
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,reverses aging
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,resets gene expression
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,treats…
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,hair growth
+ghk-cu,GHK-Cu (Copper Tripeptide-1),forbidden,increases hair density
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),allowed,"for the appearance of hydrated, plumper-looking skin"
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),allowed,helps improve the look of dryness
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),allowed,"supports a smooth, comfortable-feeling skin surface"
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),allowed,"for the appearance of a more supple, refreshed-looking complexion"
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,treats dry skin
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,repairs the skin barrier
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,restores dermal volume
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,builds collagen
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,reverses aging
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,fills wrinkles from within
+hyaluronic-acid,Hyaluronic Acid (Sodium Hyaluronate),forbidden,regenerates skin
+kojic-acid,Kojic Acid,allowed,"for the appearance of a brighter, more even complexion"
+kojic-acid,Kojic Acid,allowed,helps reduce the look of dark spots
+kojic-acid,Kojic Acid,allowed,brightening support within a combination routine
+kojic-acid,Kojic Acid,forbidden,treats melasma
+kojic-acid,Kojic Acid,forbidden,treats hyperpigmentation
+kojic-acid,Kojic Acid,forbidden,cures dark spots
+kojic-acid,Kojic Acid,forbidden,bleaches skin
+kojic-acid,Kojic Acid,forbidden,inhibits tyrosinase
+kojic-acid,Kojic Acid,forbidden,skin-whitening
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),allowed,"for the **appearance** of firmer, plumper, smoother skin"
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),allowed,helps reduce the **look** of fine lines and wrinkles
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),allowed,supports a more youthful-looking complexion
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,boosts / stimulates / increases **collagen** (synthesis/production)
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,collagen-boosting
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,rebuilds collagen
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,by function
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,wound healing
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,repairs
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,regenerates
+matrixyl,Matrixyl (Palmitoyl Pentapeptide-4),forbidden,the proposed mechanism
+naringenin,Naringenin,allowed,"for the appearance of calm, healthy-looking skin"
+naringenin,Naringenin,allowed,supports the look of a resilient skin barrier
+naringenin,Naringenin,allowed,antioxidant
+naringenin,Naringenin,allowed,helps skin look protected from environmental stress
+naringenin,Naringenin,forbidden,reverses aging
+naringenin,Naringenin,forbidden,interrupts the root cause of skin aging
+naringenin,Naringenin,forbidden,15 times more effective than niacinamide
+naringenin,Naringenin,forbidden,reduces inflammation
+naringenin,Naringenin,forbidden,anti-inflammatory
+naringenin,Naringenin,forbidden,stops inflammaging
+naringenin,Naringenin,forbidden,inhibits MMP
+naringenin,Naringenin,forbidden,protects collagen (as a stand-alone claim)
+niacinamide,Niacinamide (Vitamin B3),allowed,"for the appearance of a more even, brighter-looking complexion"
+niacinamide,Niacinamide (Vitamin B3),allowed,helps improve the look of uneven skin tone
+niacinamide,Niacinamide (Vitamin B3),allowed,supports the appearance of a healthy skin barrier
+niacinamide,Niacinamide (Vitamin B3),allowed,"for the look of smoother, more refined-looking skin"
+niacinamide,Niacinamide (Vitamin B3),allowed,antioxidant
+niacinamide,Niacinamide (Vitamin B3),forbidden,treats melasma
+niacinamide,Niacinamide (Vitamin B3),forbidden,treats hyperpigmentation
+niacinamide,Niacinamide (Vitamin B3),forbidden,treats acne
+niacinamide,Niacinamide (Vitamin B3),forbidden,inhibits melanogenesis
+niacinamide,Niacinamide (Vitamin B3),forbidden,repairs the skin barrier
+niacinamide,Niacinamide (Vitamin B3),forbidden,stimulates ceramide synthesis
+niacinamide,Niacinamide (Vitamin B3),forbidden,reduces inflammation
+niacinamide,Niacinamide (Vitamin B3),forbidden,anti-inflammatory
+niacinamide,Niacinamide (Vitamin B3),forbidden,prevents skin cancer
+niacinamide,Niacinamide (Vitamin B3),forbidden,reverses photoaging
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,allowed,"for the **appearance** of firmer, plumper, smoother skin"
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,allowed,helps reduce the **look** of fine lines.
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,forbidden,boosts / stimulates / increases **collagen**
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,forbidden,collagen-boosting
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,forbidden,activates TGF-β
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,forbidden,rebuilds collagen
+palmitoyl-tripeptide-1-5,Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5,forbidden,by function
+pdrn,PDRN (Polydeoxyribonucleotide),allowed,"helps skin feel soothed, calm, and comfortable"
+pdrn,PDRN (Polydeoxyribonucleotide),allowed,provides lightweight hydration and a comforting feel
+pdrn,PDRN (Polydeoxyribonucleotide),allowed,a gentle option for sensitive or post-procedure-feeling skin
+pdrn,PDRN (Polydeoxyribonucleotide),allowed,supports the look and feel of a comfortable skin barrier
+pdrn,PDRN (Polydeoxyribonucleotide),forbidden,regenerates or renews skin
+pdrn,PDRN (Polydeoxyribonucleotide),forbidden,repairs tissue or wounds
+pdrn,PDRN (Polydeoxyribonucleotide),forbidden,reverses ageing
+pdrn,PDRN (Polydeoxyribonucleotide),forbidden,stimulates collagen or fibroblasts
+pdrn,PDRN (Polydeoxyribonucleotide),forbidden,heals or treats any condition
+pdrn,PDRN (Polydeoxyribonucleotide),forbidden,delivers the results of injectable PDRN
+retinol,Retinol (Vitamin A),allowed,"for the appearance of smoother, more refined-looking skin"
+retinol,Retinol (Vitamin A),allowed,helps improve the look of fine lines
+retinol,Retinol (Vitamin A),allowed,for the appearance of a more even complexion
+retinol,Retinol (Vitamin A),allowed,"supports the look of firmer, more resilient-looking skin"
+retinol,Retinol (Vitamin A),allowed,antioxidant
+retinol,Retinol (Vitamin A),forbidden,treats wrinkles
+retinol,Retinol (Vitamin A),forbidden,reverses aging
+retinol,Retinol (Vitamin A),forbidden,stimulates collagen synthesis
+retinol,Retinol (Vitamin A),forbidden,increases skin thickness
+retinol,Retinol (Vitamin A),forbidden,treats acne
+retinol,Retinol (Vitamin A),forbidden,treats hyperpigmentation
+retinol,Retinol (Vitamin A),forbidden,treats photodamage
+retinol,Retinol (Vitamin A),forbidden,regenerates skin
+retinol,Retinol (Vitamin A),forbidden,inhibits matrix metalloproteinases
+snap-8,SNAP-8 (Acetyl Octapeptide-3),allowed,helps reduce the **appearance** of expression lines
+snap-8,SNAP-8 (Acetyl Octapeptide-3),allowed,for smoother-looking skin around the eyes and forehead.
+snap-8,SNAP-8 (Acetyl Octapeptide-3),forbidden,topical botox
+snap-8,SNAP-8 (Acetyl Octapeptide-3),forbidden,botox alternative
+snap-8,SNAP-8 (Acetyl Octapeptide-3),forbidden,relaxes muscles
+snap-8,SNAP-8 (Acetyl Octapeptide-3),forbidden,reduces acetylcholine / neurotransmitter release
+squalane,Squalane,allowed,softens and smooths the look and feel of skin
+squalane,Squalane,allowed,helps skin look and feel hydrated and comfortable
+squalane,Squalane,allowed,"a lightweight, non-greasy facial oil suitable for most skin types"
+squalane,Squalane,allowed,helps reduce the look of dryness and flakiness
+squalane,Squalane,allowed,mimics the feel of skin's own oils without a heavy finish
+squalane,Squalane,forbidden,repairs the skin barrier
+squalane,Squalane,forbidden,treats acne
+squalane,Squalane,forbidden,anti-inflammatory
+squalane,Squalane,forbidden,reduces inflammation
+squalane,Squalane,forbidden,heals or cures dry skin
+squalane,Squalane,forbidden,reverses ageing
+squalane,Squalane,forbidden,controls oil production
+tranexamic-acid,Tranexamic Acid,allowed,"for the appearance of a more even, brighter-looking complexion"
+tranexamic-acid,Tranexamic Acid,allowed,helps reduce the look of dark spots and uneven tone
+tranexamic-acid,Tranexamic Acid,allowed,"for the look of a clearer, more uniform complexion"
+tranexamic-acid,Tranexamic Acid,allowed,supports a more radiant-looking complexion
+tranexamic-acid,Tranexamic Acid,forbidden,treats melasma
+tranexamic-acid,Tranexamic Acid,forbidden,treats hyperpigmentation
+tranexamic-acid,Tranexamic Acid,forbidden,cures dark spots
+tranexamic-acid,Tranexamic Acid,forbidden,inhibits melanogenesis
+tranexamic-acid,Tranexamic Acid,forbidden,inhibits plasmin
+tranexamic-acid,Tranexamic Acid,forbidden,reduces inflammation
+tranexamic-acid,Tranexamic Acid,forbidden,anti-inflammatory
+tranexamic-acid,Tranexamic Acid,forbidden,bleaches or lightens the skin
+tranexamic-acid,Tranexamic Acid,forbidden,an antifibrinolytic treatment
+vitamin-c,Vitamin C (L-Ascorbic Acid),allowed,"for the appearance of a brighter, more radiant-looking complexion"
+vitamin-c,Vitamin C (L-Ascorbic Acid),allowed,helps improve the look of uneven skin tone
+vitamin-c,Vitamin C (L-Ascorbic Acid),allowed,"for the appearance of firmer, more resilient-looking skin"
+vitamin-c,Vitamin C (L-Ascorbic Acid),allowed,"supports the look of smoother, more refined skin"
+vitamin-c,Vitamin C (L-Ascorbic Acid),allowed,antioxidant
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,treats melasma
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,treats hyperpigmentation
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,stimulates collagen synthesis
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,builds collagen
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,reverses aging
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,reverses photodamage
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,treats age spots
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,anti-inflammatory
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,replaces sunscreen
+vitamin-c,Vitamin C (L-Ascorbic Acid),forbidden,prevents UV damage (implies medical protection claim)

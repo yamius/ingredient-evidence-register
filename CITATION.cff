@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it and attribute Vallydia."
+title: "Vallydia Ingredient-Evidence Register"
+abstract: "An evidence-graded open reference dataset of cosmetic and research ingredients, with per-outcome A–F evidence grades, DOI-verified citations, legal status by region, machine-readable cosmetic-claims maps, and chemical identifiers with explicit confidence and provenance."
+type: dataset
+authors:
+  - family-names: Bilenko
+    given-names: Yakiv
+    website: "https://vallydia.com"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add once registered (PUBLISHING.md step 2)
+repository-code: "https://github.com/yamius/ingredient-evidence-register"
+url: "https://vallydia.com"
+keywords:
+  - cosmetics
+  - skincare
+  - ingredients
+  - evidence
+  - peptides
+  - dermatology
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-07-14"
+# identifiers:                      # add the Zenodo DOI after the first GitHub release
+#   - type: doi
+#     value: 10.5281/zenodo.XXXXXXX

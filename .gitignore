@@ -1,0 +1,15 @@
+# The register's MDX source is the generator's INPUT, pulled from the private Vallydia
+# site repo. It is not vendored into this public repo (see METHODOLOGY.md → Provenance).
+# Point the generator at your own export with --source.
+register-source/
+
+# PubChem response cache (regenerable; keeps re-runs offline and deterministic)
+build/.cache/
+
+# Local Claude Code / editor settings — not part of the published dataset
+.claude/
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
