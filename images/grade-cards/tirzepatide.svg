@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="408" viewBox="0 0 640 408" role="img">
+  <style>
+    .t { font: 600 27px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; }
+    .s { font: 400 14px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; opacity:.6; }
+    .out { font: 400 16px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; }
+    .chip { font: 700 18px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #fff; }
+    .obig { font: 700 40px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #fff; }
+    .olab { font: 500 13px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; opacity:.6; }
+    .f  { font: 400 14px system-ui, -apple-system, "Segoe UI", sans-serif; fill: currentColor; opacity:.75; }
+    .b  { fill: none; stroke: currentColor; stroke-opacity:.2; stroke-width:1.5; }
+  </style>
+  <rect class="b" x="12" y="12" width="616" height="384" rx="16"/>
+  <text x="40" y="66" class="t">Tirzepatide</text>
+  <text x="40" y="90" class="s">tirzepatide · evidence by outcome</text>
+  <rect x="522" y="44" width="72" height="72" rx="14" fill="#1a7f52"/><text x="558" y="92" text-anchor="middle" class="obig">A</text><text x="558" y="132" text-anchor="middle" class="olab">overall</text>
+  <line x1="40" y1="120" x2="600" y2="120" stroke="currentColor" stroke-opacity=".18"/>
+  <rect x="40" y="128" width="34" height="34" rx="7" fill="#1a7f52"/><text x="57" y="151" text-anchor="middle" class="chip">A</text><text x="90" y="151" class="out">Type-2 diabetes glycemic control</text><rect x="40" y="174" width="34" height="34" rx="7" fill="#1a7f52"/><text x="57" y="197" text-anchor="middle" class="chip">A</text><text x="90" y="197" class="out">Chronic weight management (obesity)</text><rect x="40" y="220" width="34" height="34" rx="7" fill="#1a7f52"/><text x="57" y="243" text-anchor="middle" class="chip">A</text><text x="90" y="243" class="out">Obstructive sleep apnea (with obesity)</text><rect x="40" y="266" width="34" height="34" rx="7" fill="#8a9098"/><text x="57" y="289" text-anchor="middle" class="chip">–</text><text x="90" y="289" class="out">Safety</text>
+  <line x1="40" y1="348" x2="600" y2="348" stroke="currentColor" stroke-opacity=".18"/>
+  <text x="40" y="376" class="f">Based on 1 cited sources · 0 DOI-verified · grades are Vallydia's evidence assessment (CC-BY-4.0)</text>
+</svg>
