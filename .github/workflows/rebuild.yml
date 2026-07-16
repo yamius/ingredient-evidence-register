@@ -38,6 +38,9 @@ jobs:
       - name: Refresh checksums over data/ + images/
         run: python build/generate_dataset.py --checksums-only
 
+      - name: Regenerate Croissant metadata from the refreshed checksums
+        run: python build/generate_croissant.py
+
       - name: Validate integrity before proposing the change
         run: |
           python build/validate_dataset.py

@@ -94,6 +94,8 @@ English (`en`).
 
 **Parquet mirrors** — `data/parquet/*.parquet` for all of the above (Hugging Face auto-generates Croissant JSON-LD from these).
 
+**Croissant metadata** — `croissant.json` at the repo root: an MLCommons [Croissant](https://mlcommons.org/croissant/) 1.0 JSON-LD description of the CSV tables (per-column descriptions, the A–F grade scale, sha256 checksums), so the dataset is machine-discoverable and loadable by Croissant-aware ML tooling and Google Dataset Search. Hugging Face serves an equivalent auto-generated Croissant from the Parquet mirrors; this committed file covers the GitHub and Zenodo copies and pins the field descriptions. Regenerate with `python build/generate_croissant.py`.
+
 **Retrieval corpus**
 - `data/corpus.jsonl` — one record per compound: `{slug, name, title, url, text}`, where `text` is a natural-language rendering of the identity, the per-outcome grades, the legal status and the caveats. Every record carries its `https://vallydia.com/compound/<slug>` URL so a citation resolves back to the source.
 

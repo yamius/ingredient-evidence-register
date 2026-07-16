@@ -1,0 +1,1394 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "ingredient-evidence-register",
+  "alternateName": "Vallydia Ingredient-Evidence Register",
+  "description": "An open, evidence-graded reference dataset of 85 cosmetic and research ingredients (peptides, small molecules, proteins, blends). Each compound carries per-outcome A–F evidence grades (456 graded outcome rows; a compound can be B for one outcome and F for another, and grades left null are deliberate non-claims such as safety or skin penetration, never coerced to F), DOI-verified citations joined back to the source text, legal status by region (INT/EU/US/UK) and WADA status, machine-readable cosmetic-claims maps (permitted and forbidden claim wordings), and chemical identifiers (CAS, PubChem CID, InChIKey, SMILES) with explicit confidence and provenance. Scope is appearance and evidence only: no dosing, administration or commerce information, by design. Grades are Vallydia's own evidence assessment, not third-party certification. Published as CSV and Parquet; this Croissant describes the CSV tables.",
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Jacob Bilenko",
+    "affiliation": {
+      "@type": "sc:Organization",
+      "name": "Vallydia"
+    },
+    "sameAs": "https://orcid.org/0009-0009-1636-8487"
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Vallydia",
+    "url": "https://vallydia.com"
+  },
+  "url": "https://github.com/yamius/ingredient-evidence-register",
+  "sameAs": "https://vallydia.com",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.1.0",
+  "datePublished": "2026-07-15",
+  "keywords": [
+    "skincare ingredients",
+    "cosmetic ingredients",
+    "evidence grading",
+    "dermatology",
+    "open data",
+    "evidence-based skincare"
+  ],
+  "citeAs": "Bilenko, Jacob (2026). Vallydia Ingredient-Evidence Register (Version 1.1.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
+  "identifier": "https://doi.org/10.5281/zenodo.21364453",
+  "isLiveDataset": false,
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "compounds.csv",
+      "name": "compounds.csv",
+      "description": "One row per compound (85): scalar core plus pipe-joined list columns.",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/compounds.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "72cc2d828e1d6873a2510155ebad3175925b2ed144351ba8d9e2aaf31cfa1940"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "grades.csv",
+      "name": "grades.csv",
+      "description": "One row per compound × outcome (456). The analytical heart of the dataset.",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/grades.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "33ed4262b795008271b4b4155cbf27b4d597572e6d6d45ee6ad4a9974fa54e6c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "legal_status.csv",
+      "name": "legal_status.csv",
+      "description": "One row per compound × region (132).",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/legal_status.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "3461c849103437901369a3d5f174d5a87f4c83d269f5215282e977e742f88ccb"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "citations.csv",
+      "name": "citations.csv",
+      "description": "DOI provenance table (117 rows across 50 compounds).",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "248e1f1ff81f638db681e5590c0cc9ca7e62be7aae7d02155abe653058b25844"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "citations_enriched.csv",
+      "name": "citations_enriched.csv",
+      "description": "The citations table enriched with scholarly cross-links (117 rows).",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations_enriched.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1d19ef9e2f31bbc82952e67ed4f997113497b3a7405c8cbf1cda27fd2435ba24"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "cosmetic_claims.csv",
+      "name": "cosmetic_claims.csv",
+      "description": "Permitted and forbidden claim wordings per cosmetic ingredient (246 rows across 21 compounds).",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/cosmetic_claims.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "66f78e8170a6425b111e7ea06894faa9036cfe3950f17e4b5f53d18da84fbb06"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "identifiers.csv",
+      "name": "identifiers.csv",
+      "description": "Chemical identifiers with confidence and provenance (85 rows; 64 confident, 21 intentionally blank).",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/identifiers.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a81e8978df171b34f0373acc4002c2729d232284f52e2a5d4f26e00074db3afb"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "images.csv",
+      "name": "images.csv",
+      "description": "Manifest of the published image layer: 2D structures and factual data cards, with mandatory alt text.",
+      "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/images/MANIFEST.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "92349044fa46447f5d69c0b362f16a87f977881e553610be3b41d9c1e17b2344"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "compounds",
+      "name": "compounds",
+      "description": "One row per compound (85): scalar core plus pipe-joined list columns.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/slug",
+          "name": "slug",
+          "description": "Unique id and join key (e.g. ghk-cu).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/name",
+          "name": "name",
+          "description": "Display name.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/compound_class",
+          "name": "compound_class",
+          "description": "peptide | small_molecule | protein | blend | polysaccharide.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "compound_class"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/overall_grade",
+          "name": "overall_grade",
+          "description": "A–F summary of the leading application; empty if unassigned. No E.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "overall_grade"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/is_cosmetic",
+          "name": "is_cosmetic",
+          "description": "Lawful cosmetic ingredient in at least one form.",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "is_cosmetic"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/wada_prohibited",
+          "name": "wada_prohibited",
+          "description": "On the WADA prohibited list.",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "wada_prohibited"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/n_outcomes",
+          "name": "n_outcomes",
+          "description": "Number of graded outcome rows.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "n_outcomes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/best_outcome_grade",
+          "name": "best_outcome_grade",
+          "description": "Best non-null outcome grade; nulls ignored.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "best_outcome_grade"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/worst_outcome_grade",
+          "name": "worst_outcome_grade",
+          "description": "Worst non-null outcome grade; nulls ignored, never treated as F.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "worst_outcome_grade"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/synonyms",
+          "name": "synonyms",
+          "description": "Pipe-joined alternative names, including INCI names.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "synonyms"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/function_tags",
+          "name": "function_tags",
+          "description": "Pipe-joined functional tags.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "function_tags"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/related",
+          "name": "related",
+          "description": "Pipe-joined slugs of related compounds.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "related"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/regions",
+          "name": "regions",
+          "description": "Pipe-joined regions present in legal_status.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "regions"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/n_sources",
+          "name": "n_sources",
+          "description": "Count of cited sources.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "n_sources"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/n_doi_verified",
+          "name": "n_doi_verified",
+          "description": "Count of citations with a verified DOI; 0 = a reported gap, not an error.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "n_doi_verified"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/last_updated",
+          "name": "last_updated",
+          "description": "YYYY-MM-DD the register entry was last revised.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "last_updated"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/in_brief",
+          "name": "in_brief",
+          "description": "Plain-language summary.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "in_brief"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/url",
+          "name": "url",
+          "description": "Canonical source page on vallydia.com.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/structure_image",
+          "name": "structure_image",
+          "description": "Path to the structure image, or empty.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "structure_image"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/grade_card_image",
+          "name": "grade_card_image",
+          "description": "Path to the evidence-grade card image, or empty.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "grade_card_image"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "grades",
+      "name": "grades",
+      "description": "One row per compound × outcome (456). The analytical heart of the dataset.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "grades/slug",
+          "name": "slug",
+          "description": "Join key.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/name",
+          "name": "name",
+          "description": "Display name (denormalized).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/compound_class",
+          "name": "compound_class",
+          "description": "Compound class (denormalized).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "compound_class"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/outcome",
+          "name": "outcome",
+          "description": "The specific claim being graded.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "outcome"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/grade",
+          "name": "grade",
+          "description": "Evidence grade on the register's A–F scale: A, B, C, D or F, or empty/null. There is no E. Empty means the row is a deliberate non-claim (e.g. safety, skin penetration) — it must not be read or coerced as F.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "grade"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/base",
+          "name": "base",
+          "description": "The evidence base the grade rests on.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "base"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/effect",
+          "name": "effect",
+          "description": "What the evidence reports.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "effect"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "grades/caveat",
+          "name": "caveat",
+          "description": "Why the grade is not higher.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "grades.csv"
+            },
+            "extract": {
+              "column": "caveat"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "legal_status",
+      "name": "legal_status",
+      "description": "One row per compound × region (132).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "legal_status/slug",
+          "name": "slug",
+          "description": "Join key.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "legal_status.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "legal_status/name",
+          "name": "name",
+          "description": "Display name (denormalized).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "legal_status.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "legal_status/region",
+          "name": "region",
+          "description": "INT | EU | US | UK.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "legal_status.csv"
+            },
+            "extract": {
+              "column": "region"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "legal_status/status",
+          "name": "status",
+          "description": "Short status label.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "legal_status.csv"
+            },
+            "extract": {
+              "column": "status"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "legal_status/note",
+          "name": "note",
+          "description": "Long-form regulatory detail. Ages; check last_updated.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "legal_status.csv"
+            },
+            "extract": {
+              "column": "note"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "citations",
+      "name": "citations",
+      "description": "DOI provenance table (117 rows across 50 compounds).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "citations/slug",
+          "name": "slug",
+          "description": "Join key.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations/name",
+          "name": "name",
+          "description": "Display name (denormalized).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations/source_index",
+          "name": "source_index",
+          "description": "0-based index into that compound's sources list.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "source_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations/source_text",
+          "name": "source_text",
+          "description": "The free-text citation, resolved from sources[source_index].",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "source_text"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations/doi",
+          "name": "doi",
+          "description": "DOI of the cited work.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "doi"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations/resolved",
+          "name": "resolved",
+          "description": "Resolution confidence, e.g. high.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "resolved"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations/verified_title",
+          "name": "verified_title",
+          "description": "Title as returned by the resolver.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations.csv"
+            },
+            "extract": {
+              "column": "verified_title"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "citations_enriched",
+      "name": "citations_enriched",
+      "description": "The citations table enriched with scholarly cross-links (117 rows).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/slug",
+          "name": "slug",
+          "description": "Join key.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/name",
+          "name": "name",
+          "description": "Display name (denormalized).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/source_index",
+          "name": "source_index",
+          "description": "0-based index into that compound's sources list.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "source_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/source_text",
+          "name": "source_text",
+          "description": "The free-text citation, resolved from sources[source_index].",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "source_text"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/doi",
+          "name": "doi",
+          "description": "DOI of the cited work.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "doi"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/resolved",
+          "name": "resolved",
+          "description": "Resolution confidence, e.g. high.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "resolved"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/verified_title",
+          "name": "verified_title",
+          "description": "Title as returned by the resolver.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "verified_title"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/openalex_id",
+          "name": "openalex_id",
+          "description": "OpenAlex work id; blank where unresolved, never guessed.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "openalex_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/semantic_scholar_id",
+          "name": "semantic_scholar_id",
+          "description": "Semantic Scholar paper id; blank where the rate limit blocked lookup.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "semantic_scholar_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/citation_count",
+          "name": "citation_count",
+          "description": "Citation count reported by OpenAlex; blank if unresolved.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "citation_count"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/oa_url",
+          "name": "oa_url",
+          "description": "Open-access URL for the work, where one exists; blank otherwise.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "oa_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "citations_enriched/enrichment_source",
+          "name": "enrichment_source",
+          "description": "Which resolver(s) supplied the cross-links for this row.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "citations_enriched.csv"
+            },
+            "extract": {
+              "column": "enrichment_source"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "cosmetic_claims",
+      "name": "cosmetic_claims",
+      "description": "Permitted and forbidden claim wordings per cosmetic ingredient (246 rows across 21 compounds).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "cosmetic_claims/slug",
+          "name": "slug",
+          "description": "Join key; only is_cosmetic compounds appear.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "cosmetic_claims.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cosmetic_claims/name",
+          "name": "name",
+          "description": "Display name (denormalized).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "cosmetic_claims.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cosmetic_claims/claim_type",
+          "name": "claim_type",
+          "description": "allowed | forbidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "cosmetic_claims.csv"
+            },
+            "extract": {
+              "column": "claim_type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cosmetic_claims/claim_text",
+          "name": "claim_text",
+          "description": "The claim wording. forbidden = asserts a physiological/therapeutic action and must not be used.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "cosmetic_claims.csv"
+            },
+            "extract": {
+              "column": "claim_text"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "identifiers",
+      "name": "identifiers",
+      "description": "Chemical identifiers with confidence and provenance (85 rows; 64 confident, 21 intentionally blank).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/slug",
+          "name": "slug",
+          "description": "Join key.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/name",
+          "name": "name",
+          "description": "Display name.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/compound_class",
+          "name": "compound_class",
+          "description": "Compound class.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "compound_class"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/cas",
+          "name": "cas",
+          "description": "CAS registry number; blank where depositors disagree, never guessed.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "cas"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/pubchem_cid",
+          "name": "pubchem_cid",
+          "description": "PubChem Compound ID.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "pubchem_cid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/inchikey",
+          "name": "inchikey",
+          "description": "InChIKey — the best cross-database join key.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "inchikey"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/inchi",
+          "name": "inchi",
+          "description": "Full InChI string.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "inchi"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/smiles",
+          "name": "smiles",
+          "description": "Canonical SMILES; only high-confidence SMILES are rendered as images.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "smiles"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/unii",
+          "name": "unii",
+          "description": "FDA UNII; blank if ambiguous.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "unii"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/chembl_id",
+          "name": "chembl_id",
+          "description": "ChEMBL id where available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "chembl_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/drugbank_id",
+          "name": "drugbank_id",
+          "description": "DrugBank id where available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "drugbank_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/identifier_source",
+          "name": "identifier_source",
+          "description": "Provenance of the identifier match.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "identifier_source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/identifier_confidence",
+          "name": "identifier_confidence",
+          "description": "high | medium | low | none.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "identifier_confidence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "identifiers/entity_note",
+          "name": "entity_note",
+          "description": "Set when the resolved record is a real but distinct entity from the register compound.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "identifiers.csv"
+            },
+            "extract": {
+              "column": "entity_note"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "images",
+      "name": "images",
+      "description": "Manifest of the published image layer: 2D structures and factual data cards, with mandatory alt text.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "images/slug",
+          "name": "slug",
+          "description": "Join key to the compound.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/image_type",
+          "name": "image_type",
+          "description": "structure | data_card | grade_card.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "image_type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/path",
+          "name": "path",
+          "description": "Repo-relative path to the image file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "path"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/format",
+          "name": "format",
+          "description": "Image encoding, e.g. png or svg.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/alt_text",
+          "name": "alt_text",
+          "description": "Mandatory alternative text describing the image.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "alt_text"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/license",
+          "name": "license",
+          "description": "Image license.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "license"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/source",
+          "name": "source",
+          "description": "How the image was produced or where it came from.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/note",
+          "name": "note",
+          "description": "Caveats, e.g. an entity mismatch stated honestly rather than mislabelled.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "images.csv"
+            },
+            "extract": {
+              "column": "note"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

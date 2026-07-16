@@ -32,6 +32,12 @@ change to the 85 compounds or their grades; everything here is additive.
   every push/PR) and `rebuild.yml` (weekly + manual: refresh scholarly links, images and
   checksums, then open a PR — never auto-merges).
 - `build/generate_dataset.py --checksums-only` for CI checksum refresh without the private source.
+- **Croissant metadata** — `croissant.json` (MLCommons Croissant 1.0 JSON-LD) describing the eight
+  published CSV tables: per-column descriptions, dataTypes, the A–F grade scale (with null handling,
+  no invented E), and per-file sha256 checksums. Generated deterministically by
+  `build/generate_croissant.py` from the committed data + `checksums.sha256`, reconciled with
+  CITATION.cff. Complements Hugging Face's auto-generated Croissant for the GitHub/Zenodo copies.
+  CI validates it with `mlcroissant` and enforces that the committed file stays in step (`--check`).
 
 ### Notes
 - The register's MDX source stays private and unvendored; the auto-rebuild refreshes only the
