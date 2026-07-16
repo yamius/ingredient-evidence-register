@@ -34,13 +34,15 @@ ROOT = Path(__file__).resolve().parent.parent
 # --- dataset-level facts (kept in step with CITATION.cff / .zenodo.json) ----------
 NAME = "ingredient-evidence-register"
 TITLE = "Vallydia Ingredient-Evidence Register"
-VERSION = "1.1.0"
-DATE_PUBLISHED = "2026-07-15"
+VERSION = "1.0.0"
+DATE_PUBLISHED = "2026-07-14"
+DATE_MODIFIED = "2026-07-14"
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
 DOI = "10.5281/zenodo.21364453"
 DOI_URL = f"https://doi.org/{DOI}"
-# /data is not live yet (404); fall back to the repository URL per spec.
-DATASET_URL = "https://github.com/yamius/ingredient-evidence-register"
+# /data is live; use it as the dataset landing page (matches CITATION.cff and the
+# site's schema.org/Dataset).
+DATASET_URL = "https://vallydia.com/data"
 RAW_BASE = "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main"
 ORCID = "https://orcid.org/0009-0009-1636-8487"
 
@@ -60,7 +62,7 @@ DESCRIPTION = (
 )
 
 CITE_AS = (
-    "Bilenko, Jacob (2026). Vallydia Ingredient-Evidence Register (Version 1.1.0) "
+    "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.0.0) "
     f"[Data set]. Vallydia. https://doi.org/{DOI}"
 )
 
@@ -322,6 +324,7 @@ def build(sums: dict[str, str]) -> dict:
         "license": LICENSE_URL,
         "version": VERSION,
         "datePublished": DATE_PUBLISHED,
+        "dateModified": DATE_MODIFIED,
         "keywords": KEYWORDS,
         "citeAs": CITE_AS,
         "identifier": DOI_URL,

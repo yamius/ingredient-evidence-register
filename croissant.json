@@ -65,11 +65,12 @@
     "name": "Vallydia",
     "url": "https://vallydia.com"
   },
-  "url": "https://github.com/yamius/ingredient-evidence-register",
+  "url": "https://vallydia.com/data",
   "sameAs": "https://vallydia.com",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "1.1.0",
-  "datePublished": "2026-07-15",
+  "version": "1.0.0",
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14",
   "keywords": [
     "skincare ingredients",
     "cosmetic ingredients",
@@ -78,7 +79,7 @@
     "open data",
     "evidence-based skincare"
   ],
-  "citeAs": "Bilenko, Jacob (2026). Vallydia Ingredient-Evidence Register (Version 1.1.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
+  "citeAs": "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.0.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
   "identifier": "https://doi.org/10.5281/zenodo.21364453",
   "isLiveDataset": false,
   "distribution": [
