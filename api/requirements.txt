@@ -1,0 +1,3 @@
+# Read-only reference API (§10.1). Pinned for reproducible deploys.
+fastapi==0.115.6
+uvicorn[standard]==0.34.0

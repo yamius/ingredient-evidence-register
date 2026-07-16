@@ -3,6 +3,40 @@
 All notable changes to the Vallydia Ingredient-Evidence Register dataset.
 Versioning follows [Semantic Versioning](https://semver.org/): a breaking schema change bumps the major version.
 
+## [1.1.0] — 2026-07-15
+
+Phase 3 — the dataset hardened into a machine-linkable, continuously-validated asset. No
+change to the 85 compounds or their grades; everything here is additive.
+
+### Added
+- **Evidence-grade cards** (§12.2) — `images/grade-cards/<slug>.svg`, one per compound: a
+  per-outcome A–F strip, the overall-grade badge and a "based on N sources, M DOI-verified"
+  line, rendered deterministically from the grades. Null grades show as a neutral dash, never
+  an F. `grade_card_image` path joined into `compounds.jsonl/.json/.csv`.
+- **Scholarly cross-links** (§10.3) — `data/citations_enriched.csv` (+ parquet): every DOI
+  enriched against OpenAlex and Semantic Scholar (openalex_id, semantic_scholar_id,
+  citation_count, oa_url). All 117 carry an OpenAlex id + citation count; open-access URLs on
+  74; Semantic Scholar where its rate limit allowed. Missing cross-links are blank + logged,
+  never guessed.
+- **Read-only API** (§10.1) — `api/`: OpenAPI 3.1 spec + a FastAPI reference implementation
+  (serves the generated data from memory, no database), Dockerfile, and tests. Every response
+  carries `attribution` + `source_url`; CORS open for read. Deploy is a manual operator step.
+- **Loader packages** (§10.2) — `packages/python` (`vallydia-register`, pandas DataFrames) and
+  `packages/npm` (`@vallydia/ingredient-register`, typed objects). Both pull from the published
+  data with a local-checkout offline mode, attribute Vallydia, and ship tests.
+- **Integrity validation suite** — `build/validate_dataset.py`: referential integrity across
+  the six configs, grade-scale and overall/outcome consistency, DOI well-formedness, the
+  no-fabricated-identifier rule, and a firewall lint (no commerce or dosing-instruction text).
+  `--selftest` proves it catches seeded bad rows. Wired into CI.
+- **GitHub Actions** — `.github/workflows/validate.yml` (integrity + all package/API tests on
+  every push/PR) and `rebuild.yml` (weekly + manual: refresh scholarly links, images and
+  checksums, then open a PR — never auto-merges).
+- `build/generate_dataset.py --checksums-only` for CI checksum refresh without the private source.
+
+### Notes
+- The register's MDX source stays private and unvendored; the auto-rebuild refreshes only the
+  layers derivable from committed data. Full MDX regeneration remains a documented local step.
+
 ## [1.0.0] — 2026-07-14
 
 Initial public release. 85 compounds.

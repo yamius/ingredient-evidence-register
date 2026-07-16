@@ -407,10 +407,19 @@ def main() -> int:
     ap.add_argument("--source", default=str(root / "register-source" / "compounds"),
                     help="directory of compound .mdx files (the register export)")
     ap.add_argument("--out", default=str(root / "data"), help="output data directory")
+    ap.add_argument("--checksums-only", action="store_true",
+                    help="refresh checksums.sha256 over data/ + images/ without reading the MDX source "
+                         "(for CI, where the private register source is not present)")
     args = ap.parse_args()
 
     src = Path(args.source)
     out = Path(args.out)
+
+    if args.checksums_only:
+        n = checksums(root, [out, root / "images"], root / "checksums.sha256")
+        print(f"checksums.sha256 refreshed over {n} files in data/ + images/")
+        return 0
+
     if not src.is_dir():
         print(f"ERROR: source directory not found: {src}", file=sys.stderr)
         return 2

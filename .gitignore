@@ -13,3 +13,6 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+
+# Editable-install metadata
+*.egg-info/

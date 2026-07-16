@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vallydia-register"
+version = "1.1.0"
+description = "Thin loader for the Vallydia Ingredient-Evidence Register: evidence-graded cosmetic & research ingredients as pandas DataFrames."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "CC-BY-4.0"
+authors = [{ name = "Jacob Bilenko" }]
+keywords = ["cosmetics", "skincare", "ingredients", "evidence", "peptides", "cheminformatics", "open-data"]
+dependencies = ["pandas>=1.5", "pyarrow>=10"]
+
+[project.urls]
+Homepage = "https://vallydia.com"
+Source = "https://github.com/yamius/ingredient-evidence-register"
+Dataset = "https://huggingface.co/datasets/vallydia/ingredient-evidence-register"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vallydia_register"]

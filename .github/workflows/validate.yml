@@ -1,0 +1,61 @@
+name: validate
+
+# Continuous integrity enforcement. A bad row — a broken reference, an out-of-scale grade,
+# a fabricated identifier, or leaked dosing/commerce text — fails the build here rather than
+# reaching a consumer. Runs on every push and PR that touches the data or the code around it.
+on:
+  push:
+    paths: ["data/**", "build/**", "api/**", "packages/**", ".github/workflows/validate.yml"]
+  pull_request:
+    paths: ["data/**", "build/**", "api/**", "packages/**", ".github/workflows/validate.yml"]
+  workflow_dispatch:
+
+jobs:
+  validate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install --quiet pandas pyarrow
+      - name: Dataset integrity suite
+        run: python build/validate_dataset.py
+      - name: Prove the suite catches seeded bad rows
+        run: python build/validate_dataset.py --selftest
+
+  test-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install --quiet -r api/requirements.txt httpx pytest
+      - name: API tests
+        run: python -m pytest api/test_api.py -q
+
+  test-python-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package + test deps
+        run: python -m pip install --quiet -e packages/python pytest
+      - name: Loader tests (offline, against the checkout)
+        run: python -m pytest packages/python/test_loader.py -q
+
+  test-npm-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Loader tests (offline, against the checkout)
+        working-directory: packages/npm
+        run: node --test

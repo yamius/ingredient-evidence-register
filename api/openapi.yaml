@@ -1,0 +1,278 @@
+openapi: 3.1.0
+info:
+  title: Vallydia Ingredient-Evidence Register API
+  version: 1.1.0
+  description: >-
+    Read-only API over an evidence-graded open dataset of cosmetic and research
+    ingredients: per-outcome A–F evidence grades, DOI-verified citations (with
+    scholarly cross-links), legal status by region, machine-readable cosmetic-claims
+    maps, and neutral chemical identifiers.
+
+
+    Scope is appearance and evidence only — the API exposes no dosing, administration
+    or commerce data. Every response carries an `attribution` string and a `source_url`;
+    reuse is under CC-BY-4.0 and requires attribution to vallydia.com.
+  license:
+    name: CC-BY-4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    url: https://vallydia.com
+servers:
+  - url: https://vallydia.com
+    description: Canonical source (deploy target is operator-chosen — see PUBLISHING.md)
+tags:
+  - name: compounds
+  - name: grades
+  - name: citations
+  - name: cosmetic-claims
+  - name: identifiers
+  - name: search
+paths:
+  /:
+    get:
+      summary: Service metadata and endpoint index
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Envelope" }
+  /compounds:
+    get:
+      tags: [compounds]
+      summary: List compounds (optionally filtered)
+      parameters:
+        - { name: class, in: query, required: false, schema: { type: string }, description: "Filter by compound_class (peptide, small_molecule, protein, blend, polysaccharide)" }
+        - { name: is_cosmetic, in: query, required: false, schema: { type: boolean } }
+        - { name: limit, in: query, required: false, schema: { type: integer, minimum: 1, maximum: 1000, default: 500 } }
+        - { name: offset, in: query, required: false, schema: { type: integer, minimum: 0, default: 0 } }
+      responses:
+        "200":
+          description: A page of compounds
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      count: { type: integer }
+                      total: { type: integer }
+                      offset: { type: integer }
+                      limit: { type: integer }
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/Compound" }
+  /compounds/{slug}:
+    get:
+      tags: [compounds]
+      summary: Get one compound by slug
+      parameters:
+        - { name: slug, in: path, required: true, schema: { type: string }, example: ghk-cu }
+      responses:
+        "200":
+          description: The compound
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      data: { $ref: "#/components/schemas/Compound" }
+        "404":
+          description: No compound with that slug
+  /grades:
+    get:
+      tags: [grades]
+      summary: Per-outcome evidence grades
+      parameters:
+        - { name: slug, in: query, required: false, schema: { type: string } }
+        - { name: grade, in: query, required: false, schema: { type: string, enum: [A, B, C, D, F] }, description: "Grade letter. Ungraded (null) rows are safety/penetration rows, not efficacy claims." }
+      responses:
+        "200":
+          description: Matching grade rows
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      count: { type: integer }
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/Grade" }
+  /citations:
+    get:
+      tags: [citations]
+      summary: DOI-verified citations (with scholarly cross-links where resolved)
+      parameters:
+        - { name: slug, in: query, required: false, schema: { type: string } }
+      responses:
+        "200":
+          description: Matching citation rows
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      count: { type: integer }
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/Citation" }
+  /cosmetic-claims:
+    get:
+      tags: [cosmetic-claims]
+      summary: Permitted / forbidden cosmetic-claim wordings
+      parameters:
+        - { name: slug, in: query, required: false, schema: { type: string } }
+        - { name: claim_type, in: query, required: false, schema: { type: string, enum: [allowed, forbidden] } }
+      responses:
+        "200":
+          description: Matching claim rows
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      count: { type: integer }
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/CosmeticClaim" }
+  /identifiers:
+    get:
+      tags: [identifiers]
+      summary: Neutral chemical identifiers (CAS / PubChem CID / InChIKey / SMILES)
+      parameters:
+        - { name: slug, in: query, required: false, schema: { type: string } }
+      responses:
+        "200":
+          description: Matching identifier rows
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      count: { type: integer }
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/Identifier" }
+  /search:
+    get:
+      tags: [search]
+      summary: Free-text search over name, slug, synonyms, class and function tags
+      parameters:
+        - { name: q, in: query, required: true, schema: { type: string, minLength: 1 }, example: copper }
+      responses:
+        "200":
+          description: Matching compounds (summary form)
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/Envelope"
+                  - type: object
+                    properties:
+                      count: { type: integer }
+                      query: { type: string }
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/SearchHit" }
+components:
+  schemas:
+    Envelope:
+      type: object
+      required: [attribution, source_url, data]
+      properties:
+        attribution:
+          type: string
+          example: "Data: Vallydia Ingredient-Evidence Register (https://vallydia.com), CC-BY-4.0."
+        source_url:
+          type: string
+          format: uri
+          example: https://vallydia.com
+        data: {}
+    Grade:
+      type: object
+      properties:
+        slug: { type: string }
+        name: { type: string }
+        compound_class: { type: string }
+        outcome: { type: string }
+        grade:
+          type: [string, "null"]
+          enum: [A, B, C, D, F, null]
+          description: "null = not an efficacy claim (safety/penetration row), never coerced to F"
+        base: { type: string }
+        effect: { type: string }
+        caveat: { type: string }
+    Citation:
+      type: object
+      properties:
+        slug: { type: string }
+        name: { type: string }
+        source_index: { type: integer }
+        source_text: { type: string }
+        doi: { type: string }
+        resolved: { type: string }
+        verified_title: { type: string }
+        openalex_id: { type: string }
+        semantic_scholar_id: { type: string }
+        citation_count: { type: [integer, string] }
+        oa_url: { type: string }
+    CosmeticClaim:
+      type: object
+      properties:
+        slug: { type: string }
+        name: { type: string }
+        claim_type: { type: string, enum: [allowed, forbidden] }
+        claim_text: { type: string }
+    Identifier:
+      type: object
+      properties:
+        slug: { type: string }
+        name: { type: string }
+        compound_class: { type: string }
+        cas: { type: string }
+        pubchem_cid: { type: string }
+        inchikey: { type: string }
+        inchi: { type: string }
+        smiles: { type: string }
+        unii: { type: string }
+        identifier_source: { type: string }
+        identifier_confidence: { type: string, enum: [high, medium, low, none] }
+        entity_note: { type: string }
+    SearchHit:
+      type: object
+      properties:
+        slug: { type: string }
+        name: { type: string }
+        compound_class: { type: string }
+        overall_grade: { type: [string, "null"] }
+        url: { type: string, format: uri }
+    Compound:
+      type: object
+      description: Full nested compound record (see DATA_DICTIONARY.md for every field)
+      properties:
+        slug: { type: string }
+        name: { type: string }
+        title: { type: string }
+        url: { type: string, format: uri }
+        synonyms: { type: array, items: { type: string } }
+        compound_class: { type: string }
+        overall_grade: { type: [string, "null"] }
+        grades_by_outcome: { type: array, items: { $ref: "#/components/schemas/Grade" } }
+        legal_status: { type: array, items: { type: object } }
+        wada: { type: object }
+        function_tags: { type: array, items: { type: string } }
+        related: { type: array, items: { type: string } }
+        is_cosmetic: { type: boolean }
+        structure_image: { type: [string, "null"] }
+        grade_card_image: { type: [string, "null"] }

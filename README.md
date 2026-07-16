@@ -88,6 +88,7 @@ English (`en`).
 - `data/grades.csv` — one row per compound × outcome.
 - `data/legal_status.csv` — one row per compound × region.
 - `data/citations.csv` — the DOI provenance table, joined back to the source text.
+- `data/citations_enriched.csv` — the same citations cross-linked to OpenAlex and Semantic Scholar (citation counts, open-access links).
 - `data/cosmetic_claims.csv` — permitted and forbidden claim wordings per cosmetic ingredient.
 - `data/identifiers.csv` — chemical identifiers with confidence and provenance.
 
@@ -96,7 +97,13 @@ English (`en`).
 **Retrieval corpus**
 - `data/corpus.jsonl` — one record per compound: `{slug, name, title, url, text}`, where `text` is a natural-language rendering of the identity, the per-outcome grades, the legal status and the caveats. Every record carries its `https://vallydia.com/compound/<slug>` URL so a citation resolves back to the source.
 
-**Images** — `images/structures/<slug>.svg` (+ `.png`) and `images/MANIFEST.csv`, which carries mandatory factual `alt_text` for every image.
+**Images** — `images/structures/<slug>.svg` (+ `.png`), `images/grade-cards/<slug>.svg` (per-outcome A–F cards), and `images/MANIFEST.csv`, which carries mandatory factual `alt_text` for every image.
+
+**Tools & access layers**
+- `api/` — a read-only [OpenAPI 3.1](api/openapi.yaml) service (FastAPI reference impl + Dockerfile); every response attributes vallydia.com.
+- `packages/python` — the `vallydia-register` pip package (pandas DataFrames).
+- `packages/npm` — the `@vallydia/ingredient-register` npm package (typed objects).
+- `build/validate_dataset.py` — the integrity suite that runs in CI on every change.
 
 Full field-by-field documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md).
 
