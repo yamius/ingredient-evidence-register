@@ -1,27 +1,32 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it and attribute Vallydia."
-title: "Vallydia Ingredient-Evidence Register"
-abstract: "An evidence-graded open reference dataset of cosmetic and research ingredients, with per-outcome A–F evidence grades, DOI-verified citations, legal status by region, machine-readable cosmetic-claims maps, and chemical identifiers with explicit confidence and provenance."
+message: "If you use this dataset, please cite it as below."
+title: "The Ingredient Evidence Register"
+abstract: >-
+  An open, versioned dataset of skincare actives and topical compounds,
+  each outcome graded A to F on the published evidence, with citations,
+  provenance, chemical identifiers, and grade-card images.
 type: dataset
 authors:
-  - family-names: Bilenko
-    given-names: Jacob
+  - family-names: "Bilenko"
+    given-names: "Jacob"
+    affiliation: "Vallydia"
     orcid: "https://orcid.org/0009-0009-1636-8487"
     website: "https://vallydia.com"
+version: "v1.1.0"
+date-released: "2026-07-15"
+license: "CC-BY-4.0"
+doi: "10.5281/zenodo.21364453"
+url: "https://vallydia.com/data"
 repository-code: "https://github.com/yamius/ingredient-evidence-register"
-url: "https://vallydia.com"
 keywords:
-  - cosmetics
-  - skincare
-  - ingredients
-  - evidence
-  - peptides
+  - skincare ingredients
+  - cosmetic ingredients
+  - evidence grading
   - dermatology
-license: CC-BY-4.0
-version: 1.0.0
-date-released: "2026-07-14"
+  - open data
+  - evidence-based skincare
 identifiers:
   # Concept DOI — always resolves to the latest version. Cite this one.
   - type: doi
-    value: 10.5281/zenodo.21364453
-    description: "Concept DOI for all versions of the Vallydia Ingredient-Evidence Register"
+    value: "10.5281/zenodo.21364453"
+    description: "Concept DOI (always resolves to the latest version)"
