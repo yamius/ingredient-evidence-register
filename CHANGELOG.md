@@ -3,12 +3,19 @@
 All notable changes to the Vallydia Ingredient-Evidence Register dataset.
 Versioning follows [Semantic Versioning](https://semver.org/): a breaking schema change bumps the major version.
 
-## [1.1.0] — 2026-07-15
+## [1.0.0] — 2026-07-14
 
-Phase 3 — the dataset hardened into a machine-linkable, continuously-validated asset. No
-change to the 85 compounds or their grades; everything here is additive.
+Initial public release: 85 compounds, evidence-graded, and published as a machine-linkable,
+continuously-validated asset. None of the tooling below changes the 85 compounds or their grades.
 
 ### Added
+- **Canonical data** — `data/compounds.jsonl` and `.json`: full nested records, lossless, including the parsed (`body_sections`) and raw (`body_markdown`) Markdown body.
+- **Flat table** — `data/compounds.csv`, one row per compound with computed `best_outcome_grade` / `worst_outcome_grade` (nulls ignored, never coerced to `F`).
+- **Tidy tables** — `data/grades.csv` (456 outcome rows, 97 deliberately ungraded), `data/legal_status.csv` (132 rows), `data/citations.csv` (117 DOI-verified citations across 50 compounds), `data/cosmetic_claims.csv` (246 allowed/forbidden claim rows across 21 cosmetic ingredients).
+- **Chemical identifiers** — `data/identifiers.csv`: CAS, PubChem CID, InChIKey, InChI, SMILES, UNII, ChEMBL and DrugBank ids, each with `identifier_source` and `identifier_confidence`. 64 of 85 resolved at high confidence; 21 left blank on purpose (blends, stacks and multi-component biologics have no single structure).
+- **Parquet mirrors** — `data/parquet/*.parquet` for all seven tables (Hugging Face auto-generates Croissant JSON-LD from these).
+- **Retrieval corpus** — `data/corpus.jsonl`: one natural-language record per compound, each carrying its `vallydia.com` URL so a retrieved passage always resolves back to an attributable source.
+- **Image layer** — 42 RDKit-rendered 2D structures and 22 factual data cards for molecules too large for an honest 2D depiction, with mandatory `alt_text` in `images/MANIFEST.csv`.
 - **Evidence-grade cards** (§12.2) — `images/grade-cards/<slug>.svg`, one per compound: a
   per-outcome A–F strip, the overall-grade badge and a "based on N sources, M DOI-verified"
   line, rendered deterministically from the grades. Null grades show as a neutral dash, never
@@ -24,6 +31,7 @@ change to the 85 compounds or their grades; everything here is additive.
 - **Loader packages** (§10.2) — `packages/python` (`vallydia-register`, pandas DataFrames) and
   `packages/npm` (`@vallydia/ingredient-register`, typed objects). Both pull from the published
   data with a local-checkout offline mode, attribute Vallydia, and ship tests.
+- **Reproducible build** — `build/generate_dataset.py`, `build/enrich_identifiers.py`, `build/generate_images.py`, with pinned dependencies. Deterministic: two runs on the same source produce byte-identical output.
 - **Integrity validation suite** — `build/validate_dataset.py`: referential integrity across
   the six configs, grade-scale and overall/outcome consistency, DOI well-formedness, the
   no-fabricated-identifier rule, and a firewall lint (no commerce or dosing-instruction text).
@@ -38,30 +46,15 @@ change to the 85 compounds or their grades; everything here is additive.
   `build/generate_croissant.py` from the committed data + `checksums.sha256`, reconciled with
   CITATION.cff. Complements Hugging Face's auto-generated Croissant for the GitHub/Zenodo copies.
   CI validates it with `mlcroissant` and enforces that the committed file stays in step (`--check`).
+- **Documentation** — README (doubling as the Hugging Face dataset card), `datasheet.md` (Datasheets for Datasets), `DATA_DICTIONARY.md`, `METHODOLOGY.md`, `PUBLISHING.md`, `CITATION.cff`, `.zenodo.json`, `dataset-metadata.json`, `checksums.sha256`.
 
 ### Notes
 - The register's MDX source stays private and unvendored; the auto-rebuild refreshes only the
   layers derivable from committed data. Full MDX regeneration remains a documented local step.
 
-## [1.0.0] — 2026-07-14
-
-Initial public release. 85 compounds.
-
-### Added
-- **Canonical data** — `data/compounds.jsonl` and `.json`: full nested records, lossless, including the parsed (`body_sections`) and raw (`body_markdown`) Markdown body.
-- **Flat table** — `data/compounds.csv`, one row per compound with computed `best_outcome_grade` / `worst_outcome_grade` (nulls ignored, never coerced to `F`).
-- **Tidy tables** — `data/grades.csv` (456 outcome rows, 97 deliberately ungraded), `data/legal_status.csv` (132 rows), `data/citations.csv` (117 DOI-verified citations across 50 compounds), `data/cosmetic_claims.csv` (246 allowed/forbidden claim rows across 21 cosmetic ingredients).
-- **Chemical identifiers** — `data/identifiers.csv`: CAS, PubChem CID, InChIKey, InChI, SMILES, UNII, ChEMBL and DrugBank ids, each with `identifier_source` and `identifier_confidence`. 64 of 85 resolved at high confidence; 21 left blank on purpose (blends, stacks and multi-component biologics have no single structure).
-- **Parquet mirrors** — `data/parquet/*.parquet` for all six tables (Hugging Face auto-generates Croissant JSON-LD from these).
-- **Retrieval corpus** — `data/corpus.jsonl`: one natural-language record per compound, each carrying its `vallydia.com` URL so a retrieved passage always resolves back to an attributable source.
-- **Image layer** — 42 RDKit-rendered 2D structures and 22 factual data cards for molecules too large for an honest 2D depiction, with mandatory `alt_text` in `images/MANIFEST.csv`.
-- **Reproducible build** — `build/generate_dataset.py`, `build/enrich_identifiers.py`, `build/generate_images.py`, with pinned dependencies. Deterministic: two runs on the same source produce byte-identical output.
-- **Documentation** — README (doubling as the Hugging Face dataset card), `datasheet.md` (Datasheets for Datasets), `DATA_DICTIONARY.md`, `METHODOLOGY.md`, `PUBLISHING.md`, `CITATION.cff`, `.zenodo.json`, `dataset-metadata.json`, `checksums.sha256`.
-
 ### Known gaps (reported, not hidden)
 - 35 compounds carry no DOI-verified citation yet; they have free-text sources. Listed by slug in the build report. Closing this gap is the priority for the next version.
 - 21 compounds have no chemical identifiers, by design.
-- `grade_card_image` is not populated: evidence-grade cards ship in a later version.
 - `entity_note` flags one live entity mismatch (`ghk-cu`: PubChem's record is the free tripeptide ligand, not the copper(II) complex). The image `alt_text` states this rather than mislabelling the structure.
 
 [1.0.0]: https://github.com/yamius/ingredient-evidence-register/releases/tag/v1.0.0
