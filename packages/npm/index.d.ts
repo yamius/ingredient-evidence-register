@@ -1,4 +1,4 @@
-// Type definitions for @vallydia/ingredient-register
+// Type definitions for @vallydia-data/ingredient-register
 
 export const ATTRIBUTION: string;
 export const HOMEPAGE: string;

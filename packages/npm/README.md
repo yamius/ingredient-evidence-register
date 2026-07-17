@@ -1,14 +1,14 @@
-# @vallydia/ingredient-register
+# @vallydia-data/ingredient-register
 
 A typed loader for the [Vallydia Ingredient-Evidence Register](https://vallydia.com) — an
 evidence-graded open dataset of cosmetic and research ingredients.
 
 ```bash
-npm install @vallydia/ingredient-register
+npm install @vallydia-data/ingredient-register
 ```
 
 ```js
-import { loadCompounds, loadGrades, loadCitations } from '@vallydia/ingredient-register';
+import { loadCompounds, loadGrades, loadCitations } from '@vallydia-data/ingredient-register';
 
 const compounds = await loadCompounds();   // Compound[] (85)
 const grades    = await loadGrades();      // GradeRow[] (456)

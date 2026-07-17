@@ -1,10 +1,10 @@
-// @vallydia/ingredient-register — typed loader for the Vallydia Ingredient-Evidence Register.
+// @vallydia-data/ingredient-register — typed loader for the Vallydia Ingredient-Evidence Register.
 //
 // Evidence-graded cosmetic and research ingredients. Data is fetched from the published
 // dataset (GitHub raw by default, or the Hugging Face mirror) and cached on disk; point at a
 // local checkout with { dataDir } for offline use.
 //
-//   import { loadCompounds, loadGrades } from '@vallydia/ingredient-register';
+//   import { loadCompounds, loadGrades } from '@vallydia-data/ingredient-register';
 //   const grades = await loadGrades();
 //   grades.filter(g => g.grade === 'A');
 //

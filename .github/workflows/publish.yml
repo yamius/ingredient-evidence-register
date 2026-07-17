@@ -1,0 +1,73 @@
+name: publish
+
+# Publishes the two Phase-3 loader packages when a GitHub Release is *published* — and only
+# then. Nothing here runs on push or pull_request, so day-to-day commits never publish. To
+# release, the owner drafts a GitHub Release and clicks "Publish release" (see PUBLISHING.md);
+# both jobs then run once, independently.
+#
+# The version that lands on each registry is whatever is in that package's manifest at release
+# time — packages/python/pyproject.toml and packages/npm/package.json (both 1.1.0 today, the
+# intentional PACKAGE version, independent of the dataset's 1.0.0). Bump the manifest before
+# cutting a release if you need a new registry version; re-publishing an existing version fails
+# loudly (by design — see the note on skip-existing below), it does not silently succeed.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  # --- Job 1: Python -> PyPI via Trusted Publishing (OIDC). No API token stored anywhere. ---
+  publish-pypi:
+    name: Publish Python package to PyPI (Trusted Publishing)
+    runs-on: ubuntu-latest
+    # Trusted Publishing binds to: owner=yamius, repo=ingredient-evidence-register,
+    # workflow filename=publish.yml, environment=pypi. These are registered on PyPI as a
+    # pending publisher; the first publish auto-creates the `vallydia-register` project.
+    environment: pypi
+    permissions:
+      id-token: write        # mint the short-lived OIDC identity PyPI trusts — replaces a token
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build sdist + wheel (packages/python only)
+        working-directory: packages/python
+        run: |
+          python -m pip install --upgrade build
+          python -m build
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          # Only the package we built above — not the repo root.
+          packages-dir: packages/python/dist/
+          # No `password:` — auth is OIDC Trusted Publishing.
+          # skip-existing defaults to false: if this version is already on PyPI the step FAILS
+          # (correct — it means pyproject.toml's version wasn't bumped), never a silent no-op.
+
+  # --- Job 2: npm (scoped, public). npm has no OIDC publish flow yet -> automation token. ---
+  publish-npm:
+    name: Publish npm package (@vallydia-data, public)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write        # enables npm build provenance (see the commented --provenance below)
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"   # writes an .npmrc that reads NODE_AUTH_TOKEN
+          scope: "@vallydia-data"
+      # No `npm ci`: the package has no dependencies and ships no lockfile, so there is nothing
+      # to install before publishing.
+      - name: Publish to npm
+        working-directory: packages/npm
+        # Scoped packages are private by default -> --access public is required.
+        # Re-publishing an existing version fails loudly (npm's default), which is what we want.
+        # Provenance: once the first publish succeeds you can add --provenance here (the
+        # id-token: write permission above is already in place; it needs package.json's
+        # `repository` url, which is set). Left off the first publish to keep it simple.
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

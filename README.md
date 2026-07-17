@@ -104,7 +104,7 @@ English (`en`).
 **Tools & access layers**
 - `api/` — a read-only [OpenAPI 3.1](api/openapi.yaml) service (FastAPI reference impl + Dockerfile); every response attributes vallydia.com.
 - `packages/python` — the `vallydia-register` pip package (pandas DataFrames).
-- `packages/npm` — the `@vallydia/ingredient-register` npm package (typed objects).
+- `packages/npm` — the `@vallydia-data/ingredient-register` npm package (typed objects).
 - `build/validate_dataset.py` — the integrity suite that runs in CI on every change.
 
 Full field-by-field documentation: [DATA_DICTIONARY.md](DATA_DICTIONARY.md).

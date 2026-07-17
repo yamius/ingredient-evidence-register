@@ -29,7 +29,7 @@ continuously-validated asset. None of the tooling below changes the 85 compounds
   (serves the generated data from memory, no database), Dockerfile, and tests. Every response
   carries `attribution` + `source_url`; CORS open for read. Deploy is a manual operator step.
 - **Loader packages** (§10.2) — `packages/python` (`vallydia-register`, pandas DataFrames) and
-  `packages/npm` (`@vallydia/ingredient-register`, typed objects). Both pull from the published
+  `packages/npm` (`@vallydia-data/ingredient-register`, typed objects). Both pull from the published
   data with a local-checkout offline mode, attribute Vallydia, and ship tests.
 - **Reproducible build** — `build/generate_dataset.py`, `build/enrich_identifiers.py`, `build/generate_images.py`, with pinned dependencies. Deterministic: two runs on the same source produce byte-identical output.
 - **Integrity validation suite** — `build/validate_dataset.py`: referential integrity across

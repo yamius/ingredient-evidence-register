@@ -1,5 +1,5 @@
 {
-  "name": "@vallydia/ingredient-register",
+  "name": "@vallydia-data/ingredient-register",
   "version": "1.1.0",
   "description": "Typed loader for the Vallydia Ingredient-Evidence Register: evidence-graded cosmetic & research ingredients.",
   "type": "module",
