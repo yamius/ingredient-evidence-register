@@ -117,7 +117,7 @@
       "description": "DOI provenance table (117 rows across 50 compounds).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations.csv",
       "encodingFormat": "text/csv",
-      "sha256": "8a98454984b2aac6adc8dea7dab5771d6ddadabe6a507c7b5690717a0ab74000"
+      "sha256": "c0497f01c0c582c7207e6f5eebe836fd3ecb8c3ddaa0be1b6624543a294d4bc8"
     },
     {
       "@type": "cr:FileObject",
