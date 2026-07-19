@@ -126,7 +126,7 @@
       "description": "The citations table enriched with scholarly cross-links (117 rows).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations_enriched.csv",
       "encodingFormat": "text/csv",
-      "sha256": "1d19ef9e2f31bbc82952e67ed4f997113497b3a7405c8cbf1cda27fd2435ba24"
+      "sha256": "df3a8a7fc015df2c2cc638f3765249bff1d67362170f69b531725c027dadd71f"
     },
     {
       "@type": "cr:FileObject",
