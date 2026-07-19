@@ -15,6 +15,13 @@ openalex_id, semantic_scholar_id, citation_count, oa_url, enrichment_source.
 Design rules (same discipline as the rest of the build):
   * Degrade gracefully. If an API is down, rate-limits us, or has no record, the field is
     left BLANK and the reason is logged — never guessed. A missing cross-link is honest.
+  * Never regress. A blank answer means "the call failed", not "the fact is gone", so an
+    empty result never overwrites a value an earlier run already established: the previous
+    value is kept and the preservation is logged. Semantic Scholar rate-limits hard and
+    answers for a different subset of rows on every run, so without this rule a weekly
+    rebuild would silently drop cross-links it had already found. (Trade-off, stated
+    plainly: if a record genuinely disappears upstream we keep the last known value rather
+    than blanking it — the same call we make for chemical identifiers.)
   * Cache every response under build/.cache/scholar/ so re-runs are offline and the emitted
     files are deterministic (no timestamps, stable input order).
   * Be polite: one request at a time with a small delay; back off on HTTP 429.
@@ -46,6 +53,17 @@ OUT_FIELDS = [
     "slug", "name", "source_index", "source_text", "doi", "resolved", "verified_title",
     "openalex_id", "semantic_scholar_id", "citation_count", "oa_url", "enrichment_source",
 ]
+
+# Cross-link fields an empty API answer must never clear (see "Never regress" above).
+PRESERVE_FIELDS = ("openalex_id", "semantic_scholar_id", "citation_count", "oa_url")
+
+
+def load_previous(path: Path) -> dict[tuple[str, str], dict]:
+    """Previous enrichment, keyed by (slug, source_index), so a failed call can't erase it."""
+    if not path.exists():
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {(r["slug"], r["source_index"]): r for r in csv.DictReader(fh)}
 
 
 def cache_path(root: Path, api: str, doi: str) -> Path:
@@ -162,12 +180,31 @@ def main() -> int:
         resolved_by_doi[doi] = out
         return out
 
+    out = Path(args.out)
+    prev = load_previous(out)
+    preserved: list[str] = []
+
     out_rows = []
     for r in rows:
-        enr = resolve(r["doi"].strip())
+        # Copy: resolve() memoises per DOI and several rows can share one, so never mutate it.
+        enr = dict(resolve(r["doi"].strip()))
+        old = prev.get((r["slug"], r["source_index"]))
+        if old:
+            for f in PRESERVE_FIELDS:
+                if not str(enr.get(f) or "").strip() and (old.get(f) or "").strip():
+                    enr[f] = old[f]
+                    preserved.append(f"{r['slug']}[{r['source_index']}].{f} kept ({old[f]!r})")
+        # Attribute the row to the graphs whose data it actually carries. Derived from the
+        # merged values, not from who answered this run, so the column stops flapping with
+        # Semantic Scholar's rate-limit luck.
+        if enr.get("enrichment_source") != "invalid-doi":
+            srcs = []
+            if str(enr.get("openalex_id") or "").strip():
+                srcs.append("OpenAlex")
+            if str(enr.get("semantic_scholar_id") or "").strip():
+                srcs.append("SemanticScholar")
+            enr["enrichment_source"] = "+".join(srcs) if srcs else "none"
         out_rows.append({**r, **enr})
-
-    out = Path(args.out)
     with out.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=OUT_FIELDS, lineterminator="\n")
         w.writeheader()
@@ -198,6 +235,12 @@ def main() -> int:
     print(f"Semantic Scholar only   : {s2_only}")
     print(f"neither (blank, logged) : {none}")
     print(f"with open-access URL     : {with_oa}")
+    print(f"preserved from prior run : {len(preserved)}  (empty answer did not overwrite a known value)")
+    if preserved:
+        for m in preserved[:10]:
+            print(f"  · {m}")
+        if len(preserved) > 10:
+            print(f"  … and {len(preserved) - 10} more")
     if log:
         print(f"\ndegraded/blank ({len(log)} — honest gaps, not guesses):")
         for m in log[:25]:

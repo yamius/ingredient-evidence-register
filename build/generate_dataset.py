@@ -397,7 +397,10 @@ def checksums(root: Path, dirs: list[Path], out: Path) -> int:
                 continue
             h = hashlib.sha256(f.read_bytes()).hexdigest()
             lines.append(f"{h}  {f.relative_to(root).as_posix()}")
-    out.write_text("\n".join(sorted(lines)) + "\n", encoding="utf-8")
+    # newline="\n" is load-bearing: without it Windows writes CRLF, and since .gitattributes
+    # pins the repo to byte-for-byte (* -text) the whole file then churns on every Linux
+    # rebuild — and `sha256sum -c` on Linux reads the trailing \r as part of the filename.
+    out.write_text("\n".join(sorted(lines)) + "\n", encoding="utf-8", newline="\n")
     return len(lines)
 
 

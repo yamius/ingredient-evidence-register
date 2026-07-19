@@ -6,9 +6,16 @@ name: rebuild
 #
 # Scope note: the register's MDX source is private and is NOT vendored into this public repo,
 # so this Action regenerates only the layers that depend on the committed data — scholarly
-# enrichment, images, checksums — and validates the result. A full regeneration from the MDX
+# enrichment, checksums, Croissant — and validates the result. A full regeneration from the MDX
 # (enrich_identifiers.py + generate_dataset.py) is a local step that needs the private source;
 # it is documented in PUBLISHING.md and METHODOLOGY.md.
+#
+# Images are deliberately NOT rendered here. They derive from identifiers.csv and
+# compounds.jsonl, neither of which this job touches, so they cannot change for any real
+# reason — but RDKit's 2D coordinate generation is not byte-identical across platforms, so
+# re-rendering them on the runner produces pure diff noise (observed: oxytocin and ghrp-6
+# drifted on the first run). They are regenerated locally, with generate_images.py, when the
+# identifiers or grades they depend on actually change.
 on:
   workflow_dispatch:
   schedule:
@@ -32,9 +39,6 @@ jobs:
       - name: Refresh scholarly cross-links (OpenAlex + Semantic Scholar)
         run: python build/enrich_citations.py
 
-      - name: Regenerate images from the committed identifiers + grades
-        run: python build/generate_images.py
-
       - name: Refresh checksums over data/ + images/
         run: python build/generate_dataset.py --checksums-only
 
@@ -46,20 +50,23 @@ jobs:
           python build/validate_dataset.py
           python build/validate_dataset.py --selftest
 
+      # Written to the runner's temp dir, never into the working tree: anything left in the
+      # repo here would be swept into the PR as if it were dataset content.
       - name: Build report
         id: report
         run: |
           {
             echo "### Automated rebuild report"
             echo ""
-            echo "Regenerated the derived layers (scholarly enrichment, images, checksums) from the"
-            echo "committed data. Full MDX regeneration is a separate local step (private source)."
+            echo "Refreshed the layers derived from the committed data (scholarly cross-links,"
+            echo "checksums, Croissant). Images are rendered locally, not here — see the workflow"
+            echo "header. Full MDX regeneration is a separate local step (private source)."
             echo ""
             echo '```'
             git status --short
             echo '```'
-          } > report.md
-          cat report.md >> "$GITHUB_STEP_SUMMARY"
+          } > "$RUNNER_TEMP/report.md"
+          cat "$RUNNER_TEMP/report.md" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Open a PR with the diff (never auto-merge)
         uses: peter-evans/create-pull-request@v6
@@ -68,5 +75,5 @@ jobs:
           branch: auto/rebuild
           delete-branch: true
           title: "Automated rebuild — derived layers refreshed"
-          body-path: report.md
+          body-path: ${{ runner.temp }}/report.md
           labels: automated, needs-review

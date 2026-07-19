@@ -37,8 +37,10 @@ continuously-validated asset. None of the tooling below changes the 85 compounds
   no-fabricated-identifier rule, and a firewall lint (no commerce or dosing-instruction text).
   `--selftest` proves it catches seeded bad rows. Wired into CI.
 - **GitHub Actions** — `.github/workflows/validate.yml` (integrity + all package/API tests on
-  every push/PR) and `rebuild.yml` (weekly + manual: refresh scholarly links, images and
-  checksums, then open a PR — never auto-merges).
+  every push/PR) and `rebuild.yml` (weekly + manual: refresh scholarly links, checksums and
+  Croissant, then open a PR — never auto-merges). Images are rendered locally, not in the
+  rebuild: they derive from inputs the job does not touch, and RDKit's 2D coordinates are not
+  byte-identical across platforms, so re-rendering there is pure diff noise.
 - `build/generate_dataset.py --checksums-only` for CI checksum refresh without the private source.
 - **Croissant metadata** — `croissant.json` (MLCommons Croissant 1.0 JSON-LD) describing the eight
   published CSV tables: per-column descriptions, dataTypes, the A–F grade scale (with null handling,
