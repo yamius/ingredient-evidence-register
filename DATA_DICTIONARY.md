@@ -118,7 +118,14 @@ One row per compound (85). List fields are `|`-joined.
 
 ---
 
-## `data/grades.csv` — one row per compound × outcome (456 rows)
+## `data/grades.csv` — one row per compound × outcome (475 rows)
+
+> **Two kinds of outcome.** Most rows grade an *effect* — what the compound does. 19 rows
+> grade a *marketed claim* instead: whether the thing the market says about the compound is true.
+> They are ordinary rows with the same four fields, identifiable because `outcome` opens with the
+> claim in quotes — e.g. `"Collagen-boosting" collagen synthesis in human skin`, `"Natural
+> retinol" / "plant-based retinol" identity`. A claim row can be graded `F` while the compound's
+> effect rows are `B`: the compound works, the slogan is still false.
 
 | Column | Type | Null? | Meaning |
 |---|---|---|---|
@@ -147,7 +154,7 @@ Regulatory status ages. Always read `last_updated` and `status_note` from `compo
 
 ---
 
-## `data/citations.csv` — DOI provenance (117 rows across 50 compounds)
+## `data/citations.csv` — DOI provenance (125 rows across 51 compounds)
 
 | Column | Type | Null? | Meaning |
 |---|---|---|---|

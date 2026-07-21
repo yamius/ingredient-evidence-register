@@ -23,7 +23,7 @@ Vallydia (Yakiv Bilenko). Self-funded. No external sponsor, and no ingredient su
 Chemical compounds and ingredient blends — 85 of them: 53 peptides, 23 small molecules, 5 blends, 3 proteins, 1 polysaccharide. Each instance is a compound with its evidence grades, citations, legal status, cosmetic-claims map and chemical identifiers.
 
 **How many instances are there?**
-85 compounds; 456 graded outcome rows; 132 legal-status rows; 373 cited sources of which 117 are DOI-verified; 246 cosmetic-claim rows across 21 cosmetic ingredients; 85 identifier rows (64 confidently resolved); 64 images.
+85 compounds; 475 graded outcome rows; 132 legal-status rows; 373 cited sources of which 125 are DOI-verified; 246 cosmetic-claim rows across 21 of the 22 cosmetic ingredients; 85 identifier rows (64 confidently resolved); 64 images.
 
 **Is it a sample or the complete set?**
 It is the **complete** Vallydia register as of the release date — but the register itself is not a systematic sample of chemical space. It is a demand-driven selection: compounds people search for and ask about. Cosmetic actives and popular "research peptides" are over-represented relative to their scientific importance. Do not treat it as an unbiased sample of the ingredient universe.
@@ -36,7 +36,7 @@ Yes — the A–F evidence grade, per outcome. This is the dataset's central ann
 
 **Is any information missing?**
 Yes, and deliberately:
-- **97 of 456 grade rows are null.** These are not missing values: the rows are not efficacy claims (safety, skin-penetration). They are carried as null and must not be coerced to `F`.
+- **97 of 475 grade rows are null.** These are not missing values: the rows are not efficacy claims (safety, skin-penetration). They are carried as null and must not be coerced to `F`.
 - **35 of 85 compounds have no DOI-verified citation** yet. They have free-text sources; DOI backfill is incomplete. The build reports these by slug.
 - **21 of 85 compounds have no chemical identifiers.** Blends, stacks, multi-component biologics and proprietary analogs have no single structure. Blank is the honest answer; a guessed CAS or SMILES would be worse than nothing.
 - **Grade cards** (`grade_card_image`) are not populated in v1.0.0.

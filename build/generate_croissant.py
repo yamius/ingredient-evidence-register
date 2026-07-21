@@ -34,7 +34,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # --- dataset-level facts (kept in step with CITATION.cff / .zenodo.json) ----------
 NAME = "ingredient-evidence-register"
 TITLE = "Vallydia Ingredient-Evidence Register"
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 DATE_PUBLISHED = "2026-07-14"
 DATE_MODIFIED = "2026-07-21"
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
@@ -49,7 +49,7 @@ ORCID = "https://orcid.org/0009-0009-1636-8487"
 DESCRIPTION = (
     "An open, evidence-graded reference dataset of 85 cosmetic and research "
     "ingredients (peptides, small molecules, proteins, blends). Each compound carries "
-    "per-outcome A–F evidence grades (456 graded outcome rows; a compound can be B for "
+    "per-outcome A–F evidence grades (475 graded outcome rows; a compound can be B for "
     "one outcome and F for another, and grades left null are deliberate non-claims such "
     "as safety or skin penetration, never coerced to F), DOI-verified citations joined "
     "back to the source text, legal status by region (INT/EU/US/UK) and WADA status, "
@@ -62,7 +62,7 @@ DESCRIPTION = (
 )
 
 CITE_AS = (
-    "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.1.0) "
+    "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.2.0) "
     f"[Data set]. Vallydia. https://doi.org/{DOI}"
 )
 
@@ -124,7 +124,7 @@ TABLES = [
     ),
     (
         "grades", "data/grades.csv",
-        "One row per compound × outcome (456). The analytical heart of the dataset.",
+        "One row per compound × outcome (475). The analytical heart of the dataset. 19 rows grade a marketed claim rather than an effect; their `outcome` opens with the claim in quotes.",
         [
             ("slug", "sc:Text", "Join key."),
             ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),

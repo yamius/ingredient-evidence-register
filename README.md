@@ -40,7 +40,7 @@ An open, evidence-graded reference dataset of **85 cosmetic and research ingredi
 
 Most ingredient databases tell you what a compound *is*. This one tells you **how good the evidence actually is**, outcome by outcome, and says so honestly when the answer is "we don't know" or "it was tested and it failed".
 
-- **Per-outcome A–F evidence grades** — a compound can be `B` for one outcome and `F` for another. 456 graded outcome rows.
+- **Per-outcome A–F evidence grades** — a compound can be `B` for one outcome and `F` for another. 475 graded outcome rows, including 19 that grade a marketed *claim* rather than an effect.
 - **DOI-verified citations** — 125 citations resolved to a DOI with a verified title. This is the credibility spine of the dataset.
 - **Machine-readable cosmetic-claims maps** — for each cosmetic ingredient, the claims that *may* be made and the claims that **must not** be. 246 claim rows.
 - **Legal status by region** (INT / EU / US / UK) and WADA prohibited status.
@@ -59,8 +59,8 @@ This is an **appearance-and-evidence reference**. It contains **no dosing, no ad
 |---|---|
 | Compounds | 85 |
 | Classes | peptide (53), small_molecule (23), blend (5), protein (3), polysaccharide (1) |
-| Graded outcome rows | 456 (97 intentionally ungraded — see below) |
-| Cosmetic ingredients | 21, with 246 permitted/forbidden claim rows |
+| Graded outcome rows | 475 (97 intentionally ungraded — see below) |
+| Cosmetic ingredients | 22, of which 21 carry 246 permitted/forbidden claim rows |
 | Legal-status rows | 132 |
 | Cited sources | 373, of which 125 are DOI-verified across 51 compounds |
 | WADA-prohibited | 19 |
