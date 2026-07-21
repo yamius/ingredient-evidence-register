@@ -68,9 +68,9 @@
   "url": "https://vallydia.com/data",
   "sameAs": "https://vallydia.com",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
+  "dateModified": "2026-07-21",
   "keywords": [
     "skincare ingredients",
     "cosmetic ingredients",
@@ -79,7 +79,7 @@
     "open data",
     "evidence-based skincare"
   ],
-  "citeAs": "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.0.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
+  "citeAs": "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.1.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
   "identifier": "https://doi.org/10.5281/zenodo.21364453",
   "isLiveDataset": false,
   "distribution": [
@@ -114,7 +114,7 @@
       "@type": "cr:FileObject",
       "@id": "citations.csv",
       "name": "citations.csv",
-      "description": "DOI provenance table (117 rows across 50 compounds).",
+      "description": "DOI provenance table (125 rows across 51 compounds).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations.csv",
       "encodingFormat": "text/csv",
       "sha256": "f8f07c6974b044af9f730cf066d322dbc92695bd3e821e1c5dd7959982bc467a"
@@ -123,7 +123,7 @@
       "@type": "cr:FileObject",
       "@id": "citations_enriched.csv",
       "name": "citations_enriched.csv",
-      "description": "The citations table enriched with scholarly cross-links (117 rows).",
+      "description": "The citations table enriched with scholarly cross-links (125 rows).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations_enriched.csv",
       "encodingFormat": "text/csv",
       "sha256": "3bc9b606da620bea4cf35a32abe2ff733e34a046cf639037b85c558fd4363e52"
@@ -725,7 +725,7 @@
       "@type": "cr:RecordSet",
       "@id": "citations",
       "name": "citations",
-      "description": "DOI provenance table (117 rows across 50 compounds).",
+      "description": "DOI provenance table (125 rows across 51 compounds).",
       "field": [
         {
           "@type": "cr:Field",
@@ -838,7 +838,7 @@
       "@type": "cr:RecordSet",
       "@id": "citations_enriched",
       "name": "citations_enriched",
-      "description": "The citations table enriched with scholarly cross-links (117 rows).",
+      "description": "The citations table enriched with scholarly cross-links (125 rows).",
       "field": [
         {
           "@type": "cr:Field",

@@ -34,9 +34,9 @@ ROOT = Path(__file__).resolve().parent.parent
 # --- dataset-level facts (kept in step with CITATION.cff / .zenodo.json) ----------
 NAME = "ingredient-evidence-register"
 TITLE = "Vallydia Ingredient-Evidence Register"
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 DATE_PUBLISHED = "2026-07-14"
-DATE_MODIFIED = "2026-07-14"
+DATE_MODIFIED = "2026-07-21"
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
 DOI = "10.5281/zenodo.21364453"
 DOI_URL = f"https://doi.org/{DOI}"
@@ -62,7 +62,7 @@ DESCRIPTION = (
 )
 
 CITE_AS = (
-    "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.0.0) "
+    "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.1.0) "
     f"[Data set]. Vallydia. https://doi.org/{DOI}"
 )
 
@@ -149,7 +149,7 @@ TABLES = [
     ),
     (
         "citations", "data/citations.csv",
-        "DOI provenance table (117 rows across 50 compounds).",
+        "DOI provenance table (125 rows across 51 compounds).",
         [
             ("slug", "sc:Text", "Join key."),
             ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),
@@ -162,7 +162,7 @@ TABLES = [
     ),
     (
         "citations_enriched", "data/citations_enriched.csv",
-        "The citations table enriched with scholarly cross-links (117 rows).",
+        "The citations table enriched with scholarly cross-links (125 rows).",
         [
             ("slug", "sc:Text", "Join key."),
             ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),

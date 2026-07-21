@@ -3,7 +3,28 @@
 All notable changes to the Vallydia Ingredient-Evidence Register dataset.
 Versioning follows [Semantic Versioning](https://semver.org/): a breaking schema change bumps the major version.
 
-## [Unreleased]
+## [1.1.0] — 2026-07-21
+
+Two things landed together: the DOI layer grew, and the graded name was decoupled from
+trademarks. No grade changed, and no compound was added or removed — the 85 compounds and their
+456 outcome rows are exactly as in 1.0.0.
+
+### Added
+- **8 more DOI-verified citations — 117 → 125, across 51 compounds (was 50).** `exosomes` gains
+  its first. Each was found by Crossref on title+author+year agreement and then confirmed
+  independently against OpenAlex; nothing was accepted on a title match alone. Three citations
+  were deliberately left without a DOI rather than guessed: `vitamin-c[3]` (two live DOIs resolve
+  to the same Ovid page — one work, two publisher records, so any pick would be arbitrary), and
+  `naringenin[1]` / `hyaluronic-acid[1]`, where the citation's own author and journal are in
+  question, so a DOI would attach to a claim we cannot stand behind.
+- `build/backfill_dois.py` — the Crossref search tool behind that pass. Classifies citations that
+  can never carry a DOI (regulations, agency dockets, manufacturer documentation): 13 of the 50
+  examined, which is why the ceiling here is lower than it looks.
+
+### Fixed
+- Two mis-stated citations, both surfaced when the publisher record disagreed with our text:
+  `bakuchiol[7]` had the wrong subtitle, and `naringenin[1]` credited "Yin Y" for a paper by
+  Jung SK et al.
 
 ### Changed
 - **The graded name is now always a nonproprietary one, and trade names moved to their own
@@ -97,4 +118,5 @@ continuously-validated asset. None of the tooling below changes the 85 compounds
 - 21 compounds have no chemical identifiers, by design.
 - `entity_note` flags one live entity mismatch (`ghk-cu`: PubChem's record is the free tripeptide ligand, not the copper(II) complex). The image `alt_text` states this rather than mislabelling the structure.
 
+[1.1.0]: https://github.com/yamius/ingredient-evidence-register/releases/tag/v1.1.0
 [1.0.0]: https://github.com/yamius/ingredient-evidence-register/releases/tag/v1.0.0

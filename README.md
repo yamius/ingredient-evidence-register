@@ -41,7 +41,7 @@ An open, evidence-graded reference dataset of **85 cosmetic and research ingredi
 Most ingredient databases tell you what a compound *is*. This one tells you **how good the evidence actually is**, outcome by outcome, and says so honestly when the answer is "we don't know" or "it was tested and it failed".
 
 - **Per-outcome A–F evidence grades** — a compound can be `B` for one outcome and `F` for another. 456 graded outcome rows.
-- **DOI-verified citations** — 117 citations resolved to a DOI with a verified title. This is the credibility spine of the dataset.
+- **DOI-verified citations** — 125 citations resolved to a DOI with a verified title. This is the credibility spine of the dataset.
 - **Machine-readable cosmetic-claims maps** — for each cosmetic ingredient, the claims that *may* be made and the claims that **must not** be. 246 claim rows.
 - **Legal status by region** (INT / EU / US / UK) and WADA prohibited status.
 - **Chemical identifiers** — CAS, PubChem CID, InChIKey, SMILES — each with an explicit confidence level and provenance. Where no confident match exists, the field is **blank on purpose**.
@@ -62,7 +62,7 @@ This is an **appearance-and-evidence reference**. It contains **no dosing, no ad
 | Graded outcome rows | 456 (97 intentionally ungraded — see below) |
 | Cosmetic ingredients | 21, with 246 permitted/forbidden claim rows |
 | Legal-status rows | 132 |
-| Cited sources | 373, of which 117 are DOI-verified across 50 compounds |
+| Cited sources | 373, of which 125 are DOI-verified across 51 compounds |
 | WADA-prohibited | 19 |
 | Confident chemical identifiers | 64 of 85 (21 honestly blank) |
 | Structure images | 42 2D structures + 22 large-molecule data cards |
