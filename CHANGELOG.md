@@ -3,6 +3,34 @@
 All notable changes to the Vallydia Ingredient-Evidence Register dataset.
 Versioning follows [Semantic Versioning](https://semver.org/): a breaking schema change bumps the major version.
 
+## [1.2.0] — 2026-07-21
+
+Catches the dataset up with the register, which had moved ahead of the last release.
+
+### Added
+- **19 outcome rows that grade a marketed claim rather than an effect — 456 → 475.** Across 15
+  compounds. These ask whether what the market *says* about a compound is true, which is a
+  different question from whether the compound works: `matrixyl` scores B for the appearance of
+  photoaged skin and D for "Collagen-boosting" collagen synthesis in human skin. `bakuchiol` is B
+  on wrinkles and F on the "natural retinol" identity claim.
+
+  No new field: they are ordinary rows with the same four keys, identifiable because `outcome`
+  opens with the claim in quotes. A machine-readable flag was considered and deliberately not
+  added — the register expresses the distinction in the outcome text, and a parallel field would
+  be a second source of truth that can drift out of step with it.
+
+### Fixed
+- **`syn-ake` is now `is_cosmetic: true`** (21 → 22 cosmetic compounds). It carries an INCI name
+  (Dipeptide Diaminobutyroyl Benzylamide Diacetate) and its own entry calls it "a real, approved
+  cosmetic peptide", so the flag contradicted the record. The flag drives register filters and the
+  cosmetic slice, so the entry was being excluded from analyses it belonged in.
+
+  `syn-ake` is now the only cosmetic compound without a `cosmetic_claims` block. That is an honest
+  gap — the permitted/forbidden claim wordings have not been written yet — not a schema defect, so
+  no block was invented for it. The claim map still covers 21 compounds and 246 rows.
+- Stale counts in `README.md`, `datasheet.md` and `DATA_DICTIONARY.md` that survived 1.1.0
+  (117 DOI-verified → 125, across 50 → 51 compounds).
+
 ## [1.1.0] — 2026-07-21
 
 Two things landed together: the DOI layer grew, and the graded name was decoupled from
@@ -118,5 +146,6 @@ continuously-validated asset. None of the tooling below changes the 85 compounds
 - 21 compounds have no chemical identifiers, by design.
 - `entity_note` flags one live entity mismatch (`ghk-cu`: PubChem's record is the free tripeptide ligand, not the copper(II) complex). The image `alt_text` states this rather than mislabelling the structure.
 
+[1.2.0]: https://github.com/yamius/ingredient-evidence-register/releases/tag/v1.2.0
 [1.1.0]: https://github.com/yamius/ingredient-evidence-register/releases/tag/v1.1.0
 [1.0.0]: https://github.com/yamius/ingredient-evidence-register/releases/tag/v1.0.0

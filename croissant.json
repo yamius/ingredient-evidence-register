@@ -50,7 +50,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "ingredient-evidence-register",
   "alternateName": "Vallydia Ingredient-Evidence Register",
-  "description": "An open, evidence-graded reference dataset of 85 cosmetic and research ingredients (peptides, small molecules, proteins, blends). Each compound carries per-outcome A–F evidence grades (456 graded outcome rows; a compound can be B for one outcome and F for another, and grades left null are deliberate non-claims such as safety or skin penetration, never coerced to F), DOI-verified citations joined back to the source text, legal status by region (INT/EU/US/UK) and WADA status, machine-readable cosmetic-claims maps (permitted and forbidden claim wordings), and chemical identifiers (CAS, PubChem CID, InChIKey, SMILES) with explicit confidence and provenance. Scope is appearance and evidence only: no dosing, administration or commerce information, by design. Grades are Vallydia's own evidence assessment, not third-party certification. Published as CSV and Parquet; this Croissant describes the CSV tables.",
+  "description": "An open, evidence-graded reference dataset of 85 cosmetic and research ingredients (peptides, small molecules, proteins, blends). Each compound carries per-outcome A–F evidence grades (475 graded outcome rows; a compound can be B for one outcome and F for another, and grades left null are deliberate non-claims such as safety or skin penetration, never coerced to F), DOI-verified citations joined back to the source text, legal status by region (INT/EU/US/UK) and WADA status, machine-readable cosmetic-claims maps (permitted and forbidden claim wordings), and chemical identifiers (CAS, PubChem CID, InChIKey, SMILES) with explicit confidence and provenance. Scope is appearance and evidence only: no dosing, administration or commerce information, by design. Grades are Vallydia's own evidence assessment, not third-party certification. Published as CSV and Parquet; this Croissant describes the CSV tables.",
   "creator": {
     "@type": "sc:Person",
     "name": "Jacob Bilenko",
@@ -68,7 +68,7 @@
   "url": "https://vallydia.com/data",
   "sameAs": "https://vallydia.com",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "datePublished": "2026-07-14",
   "dateModified": "2026-07-21",
   "keywords": [
@@ -79,7 +79,7 @@
     "open data",
     "evidence-based skincare"
   ],
-  "citeAs": "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.1.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
+  "citeAs": "Bilenko, J. (2026). Vallydia Ingredient-Evidence Register (v1.2.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453",
   "identifier": "https://doi.org/10.5281/zenodo.21364453",
   "isLiveDataset": false,
   "distribution": [
@@ -90,16 +90,16 @@
       "description": "One row per compound (85): scalar core plus pipe-joined list columns.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/compounds.csv",
       "encodingFormat": "text/csv",
-      "sha256": "503435719aa12d200ab0cc75e8a2be374d414efe2bf3403a19a2260a8b2a643a"
+      "sha256": "4af0e2c31959f96cc8bbc3054afab70dee41c7f651bdcb48dd7b8142fb41a5d7"
     },
     {
       "@type": "cr:FileObject",
       "@id": "grades.csv",
       "name": "grades.csv",
-      "description": "One row per compound × outcome (456). The analytical heart of the dataset.",
+      "description": "One row per compound × outcome (475). The analytical heart of the dataset. 19 rows grade a marketed claim rather than an effect; their `outcome` opens with the claim in quotes.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/grades.csv",
       "encodingFormat": "text/csv",
-      "sha256": "b67db2bc0cbb5bea5b3c50d0fe35131689736035af72660f265564b9762d6441"
+      "sha256": "977074e7261ba526d5164cdce4f813887730d8cb36b6e45d84d9b5ee02086122"
     },
     {
       "@type": "cr:FileObject",
@@ -117,7 +117,7 @@
       "description": "DOI provenance table (125 rows across 51 compounds).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations.csv",
       "encodingFormat": "text/csv",
-      "sha256": "f8f07c6974b044af9f730cf066d322dbc92695bd3e821e1c5dd7959982bc467a"
+      "sha256": "2d511d0eca0c590dcdbc4a5b88be6aa157acef941ef0329ccb64ce7a3b0e04de"
     },
     {
       "@type": "cr:FileObject",
@@ -153,7 +153,7 @@
       "description": "Manifest of the published image layer: 2D structures and factual data cards, with mandatory alt text.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/images/MANIFEST.csv",
       "encodingFormat": "text/csv",
-      "sha256": "0f2dbec3f7334b4c59bf162d1503ce38dab10ca849d267bf436ef622d0030a38"
+      "sha256": "f75ba2fcc4ef920616790a59d262f025da11f0b1c63acd166abd864c88476333"
     }
   ],
   "recordSet": [
@@ -514,7 +514,7 @@
       "@type": "cr:RecordSet",
       "@id": "grades",
       "name": "grades",
-      "description": "One row per compound × outcome (456). The analytical heart of the dataset.",
+      "description": "One row per compound × outcome (475). The analytical heart of the dataset. 19 rows grade a marketed claim rather than an effect; their `outcome` opens with the claim in quotes.",
       "field": [
         {
           "@type": "cr:Field",

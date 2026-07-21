@@ -442,9 +442,9 @@
     "in_brief": "AHK-Cu is a copper-binding tripeptide engineered for hair (whereas GHK-Cu targets skin). Its evidence is essentially one foundational ex-vivo/in-vitro study (Pyo 2007) showing it stimulates hair-follicle elongation and dermal-papilla-cell proliferation in the lab — but there is no robust human trial showing a topical AHK-Cu serum actually increases hair density in people, and \"hair growth\" is a medicinal claim (the space occupied by drugs like minoxidil and finasteride). It is a cosmetic ingredient; appearance claims only.",
     "body_sections": {
       "Identity a synthetic **copper-binding tripeptide** (3 amino acids + Cu²⁺; < 40 aa → peptide), structurally like **GHK-Cu (#26)** but with **alanine instead of glycine** at position 1. Unlike GHK-Cu, it does **not occur naturally** in the body — it was **engineered specifically for hair/scalp applications** (GHK-Cu is skin-focused; AHK-Cu is hair-focused). ## Development & history - Designed as a synthetic copper-peptide analog optimised for **hair-follicle activity**. The foundational (and essentially only pivotal) study is **Pyo HK et al., *Archives of Pharmacal Research*, 2007** (PMID 17703734), which established its effects on cultured follicles and dermal papilla cells.": "- Commercialised in **hair/scalp serums**, frequently **combined with GHK-Cu** (skin/anti-inflammatory) for a multi-pathway \"copper peptide\" product. Only ever a cosmetic/research ingredient — never a drug. ## Mechanism (as proposed) a copper-binding tripeptide that, in vitro/ex vivo, stimulates **dermal papilla cell** proliferation and reduces their apoptosis (↑Bcl-2/Bax, ↓caspase-3), raises **VEGF** (follicular blood supply), lowers **TGF-β1** (delaying catagen), and engages **Wnt/β-catenin** (the anagen switch). Most of this is lab-based; in-vivo topical relevance is constrained by skin/scalp penetration, and the dose-response is **biphasic** (\"more is not better\").",
-      "Related reading": "What copper peptides are, and how the hair-focused AHK-Cu differs from skin-focused GHK-Cu, in what are copper peptides. Where copper peptides rank among the cosmetic peptides by evidence: cosmetic peptides ranked by evidence."
+      "Related reading": "What copper peptides are, and how the hair-focused AHK-Cu differs from skin-focused GHK-Cu, in what are copper peptides. Where copper peptides rank among the cosmetic peptides by evidence: cosmetic peptides ranked by evidence. How AHK-Cu's in-vitro evidence stacks up against the rest of a hair serum's ingredients — and where \"growth\" quietly becomes \"support\": do hair growth serums actually work?."
     },
-    "body_markdown": "## Identity a synthetic **copper-binding tripeptide** (3 amino acids + Cu²⁺; < 40 aa → peptide), structurally like **GHK-Cu (#26)** but with **alanine instead of glycine** at position 1. Unlike GHK-Cu, it does **not occur naturally** in the body — it was **engineered specifically for hair/scalp applications** (GHK-Cu is skin-focused; AHK-Cu is hair-focused). ## Development & history - Designed as a synthetic copper-peptide analog optimised for **hair-follicle activity**. The foundational (and essentially only pivotal) study is **Pyo HK et al., *Archives of Pharmacal Research*, 2007** (PMID 17703734), which established its effects on cultured follicles and dermal papilla cells.\n- Commercialised in **hair/scalp serums**, frequently **combined with GHK-Cu** (skin/anti-inflammatory) for a multi-pathway \"copper peptide\" product. Only ever a cosmetic/research ingredient — never a drug. ## Mechanism (as proposed) a copper-binding tripeptide that, in vitro/ex vivo, stimulates **dermal papilla cell** proliferation and reduces their apoptosis (↑Bcl-2/Bax, ↓caspase-3), raises **VEGF** (follicular blood supply), lowers **TGF-β1** (delaying catagen), and engages **Wnt/β-catenin** (the anagen switch). Most of this is lab-based; in-vivo topical relevance is constrained by skin/scalp penetration, and the dose-response is **biphasic** (\"more is not better\").\n\n## Related reading\n\nWhat copper peptides are, and how the hair-focused AHK-Cu differs from skin-focused GHK-Cu, in [what are copper peptides](/learn/what-are-copper-peptides). Where copper peptides rank among the cosmetic peptides by evidence: [cosmetic peptides ranked by evidence](/learn/best-peptides-for-skin).",
+    "body_markdown": "## Identity a synthetic **copper-binding tripeptide** (3 amino acids + Cu²⁺; < 40 aa → peptide), structurally like **GHK-Cu (#26)** but with **alanine instead of glycine** at position 1. Unlike GHK-Cu, it does **not occur naturally** in the body — it was **engineered specifically for hair/scalp applications** (GHK-Cu is skin-focused; AHK-Cu is hair-focused). ## Development & history - Designed as a synthetic copper-peptide analog optimised for **hair-follicle activity**. The foundational (and essentially only pivotal) study is **Pyo HK et al., *Archives of Pharmacal Research*, 2007** (PMID 17703734), which established its effects on cultured follicles and dermal papilla cells.\n- Commercialised in **hair/scalp serums**, frequently **combined with GHK-Cu** (skin/anti-inflammatory) for a multi-pathway \"copper peptide\" product. Only ever a cosmetic/research ingredient — never a drug. ## Mechanism (as proposed) a copper-binding tripeptide that, in vitro/ex vivo, stimulates **dermal papilla cell** proliferation and reduces their apoptosis (↑Bcl-2/Bax, ↓caspase-3), raises **VEGF** (follicular blood supply), lowers **TGF-β1** (delaying catagen), and engages **Wnt/β-catenin** (the anagen switch). Most of this is lab-based; in-vivo topical relevance is constrained by skin/scalp penetration, and the dose-response is **biphasic** (\"more is not better\").\n\n## Related reading\n\nWhat copper peptides are, and how the hair-focused AHK-Cu differs from skin-focused GHK-Cu, in [what are copper peptides](/learn/what-are-copper-peptides). Where copper peptides rank among the cosmetic peptides by evidence: [cosmetic peptides ranked by evidence](/learn/best-peptides-for-skin). How AHK-Cu's in-vitro evidence stacks up against the rest of a hair serum's ingredients — and where \"growth\" quietly becomes \"support\": [do hair growth serums actually work?](/learn/do-hair-growth-serums-work).",
     "structure_image": "images/structures/ahk-cu.svg",
     "grade_card_image": "images/grade-cards/ahk-cu.svg"
   },
@@ -1012,10 +1012,10 @@
     "last_updated": "2026-07-12",
     "in_brief": "Argireline (INCI Acetyl Hexapeptide-8) is a synthetic six-amino-acid cosmetic peptide, a fragment of SNAP-25, popularly marketed as \"topical botox.\" Small human studies suggest a modest reduction in the appearance of expression lines, but the evidence is mixed — the strongest positive trials were manufacturer-funded and an independent 2023 evaluation found no significant effect — and it is doubtful that enough peptide crosses intact skin at cosmetic concentrations to act on muscle. It is a cosmetic ingredient only; it is not botulinum toxin and has never been compared to it head-to-head.",
     "body_sections": {
-      "Identity a synthetic **hexapeptide** (6 amino acids, < 40 aa → peptide), N-acetylated, patterned on the **N-terminal end of SNAP-25** (a SNARE-complex protein and a target of botulinum toxin). Introduced ~2001 by Lipotec (now Lubrizol); now genericised and widely used. ## Development & history - Developed by the Spanish biotech **Lipotec** and introduced around **2001**; the first efficacy report was **Blanes-Mira et al. 2002** (*Int J Cosmet Sci*). It was marketed from the outset on a \"topical botox\" analogy to botulinum toxin.": "- After its patents lapsed it was **genericised** and is now widely synthesised. Lipotec was acquired by **Lubrizol** (2012), which holds the Argireline® trade name. It has only ever been a **cosmetic** ingredient — never developed as a drug. ## Mechanism (as proposed) Ac-EEMQRR-NH₂ mimics the N-terminal of SNAP-25 and is proposed to compete for SNARE-complex assembly, attenuating Ca²⁺-dependent acetylcholine exocytosis at the neuromuscular junction and thereby reducing contraction of facial-expression muscles. This differs fundamentally from botulinum toxin (which enzymatically cleaves SNAP-25 for an irreversible, injected effect). The mechanism is largely characterised in vitro; whether enough peptide crosses intact skin at cosmetic concentrations to act on the NMJ is doubtful.",
+      "Identity a synthetic **hexapeptide** (6 amino acids, < 40 aa → peptide), N-acetylated, patterned on the **N-terminal end of SNAP-25** (a SNARE-complex protein and a target of botulinum toxin). Introduced ~2001 by Lipotec (now Lubrizol); the underlying peptide is now off-patent and widely synthesised. ## Development & history - Developed by the Spanish biotech **Lipotec** and introduced around **2001**; the first efficacy report was **Blanes-Mira et al. 2002** (*Int J Cosmet Sci*). It was marketed from the outset on a \"topical botox\" analogy to botulinum toxin.": "- After the underlying peptide's patents lapsed, it became widely available from multiple manufacturers under its INCI name, Acetyl Hexapeptide-8. Lipotec was acquired by **Lubrizol** (2012), which owns the Argireline® trade name. It has only ever been a **cosmetic** ingredient — never developed as a drug. ## Mechanism (as proposed) Ac-EEMQRR-NH₂ mimics the N-terminal of SNAP-25 and is proposed to compete for SNARE-complex assembly, attenuating Ca²⁺-dependent acetylcholine exocytosis at the neuromuscular junction and thereby reducing contraction of facial-expression muscles. This differs fundamentally from botulinum toxin (which enzymatically cleaves SNAP-25 for an irreversible, injected effect). The mechanism is largely characterised in vitro; whether enough peptide crosses intact skin at cosmetic concentrations to act on the NMJ is doubtful.",
       "Related reading": "How the neurotransmitter (\"topical Botox\") peptides like Argireline fit into a routine — and why this class is the most oversold — in how to use peptides. For where Argireline ranks among the cosmetic peptides by evidence, see cosmetic peptides ranked by evidence — and the full investigation of the \"does it work?\" question in does Argireline work?."
     },
-    "body_markdown": "## Identity a synthetic **hexapeptide** (6 amino acids, < 40 aa → peptide), N-acetylated, patterned on the **N-terminal end of SNAP-25** (a SNARE-complex protein and a target of botulinum toxin). Introduced ~2001 by Lipotec (now Lubrizol); now genericised and widely used. ## Development & history - Developed by the Spanish biotech **Lipotec** and introduced around **2001**; the first efficacy report was **Blanes-Mira et al. 2002** (*Int J Cosmet Sci*). It was marketed from the outset on a \"topical botox\" analogy to botulinum toxin.\n- After its patents lapsed it was **genericised** and is now widely synthesised. Lipotec was acquired by **Lubrizol** (2012), which holds the Argireline® trade name. It has only ever been a **cosmetic** ingredient — never developed as a drug. ## Mechanism (as proposed) Ac-EEMQRR-NH₂ mimics the N-terminal of SNAP-25 and is proposed to compete for SNARE-complex assembly, attenuating Ca²⁺-dependent acetylcholine exocytosis at the neuromuscular junction and thereby reducing contraction of facial-expression muscles. This differs fundamentally from botulinum toxin (which enzymatically cleaves SNAP-25 for an irreversible, injected effect). The mechanism is largely characterised in vitro; whether enough peptide crosses intact skin at cosmetic concentrations to act on the NMJ is doubtful.\n\n## Related reading\n\nHow the neurotransmitter (\"topical Botox\") peptides like Argireline fit into a routine — and why this class is the most oversold — in [how to use peptides](/learn/how-to-use-peptides). For where Argireline ranks among the cosmetic peptides by evidence, see [cosmetic peptides ranked by evidence](/learn/best-peptides-for-skin) — and the full investigation of the \"does it work?\" question in [does Argireline work?](/learn/does-argireline-work).",
+    "body_markdown": "## Identity a synthetic **hexapeptide** (6 amino acids, < 40 aa → peptide), N-acetylated, patterned on the **N-terminal end of SNAP-25** (a SNARE-complex protein and a target of botulinum toxin). Introduced ~2001 by Lipotec (now Lubrizol); the underlying peptide is now off-patent and widely synthesised. ## Development & history - Developed by the Spanish biotech **Lipotec** and introduced around **2001**; the first efficacy report was **Blanes-Mira et al. 2002** (*Int J Cosmet Sci*). It was marketed from the outset on a \"topical botox\" analogy to botulinum toxin.\n- After the underlying peptide's patents lapsed, it became widely available from multiple manufacturers under its INCI name, Acetyl Hexapeptide-8. Lipotec was acquired by **Lubrizol** (2012), which owns the Argireline® trade name. It has only ever been a **cosmetic** ingredient — never developed as a drug. ## Mechanism (as proposed) Ac-EEMQRR-NH₂ mimics the N-terminal of SNAP-25 and is proposed to compete for SNARE-complex assembly, attenuating Ca²⁺-dependent acetylcholine exocytosis at the neuromuscular junction and thereby reducing contraction of facial-expression muscles. This differs fundamentally from botulinum toxin (which enzymatically cleaves SNAP-25 for an irreversible, injected effect). The mechanism is largely characterised in vitro; whether enough peptide crosses intact skin at cosmetic concentrations to act on the NMJ is doubtful.\n\n## Related reading\n\nHow the neurotransmitter (\"topical Botox\") peptides like Argireline fit into a routine — and why this class is the most oversold — in [how to use peptides](/learn/how-to-use-peptides). For where Argireline ranks among the cosmetic peptides by evidence, see [cosmetic peptides ranked by evidence](/learn/best-peptides-for-skin) — and the full investigation of the \"does it work?\" question in [does Argireline work?](/learn/does-argireline-work).",
     "structure_image": "images/structures/argireline.svg",
     "grade_card_image": "images/grade-cards/argireline.svg"
   },
@@ -1071,6 +1071,13 @@
         "base": "King 2023 found no eligible RCTs for skin-aging",
         "effect": "Not demonstrated",
         "caveat": "No controlled evidence supports an anti-wrinkle claim"
+      },
+      {
+        "outcome": "\"Azelaic acid derivative\" equivalence",
+        "grade": "F",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "No human study has compared a derivative head-to-head against azelaic acid itself, so the equivalence has never been tested. The 43 pooled RCTs and the melasma meta-analysis enrolled azelaic acid at 15–20% with no derivative arm; the one lower-strength comparison varied the vehicle, not the molecule. Relabelling to a derivative is an honest ingredient name — inheriting the azelaic trial record is not."
       },
       {
         "outcome": "Safety & tolerability (topical)",
@@ -1154,7 +1161,7 @@
     "sale_note": null,
     "status_note": null,
     "honest_note": "This entry grades the COSMETIC-accessible topical form, framed around the appearance of skin. Prescription 15% gel and 20% cream are regulated medicines for acne and rosacea — stronger, and a dermatologist's decision, not something to self-manage. There is no good evidence azelaic acid does anything for wrinkles. Persistent acne, rosacea, or melasma is best assessed by a dermatologist; melasma in particular recurs and needs strict daily sun protection. Azelaic acid is widely regarded as often compatible with pregnancy, but that is a conversation to confirm with your own doctor, not medical clearance.",
-    "last_updated": "2026-07-12",
+    "last_updated": "2026-07-20",
     "in_brief": "Azelaic acid (AzA) is a dicarboxylic acid from grains and skin yeast, and one of dermatology's most versatile, best-tolerated actives — calming the look of redness, clearing the appearance of breakouts, and fading pigment through selective tyrosinase inhibition. A 2023 systematic review of 43 randomised trials found it more effective than vehicle for acne, rosacea, and melasma, with 20% azelaic comparable to 4% hydroquinone for melasma. It is graded B rather than A on honest discipline: the strongest data sits at prescription strength (15–20%), the cosmetic-accessible form is milder, results are formulation-dependent (poor solubility and penetration), and no RCTs support an anti-aging use. The prescription forms are medicines for acne and rosacea and a dermatologist's call.",
     "body_sections": {
       "Identity": "a **dicarboxylic acid** (nonanedioic acid, a nine-carbon chain) found naturally in barley, wheat, and rye, and produced on skin by the commensal yeast *Malassezia*. In skincare it is a small, well-tolerated multi-use active — a single molecule with anti-pigment (tyrosinase-inhibiting), calming, and pore-clearing action. It exists as a lower-strength **cosmetic** ingredient (often around 10%, or as gentler azelaic derivatives) and as higher-strength **prescription** medicines (15% gel, 20% cream) for acne and rosacea. For the full readable explanation of what it is and how it works, see the companion guide, what is azelaic acid?",
@@ -1226,6 +1233,20 @@
         "base": "Limited clinical trials at 0.5–1% in acne-affected skin; comprehensive review 2020 (JOID) discusses evidence but base is small",
         "effect": "Reduction in appearance of blemishes and pore appearance",
         "caveat": "Acne treatment is medical territory (retinoids, benzoyl peroxide, antibiotics); cosmetic scope covers appearance only. Evidence base smaller than for photoaging."
+      },
+      {
+        "outcome": "\"Natural retinol\" / \"plant-based retinol\" identity",
+        "grade": "F",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "A compositional claim, not a clinical one — no human study can bear on it. Bakuchiol is a meroterpene phenol (C22H34O2); retinol is C20H30O. It contains no retinol, is not a retinoid, and does not bind retinoic acid receptors. The only support ever offered is a retinol-like gene-expression signature in full-thickness skin substitutes and cultured dermal fibroblasts — in vitro, and authored by employees of the ingredient's patent holder. Matching retinol in a trial does not make a molecule retinol."
+      },
+      {
+        "outcome": "\"As effective as retinol\" clinical equivalence",
+        "grade": "C",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "A real head-to-head was run: randomised, double-blind, 12 weeks, n=44, 0.5% bakuchiol against 0.5% retinol, independent of the ingredient supplier. Both arms significantly reduced wrinkle surface area and hyperpigmentation with no statistical difference between them, graded blind by a board-certified dermatologist and by computer photograph analysis; further human work in sensitive skin and an independent replication point the same way. The evidence is still early and small — one independent trial of that size over that span, designed to detect superiority with no prespecified non-inferiority margin, so a difference not detected is not equivalence demonstrated."
       },
       {
         "outcome": "Pregnancy / breastfeeding safety",
@@ -1361,10 +1382,10 @@
       ]
     },
     "is_cosmetic": true,
-    "sale_note": "Reference science below spans mechanism (Chaudhuri 2014 with declared industry affiliation), clinical (Dhaliwal 2019 independent RCT), and safety (purity considerations). Vallydia does not currently sell a bakuchiol product but grades the ingredient independently as part of the reference registry.",
+    "sale_note": "This is an independent evidence reference. Vallydia does not currently sell a bakuchiol product; this entry grades the ingredient independently as part of the reference registry, spanning mechanism (Chaudhuri 2014 with declared industry affiliation), clinical (Dhaliwal 2019 independent RCT), and safety (purity considerations).",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "Bakuchiol is a meroterpene phenol from the seeds of the Indian plant Psoralea corylifolia (babchi), first isolated in 1966 and introduced as a cosmetic active (Sytenol A, Sytheon) in 2007. It has become the most- discussed \"natural retinol alternative\" — not because it resembles retinol chemically (structurally unrelated), but because it triggers a similar gene expression signature and collagen response through non-retinoid pathways (MAPK/ERK signalling). The pivotal clinical evidence is a single independent randomised double-blind trial (Dhaliwal 2019, Br J Dermatol, n=44, 12 weeks) showing bakuchiol 0.5% matched retinol 0.5% for wrinkle and hyperpigmentation improvement with better tolerability. Independent replication at larger scale is still limited — the ingredient sits at solid Grade B, not the A that marketing sometimes implies. Honest limits: single small human RCT, formulation and purity matter (>80% required for INCI \"Bakuchiol\"), furocoumarin-containing babchi extracts are a different and less-safe category. Well-suited to sensitive, reactive, and perimenopausal skin that tolerates retinol poorly, and to routines seeking gentle collagen support without the retinization period.",
     "body_sections": {
       "Identity": "a **meroterpene phenol** — a plant-derived molecule combining a monoterpene tail with a phenolic head — first isolated in **1966** from the seeds of *Psoralea corylifolia*, a leguminous plant native to India and China (common names: babchi, bakuchi). Molecular formula C₂₂H₃₄O₂. Notably, bakuchiol has **no structural resemblance to vitamin A or the retinoids** — it is not a vitamin, not a retinoid, and does not bind retinoic acid receptors. Its similarity to retinol is entirely functional, not structural.\n\nPurity matters: to carry the INCI name **\"Bakuchiol\"** an ingredient must be **>80% pure**. Unpurified *Psoralea corylifolia* extracts and babchi seed oils contain other phytochemicals — including **psoralen and isopsoralen** (furocoumarins) — that are photosensitising and can cause serious skin reactions on sun exposure. These fall under different INCI names (e.g., \"*Psoralea corylifolia* seed extract\"), have different safety profiles, and should not be confused with purified bakuchiol.",
@@ -2535,6 +2556,13 @@
         "caveat": "Ectoin protects and hydrates; it does not build collagen or replace retinol. Framing as an anti-aging hero is a marketing overstatement."
       },
       {
+        "outcome": "\"Repairs the skin barrier\" lasting structural repair",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "Repeated placebo-controlled trials and an independent systematic review test this exact endpoint, and the direction is right — transepidermal water loss falls, barrier function stabilises. It falls short of repair: the effect holds only while the product is applied, and no trial shows structural restoration persisting after use stops. The osmolyte water shell steadies the barrier; it does not rebuild it."
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Decades of cosmetic use; extensive tolerability data",
@@ -2627,7 +2655,7 @@
     "sale_note": "Ectoin is a lawful cosmetic ingredient worldwide. Vallydia uses it in cosmetic serums at concentrations supported by clinical trials (0.5–2%) with appearance-only claims. Reference science below includes both topical cosmetic and medical-device uses (atopic dermatitis, rhinitis); only the cosmetic barrier/hydration/soothing-appearance framing is relevant to the sellable product.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "Ectoin is a small (142 Da) amino-acid-derived \"extremolyte\" — a molecule that desert bacteria in salt lakes manufacture to survive extreme heat, UV, and osmotic stress. On skin it works as an osmolyte, forming a protective water shell around cells that stabilises the barrier, reduces transepidermal water loss, calms the appearance of redness, and defends against environmental stressors. It's exceptionally gentle (hypoallergenic, pregnancy-friendly) and — unlike many trend molecules — it's small enough to genuinely penetrate skin. Honest limit: ectoin protects and hydrates, but does not build collagen or replace retinol. It's a partner, not a hero.",
     "body_sections": {
       "Identity": "a small (142 Da) cyclic **amino-acid derivative** — specifically (S)-2-methyl-1,4,5,6-tetrahydropyrimidine-4-carboxylic acid. Classified as an **extremolyte**: a natural molecule that certain microorganisms produce to survive extreme environmental stress (heat, cold, salinity, UV, desiccation). Extracted originally from *Halomonas elongata*, a bacterium isolated from the salt lakes of Wadi El Natrun, Egypt. Now produced industrially via biotechnology (bacterial fermentation) at high purity.",
@@ -2915,6 +2943,13 @@
         "base": "Human/stem-cell exosomes are studied in clinical and in-office (often injected or post-procedure) settings, where more of the exosome evidence sits.",
         "effect": "A separate, regulated, clinical lane — not a cosmetic topical",
         "caveat": "As of 2025 the FDA had NOT approved any exosome product for therapeutic use outside clinical trials; human-derived exosomes trigger the HCT/P (human cells/tissues) framework, and injected use carries procedural risks. Out of scope for a cosmetic reference and not what a topical serum delivers."
+      },
+      {
+        "outcome": "\"FDA-approved\" regulatory status",
+        "grade": "F",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "No exosome product is FDA-approved for therapeutic use outside clinical trials, and cosmetic ingredients have no FDA approval pathway at all, so there is no such approval to have been granted. Falling under the HCT/P framework is a regulatory classification, not an approval. This is a claim about regulatory status, not about skin — the human exosome data cited here measures skin appearance, not approval status."
       }
     ],
     "legal_status": [
@@ -2951,7 +2986,7 @@
         "source": 2,
         "doi": "10.1126/science.aau6977",
         "resolved": "high",
-        "verified_title": "The biology , function , and biomedical applications of exosomes"
+        "verified_title": "The biology, function, and biomedical applications of exosomes"
       }
     ],
     "cosmetic_claims": {
@@ -2975,7 +3010,7 @@
     "sale_note": "Only plant-derived, cosmetic-appropriate exosomes are relevant to any sellable product, framed around appearance and comfort (antioxidant, soothing, barrier support) — never regeneration. The reference science below includes the human/clinical exosome context for completeness; it is a different, regulated lane and does not describe a cosmetic topical.",
     "status_note": null,
     "honest_note": "The exosome category is early-evidence and heavily marketed. Cosmetic exosomes are plant-derived and act as antioxidant/soothing carriers, not regenerative agents; the \"regeneration\" story belongs to human/stem-cell exosomes in clinical, injected settings, which are unapproved outside trials and out of cosmetic scope.",
-    "last_updated": "2026-07-09",
+    "last_updated": "2026-07-20",
     "in_brief": "Exosomes are tiny lipid-membrane vesicles (roughly 30–150 nm) that cells use to communicate — a real, serious piece of biology. Because the messaging system is universal, plant cells make them too, and cosmetic exosome products are almost always plant-derived (they also sit outside the human-tissue regulatory framework). But the honest position is that the whole exosome category in skincare is still early and not established: a 2026 review of 19 human studies found only short-term, unconfirmed associations, and a 2024 review concluded the regenerative-aesthetics field is not yet scientifically established. Plant cosmetic exosomes work through antioxidant delivery, soothing, and barrier support — they are NOT \"regenerative\" like the human/stem-cell exosomes used in clinical, often injected settings. Treat them as a promising supporting antioxidant carrier, not a proven results-driver. Full deep-dive: the exosomes explainer in the Journal.",
     "body_sections": {
       "Identity": "Exosomes are **extracellular vesicles** — tiny, lipid-membrane-bound sacs, roughly **30–150 nanometres** across — that cells release to communicate with one another. Inside, they carry a mixed cargo of signalling molecules: proteins, lipids, RNA, antioxidants, and peptides. The key fact most marketing skips is that this messaging system is **universal**: human cells, animal cells, and plant cells all release exosomes.\n\nThat universality is why \"exosomes\" in a cosmetic almost always means **plant-derived** exosomes (also called plant extracellular vesicles, or PEVs) — nano-sized, lipid-based particles from sources like strawberry, green tea, aloe, grape, ginseng, or centella. They can fuse with skin-cell membranes and deliver their cargo, which is the mechanistic basis for their cosmetic use. This entry is a short, graded reference; the full detective breakdown is in the Journal explainer, what the science actually says about exosomes.",
@@ -3349,6 +3384,13 @@
         "caveat": "Bioinformatic/in vitro only; no human systemic-efficacy trials; \"reverses aging\" is not demonstrated"
       },
       {
+        "outcome": "\"Rebuilds collagen\" dermal synthesis",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The human trials scored appearance endpoints — fine lines, firmness, the look of density — not dermal collagen; no biopsy or histology has measured collagen in skin after topical application. Synthesis of collagen and elastin was shown in fibroblast culture, and permeation through intact skin is near-zero."
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Widely used cosmetic; small trials",
@@ -3398,7 +3440,7 @@
         "source": 0,
         "doi": "10.1016/0014-5793(88)80509-x",
         "resolved": "high",
-        "verified_title": "Stimulation of collagen synthesis in fibroblast cultures by the tripeptide‐copper complex glycyl‐L‐histidyl‐L‐lysine‐Cu2+"
+        "verified_title": "Stimulation of collagen synthesis in fibroblast cultures by the tripeptide-copper complex glycyl-L-histidyl-L-lysine-Cu2+"
       },
       {
         "source": 4,
@@ -3438,7 +3480,7 @@
     "sale_note": "Dual-form compound. The topical form (INCI Copper Tripeptide-1) is a lawful cosmetic ingredient — this is the sellable serum. The injectable / systemic form is a research compound, not approved. Reference science below is neutral; the sellable product uses cosmetic (appearance/feel) claims only — see the cosmetic_claims block above.",
     "status_note": "US injectable status: interim — Category 2 removed 15 April 2026, PCAC review scheduled before end-February 2027; recheck after outcome",
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "GHK-Cu is a naturally occurring copper-binding tripeptide. As a topical cosmetic ingredient it has several small human studies showing improved appearance of photoaged skin (fine lines, firmness, density). As an injectable / systemic \"research\" compound it is studied mainly in vitro and in animals, with little human data and no approval. A well-documented limitation: GHK-Cu barely penetrates intact skin, so topical results depend heavily on formulation and delivery.",
     "body_sections": {
       "Identity": "a **tripeptide** (3 amino acids: glycine, L-histidine, L-lysine, < 40 aa → peptide) coordinated with a **copper(II)** ion. Occurs naturally in human plasma, saliva and urine; plasma levels decline ~60% between ages ~20 and ~60. First described by Loren Pickart (1973).",
@@ -4041,6 +4083,20 @@
         "caveat": "Medical device territory, not cosmetic; requires practitioner and falls outside 1223/2009 cosmetic scope"
       },
       {
+        "outcome": "\"Holds 1,000 times its weight in water\" skin-hydration advantage",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The 1,000:1 ratio is a laboratory property of the raw polymer measured under ideal humidity, not a measurement made in skin. Human trials measured corneometry hydration, and it improves; none measured the ratio in skin, and none showed hydration scaling with it"
+      },
+      {
+        "outcome": "\"Fills wrinkles from within\" needle-free filler equivalence",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "Topical trials measured wrinkle depth and appearance improving through surface smoothing of hydrated upper layers. Volume restoration is documented only for crosslinked hyaluronic acid injected into the dermis, a separate medical-device category; no human study shows a topical reaching the dermis or adding volume from within"
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Decades of widespread cosmetic use across all molecular weights",
@@ -4120,7 +4176,7 @@
     "sale_note": "Hyaluronic Acid and Sodium Hyaluronate are lawful cosmetic ingredients worldwide. Vallydia uses multi-molecular-weight HA in cosmetic serums with appearance-only claims. Reference science below includes topical cosmetic studies, oral supplementation trials, and injectable filler trials; only the topical cosmetic use is relevant to the sellable product.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "Hyaluronic acid (HA) is a naturally occurring polysaccharide that binds up to a thousand times its weight in water. As a topical cosmetic ingredient, HA reliably improves skin hydration (Grade A) and — at lower molecular weights — the appearance of fine lines and elasticity (Grade B). Higher MW forms sit on the surface; lower MW forms penetrate deeper. Effect is primarily humectant and surface-focused, not regenerative; HA does not build collagen or replace retinol, but it partners well with almost every other active. Injectable crosslinked HA is a separate medical-device category and outside the cosmetic scope.",
     "body_sections": {
       "Identity": "a large, negatively-charged **glycosaminoglycan** (polysaccharide) composed of repeating disaccharide units of D-glucuronic acid and N-acetyl-D-glucosamine. Occurs naturally throughout the body, most abundantly in skin, joints, and eyes. In skin, HA is a major component of the extracellular matrix and dermal ground substance, holding water and maintaining tissue turgor. Endogenous HA declines with age. Used topically as sodium hyaluronate (the sodium salt, more stable in cosmetic formulations) in molecular weights ranging from ~10 kDa (very-low, deeply penetrating) through 2,000+ kDa (very-high, surface-forming).",
@@ -4485,6 +4541,13 @@
         "caveat": "Isolated standalone evidence at a 1% compliant strength is limited"
       },
       {
+        "outcome": "\"Whitening\" overall skin-tone lightening",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The human trials measured melasma severity and the fading of discrete spots and post-inflammatory marks — not a shift in baseline constitutive skin colour, which is what the whitening promise asserts. Evens the look of existing pigment; does not lighten the skin a person already has"
+      },
+      {
         "outcome": "Tolerability & stability",
         "grade": null,
         "base": "Nakagawa 1995 — kojic acid is the brightener most associated with allergic contact dermatitis; it is also chemically unstable and photosensitising",
@@ -4567,7 +4630,7 @@
     "sale_note": null,
     "status_note": null,
     "honest_note": "Kojic acid is a cosmetic ingredient, framed around the appearance of tone. In the EU, Regulation 2024/996 caps it at a maximum of 1% in leave-on face and hand products; most efficacy studies used 2–4%, so EU-compliant products are milder than what was tested. It is the brightener most associated with allergic contact dermatitis, and it is unstable and photosensitising — so patch testing, well-sealed opaque packaging, and daily sunscreen matter more here than with gentler brighteners. Persistent or hormonal pigmentation such as melasma is a dermatologist's territory, and pregnancy use is best discussed with a doctor.",
-    "last_updated": "2026-07-12",
+    "last_updated": "2026-07-20",
     "in_brief": "Kojic acid (KA) is a fungal fermentation product and a long-established tyrosinase inhibitor — it works by chelating the copper the enzyme needs. Its mechanism is strong (among the most consistent tyrosinase inhibitors in comparative lab work) and there is some standalone clinical signal: a 2013 RCT found 1% kojic acid alone reduced melasma severity. But the register grade is held at C because the caveats stack higher than for any other brightener here: most efficacy data comes from 2–4%, above the EU's 1% cap (Regulation 2024/996), so compliant products are milder than the studies; it is the brightener most associated with allergic contact dermatitis; it is chemically unstable and photosensitising; and it is almost always used in combination, so isolated evidence at a compliant strength is limited. A real ingredient with a real mechanism — honestly the most caveated of the pigment set.",
     "body_sections": {
       "Identity": "a compound produced by fungi during fermentation — its skin-brightening power was first noticed on the pale hands of sake brewers. It is a long-established, globally recognised depigmenting agent, and also chemically **unstable** (prone to oxidising and losing potency) and, in the EU, now **regulated**: Regulation 2024/996 — the same package that capped retinol at 0.3% — limits kojic acid to a maximum of **1%** in leave-on face and hand products. For the full readable explanation of what it is and how it works, see the companion guide, what is kojic acid?",
@@ -5046,6 +5109,20 @@
         "caveat": "Better than plain KTTKS, but a formal 1–50 ppm dose study is lacking"
       },
       {
+        "outcome": "\"Collagen-boosting\" collagen synthesis in human skin",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The 12-week vehicle-controlled human trial measured appearance — fine lines, wrinkle depth, roughness — not collagen synthesis in skin; the collagen mechanism itself rests on fibroblast culture"
+      },
+      {
+        "outcome": "\"+117% collagen\" the quoted magnitude",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The +117% figure is a fibroblast cell-culture readout, not a human result. The human data is a single unreplicated manufacturer-run biopsy study showing raised collagen and elastin markers over about four months of twice-daily use — the right direction, well short of the quoted magnitude"
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Broad cosmetic use",
@@ -5100,7 +5177,7 @@
         "source": 3,
         "doi": "10.1021/mp300549d",
         "resolved": "high",
-        "verified_title": "Collagen Stimulating Effect of Peptide Amphiphile C16–KTTKS on Human Fibroblasts"
+        "verified_title": "Collagen Stimulating Effect of Peptide Amphiphile C16-KTTKS on Human Fibroblasts"
       }
     ],
     "cosmetic_claims": {
@@ -5124,7 +5201,7 @@
     "sale_note": "Cosmetic signal peptide — a different archetype from Argireline. Argireline is a neuromodulator (proposed to relax muscle); Matrixyl is a matrikine / signal peptide (proposed to tell skin to build matrix). It is the best-evidenced of the common cosmetic peptides — and its whole marketing (\"collagen-boosting\") is the claim trap.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-13",
+    "last_updated": "2026-07-20",
     "in_brief": "Matrixyl (INCI Palmitoyl Pentapeptide-4) is a synthetic signal peptide — a palmitoylated fragment (Pal-KTTKS) of type I procollagen — used in anti-ageing cosmetics. It has the most-replicated clinical evidence among cosmetic signal peptides, anchored by a 12-week split-face RCT, showing a modest improvement in the appearance of photoaged skin. Many of the larger figures quoted for it (e.g. \"+117% collagen\") come from in-vitro or manufacturer data, not the controlled human trial.",
     "body_sections": {
       "Identity a synthetic **lipopeptide** — the pentapeptide **KTTKS** (5 amino acids, < 40 aa → peptide), a matrikine fragment of the C-terminal propeptide of **type I procollagen**, conjugated to **palmitic acid** (C16) to aid skin penetration (unmodified KTTKS is hydrophilic, ~562 Da, and penetrates poorly). KTTKS identified 1993 (Katayama); Matrixyl launched 2000 by Sederma. ## Development & history - The active **KTTKS** sequence was identified in **1993 (Katayama et al.)** as a collagen-propeptide fragment that stimulates matrix synthesis. To make it usable on skin, the French active-ingredient house **Sederma** attached a palmitoyl tail and launched **Pal-KTTKS as Matrixyl in 2000** — described as the first peptide active designed for anti-ageing cosmetics (Lintner & Peschard, 2000).": "- The line then expanded commercially: **Matrixyl → Matrixyl 3000** (a two-peptide system) **→ Matrixyl Synthe'6**. Sederma is part of **Croda**. Like Argireline, it has only ever been a cosmetic ingredient, not a drug. ## Variants - **Matrixyl** = single peptide **Pal-KTTKS** (Palmitoyl Pentapeptide-4).\n- **Matrixyl 3000** = two-component: **Palmitoyl Tripeptide-1 (Pal-GHK)** (sometimes listed under the older INCI name **Palmitoyl Oligopeptide**) + **Palmitoyl Tetrapeptide-7 (Pal-GQPR)** — different signals (collagen + IL-6 downregulation).\n- **Matrixyl Synthe'6** = Palmitoyl Tripeptide-38. ## Mechanism (as proposed) KTTKS is a **matrikine** — a fragment released during type I collagen processing that acts as a feedback signal. Matrixyl is proposed to mimic this signal: once the palmitoyl tail carries it into the dermis, KTTKS is proposed to bind fibroblast surface receptors (TGF-β-linked signalling) and stimulate extracellular-matrix synthesis (collagen, fibronectin, HA), with the effect described as self-limiting. Much of this is characterised in vitro; the extent and consistency of the effect on intact human skin is more modest than the cell-culture figures suggest.",
@@ -5820,6 +5897,20 @@
         "caveat": "Not translated to clinical endpoints; other polyphenols show similar in-vitro effects that do not translate to visible in vivo results"
       },
       {
+        "outcome": "\"15x more effective than niacinamide\" superiority",
+        "grade": "F",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "No human study compares this compound to niacinamide. The only human trial ran against a vehicle control, not against niacinamide, and measured moisture, elasticity and fine lines. The multiplier comes from a single inflammatory marker in cell culture at concentrations that were not matched between the two ingredients. A ratio between two ingredients requires both of them in one study; that study has never been run."
+      },
+      {
+        "outcome": "\"Interrupts the root cause of skin aging\" causal claim",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The one human trial — 8 weeks, placebo-controlled, double-blind, n=30 — measured moisture, elasticity and the appearance of fine lines. It did not measure inflammaging or any causal driver of aging, and the inflammaging mechanism itself rests on cultured human dermal fibroblasts. Two things remain unshown: that inflammaging is a settled single root cause of skin aging, and that this compound interrupts it in living skin. The trial measured appearance; the promise asserts cause."
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Ruscinc 2024 HET-CAM assay — non-irritating; decades of dietary exposure (citrus consumption); no significant topical safety signals",
@@ -5899,7 +5990,7 @@
     "sale_note": "Naringenin is a lawful cosmetic ingredient globally. Vallydia does not currently sell a naringenin product — the biotech-fermented form is exclusively formulated into the Deinde brand by Debut Biotech, and plant- extracted forms of varying purity are used by other brands. This registry entry provides independent evidence-grading as a reference; the reference science below spans both cell/animal mechanism studies and one in-house brand clinical trial.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "Naringenin is a flavanone polyphenol naturally present in citrus fruits (concentrated in grapefruit peel). Independent laboratory research (2016–2024) consistently shows it has meaningful biological activity on skin cells: anti-inflammatory, anti-oxidative, MMP-suppressing, UV- protective — and, uniquely among four common polyphenols in a 2024 comparison, superior anti-lipoperoxidation in stratum corneum. However, every one of these independent studies is either in-vitro (cells, reconstructed skin models) or on animals. The only human clinical trial is an in-house study by Debut Biotech / Deinde (n=30, 8 weeks, 0.45% naringenin), which is a promising signal but not independent proof of visible anti-aging effect. The claim \"15× more effective than niacinamide\" is a cell-culture single-biomarker comparison, not a head-to-head clinical trial. Naringenin is a plausible barrier-protective, gentle anti-oxidative ingredient — appropriate for sensitive and perimenopausal skin — but the strong marketing framing outruns the current independent evidence base.",
     "body_sections": {
       "Identity": "a **flavanone** — specifically 4′,5,7-trihydroxyflavanone — a subclass of flavonoid polyphenols. Naturally present in citrus fruits, most concentrated in the peel and pith of grapefruit and other citrus. Bitter taste characteristic (naringin, the glycoside form, is responsible for grapefruit bitterness; naringenin is the aglycone). Also produced by biotech fermentation using engineered microorganisms — Debut Biotech's process yields ~99% pure naringenin used exclusively in their Deinde brand at 0.45% concentration.",
@@ -5971,6 +6062,13 @@
         "caveat": "Systemic dosing outside cosmetic scope; do not conflate oral clinical data with topical serum claims"
       },
       {
+        "outcome": "\"High-strength 10%+\" superiority over the proven 2–5% range",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The comparison exists in humans — 2%, 5% and 10% tested on sebum and hydration — and 10% did not beat 5%. Every controlled result graded on this page sits at 2–6%. The extra strength adds flushing and tingling, not proportionate benefit."
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Decades of widespread cosmetic use; controlled trials",
@@ -6027,7 +6125,7 @@
         "source": 2,
         "doi": "10.1111/j.1365-2133.2009.09477.x",
         "resolved": "high",
-        "verified_title": "Reduction in the appearance of facial hyperpigmentation after use of moisturizers with a combination of topical niacinamide and N -acetyl glucosamine: results of a randomized, double-blind, vehicle-controlled trial"
+        "verified_title": "Reduction in the appearance of facial hyperpigmentation after use of moisturizers with a combination of topical niacinamide and N-acetyl glucosamine: results of a randomized, double-blind, vehicle-controlled trial"
       },
       {
         "source": 3,
@@ -6067,7 +6165,7 @@
     "sale_note": "Niacinamide is a lawful cosmetic ingredient worldwide. Vallydia uses it in cosmetic serums at concentrations supported by clinical trials (2–10%) with appearance-only claims. Reference science below includes both topical cosmetic and higher-dose oral / medical uses; only topical cosmetic use is relevant to the sellable product.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "Niacinamide (nicotinamide, vitamin B3) is one of the best-evidenced cosmetic active ingredients. Multiple independent controlled human trials show measurable improvement in skin appearance related to hyperpigmentation, barrier function (reduced TEWL), and — at higher concentrations — fine lines and sebum. Effect sizes are modest compared with prescription retinoids or hydroquinone, but tolerability is much better and it plays well with almost every other active. It is a cornerstone cosmetic ingredient, not a hero molecule.",
     "body_sections": {
       "Identity": "a water-soluble amide form of **vitamin B3** (pyridine-3-carboxamide). It is the biologically active form used by the body to synthesise NAD+ and NADP+ — coenzymes central to cellular energy metabolism, DNA repair, and hundreds of enzymatic reactions. In skincare it is applied topically as a small, stable, well-tolerated molecule.",
@@ -6446,6 +6544,13 @@
         "caveat": "In vitro; reported magnitudes are largely manufacturer-derived"
       },
       {
+        "outcome": "\"Collagen-boosting\" / \"rebuilds collagen\" structural claim",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The controlled human endpoints are appearance-based — fine lines, wrinkle depth, scored firmness. Collagen synthesis was never measured in human skin; the collagen data are in-vitro fibroblast assays with largely manufacturer-derived magnitudes."
+      },
+      {
         "outcome": "Safety (both, topical)",
         "grade": null,
         "base": "Broad cosmetic use",
@@ -6500,7 +6605,7 @@
     "sale_note": "Cosmetic signal peptides — the \"collagen-signal\" archetype (like Matrixyl #28), with the same claim trap. Two related but distinct collagen-signalling peptides. Mechanistically among the better-grounded cosmetic peptides and very well tolerated — but the standalone human evidence is mostly manufacturer/in-vitro, and the \"collagen boosting\" claim is the structural-claim trap.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-13",
+    "last_updated": "2026-07-20",
     "in_brief": "Palmitoyl Tripeptide-1 (Pal-GHK) and Palmitoyl Tripeptide-5 (Pal-KVK / SYN-COLL) are signal peptides proposed, like Matrixyl, to tell skin fibroblasts to make collagen — Tripeptide-1 as a GHK matrikine, Tripeptide-5 by activating TGF-β. They are mechanistically plausible and very well tolerated, but the standalone human evidence is mostly manufacturer/in-vitro (thinner than Matrixyl's single split-face RCT), and most of the human data for Tripeptide-1 is actually for the Matrixyl 3000 combination, not the peptide alone. They are cosmetic ingredients only.",
     "body_sections": {
       "Identity two synthetic **palmitoylated tripeptide** signal peptides (3 aa + C16 palmitoyl tail; < 40 aa → peptides), each proposed to signal fibroblasts to build extracellular matrix — but by **different routes**:": "- **Tripeptide-1 (Pal-GHK):** a **matrikine** — the GHK sequence derives from the C-terminal region of the α2 chain of collagen I and acts as a repair signal via the TGF-β pathway.\n- **Tripeptide-5 (Pal-KVK):** a **TGF-β activator** — mimics the KRFK sequence of **thrombospondin-1 (TSP-1)**, which activates latent TGF-β. ## Development & history - **Palmitoyl Tripeptide-1** was developed by **Sederma** (France) as part of its Matrikine platform (late 1990s; \"Biopeptide CL\"), and became prominent as a component of **Matrixyl 3000** (launched ~2003), paired with **Palmitoyl Tetrapeptide-7 (Pal-GQPR / Rigin)**, an anti-inflammatory peptide.\n- **Palmitoyl Tripeptide-5** was developed by **DSM** (Pentapharm) as **SYN-COLL**.\n- Both have only ever been **cosmetic** ingredients, never drugs. ## Mechanism (as proposed) - **Palmitoyl Tripeptide-1:** the GHK matrikine is proposed to bind fibroblast receptors (TGF-β / integrin signalling) and upregulate collagen I/III, fibronectin and elastin — mimicking the collagen-degradation repair signal without actual degradation.\n- **Palmitoyl Tripeptide-5:** proposed to mimic thrombospondin-1 and activate latent TGF-β, which in turn signals procollagen synthesis; also reported to reduce MMP activity.\n- In both, the palmitoyl tail aids skin penetration; most characterisation is in vitro, and the in-vivo effect is modest.",
@@ -6548,6 +6653,13 @@
         "base": "A well-studied regenerative compound as an INJECTED treatment — clinical evidence exists for wound healing, tissue repair, and aesthetic (\"salmon DNA\") procedures, where it engages adenosine A2A receptors and supplies nucleotides to cells.",
         "effect": "Genuine regenerative signalling when injected by a professional",
         "caveat": "This is a medical/aesthetic procedure administered by qualified professionals and regulated as a drug or device in many regions — it is out of cosmetic scope, carries procedural risk, and is NOT what a topical serum delivers. Listed only so the two stories are not confused."
+      },
+      {
+        "outcome": "\"Collagen-boosting\" topical collagen synthesis",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "The human evidence for this molecule is for the injected form, which reaches the dermis directly and is regulated as a drug or device in some markets — a different route from the one being sold here. No human study shows a topical serum raising collagen synthesis; the topical case rests on reviews of the injected literature and on stratum-corneum permeation arguments, and a 2024 systematic review found the wider regenerative-aesthetics field lacks scientific rigour."
       }
     ],
     "legal_status": [
@@ -6599,7 +6711,7 @@
     "sale_note": "A sellable topical PDRN product is framed around soothing, hydration, and comfort for sensitive or post-procedure-feeling skin — never regeneration or the outcomes of injectable PDRN. The injected/clinical context below is reference background only and is out of cosmetic scope.",
     "status_note": null,
     "honest_note": "PDRN's real regenerative evidence is for the INJECTED drug, not the topical serum. Large PDRN molecules mostly cannot cross intact skin, so topical benefits are limited to soothing, hydration, and barrier comfort. Do not credit a serum with the injectable's results.",
-    "last_updated": "2026-07-09",
+    "last_updated": "2026-07-20",
     "in_brief": "PDRN (polydeoxyribonucleotide) is a mixture of DNA fragments, usually derived from salmon or trout, marketed as \"salmon DNA\" skincare. The honest split: as an INJECTED treatment it is a real, well-studied regenerative compound used in clinical and aesthetic settings — but that is a regulated medical procedure, not a serum. The topical \"salmon DNA\" products riding that reputation are a much gentler thing: PDRN's large molecules mostly cannot cross the skin barrier, so a serum offers soothing, hydration, and post-procedure comfort rather than the dramatic renewal the injections deliver. That is genuinely nice for sensitive and post-procedure skin, but a world away from the miracle framing. Full deep-dive: the PDRN explainer in the Journal.",
     "body_sections": {
       "Identity": "**PDRN — polydeoxyribonucleotide** — is a mixture of short DNA fragments, most often extracted and purified from salmon or trout (hence the \"salmon DNA\" nickname). A closely related cosmetic term, **PN (polynucleotides)**, refers to the same family of DNA-fragment ingredients. It is not a single clean molecule but a heterogeneous set of nucleotide chains, which is why this entry files it under a blend rather than one defined compound.\n\nThe single most important fact about PDRN is that it lives a **double life**, and the two versions are easy to confuse: an injected regenerative treatment with genuine clinical evidence, and a topical \"salmon DNA\" serum that borrows that reputation but works far more gently. This entry is a short, graded reference for the cosmetic (topical) use; the full detective breakdown — including the injectable's story — is in the Journal explainer, the honest guide to PDRN and \"salmon DNA\" skincare.",
@@ -7447,7 +7559,7 @@
       ]
     },
     "is_cosmetic": true,
-    "sale_note": "This registry entry provides independent evidence-grading as a reference and to support the comparative peptides-vs-retinol article.",
+    "sale_note": "This is an independent evidence reference. Vallydia does not currently sell a retinol product; this entry supports the comparative peptides-vs-retinol article.",
     "status_note": null,
     "honest_note": null,
     "last_updated": "2026-07-07",
@@ -8172,6 +8284,13 @@
         "caveat": "No trial vs botulinum toxin; mechanism is different (reversible competition) and much weaker"
       },
       {
+        "outcome": "\"Up to 63% reduction in wrinkle depth\" headline magnitude",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "Wrinkle depth was measured, but only in a single manufacturer-run periocular study of 17 subjects at 10% peptide over 28 days; no independent group has reproduced the figure, and the concentration tested is far above what finished cosmetics contain"
+      },
+      {
         "outcome": "Safety (topical)",
         "grade": null,
         "base": "Broad cosmetic use",
@@ -8222,7 +8341,7 @@
     "sale_note": "Cosmetic — the \"next-generation Argireline,\" with thinner evidence than its parent. Same SNARE/SNAP-25 mechanism and the same \"botox\" claim minefield as Argireline (#27), but marketed as more potent. The honest twist: its headline numbers are manufacturer-only, and Argireline actually has the larger, more independent evidence base.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-13",
+    "last_updated": "2026-07-20",
     "in_brief": "SNAP-8 (Acetyl Octapeptide-3) is an elongated version of Argireline that works through the same SNARE / SNAP-25 mechanism and is marketed as a more potent \"topical botox.\" Its headline figures — \"up to ~63% wrinkle-depth reduction,\" \"~30% more active than Argireline\" — come from manufacturer studies; there is essentially no independent standalone RCT, and, notably, Argireline itself has the larger and more independent evidence base. Reaching the neuromuscular junction through intact skin is doubtful. It is a cosmetic ingredient only — not botulinum toxin.",
     "body_sections": {
       "Identity a synthetic **octapeptide** (8 amino acids, < 40 aa → peptide) patterned on the N-terminal end of **SNAP-25**, with two extra amino acids added to Argireline's hexapeptide to extend coverage of the SNAP-25 target region. ## Development & history - Developed by the Spanish biotech **Lipotec** (Barcelona; now **Lubrizol** Life Science) — the same company that made Argireline — as its **\"next-generation\" extension**. Adding alanine + aspartate to Argireline's sequence was intended to improve binding to the SNARE complex, and Lipotec reported it **~30% more active** than Argireline in the company's own in-vitro/in-vivo testing.": "- Genericised and now widely used, often **paired with Argireline, Leuphasyl or Matrixyl** in serums. Like Argireline, it has only ever been a **cosmetic** ingredient, never a drug. ## Mechanism (as proposed) like Argireline, SNAP-8 mimics the N-terminal of **SNAP-25** and is proposed to compete for **SNARE-complex** assembly, reducing Ca²⁺-dependent acetylcholine release at the neuromuscular junction and thus facial-muscle contraction. This differs fundamentally from botulinum toxin (which enzymatically cleaves SNAP-25). The evidence is largely in vitro / manufacturer-derived, and whether enough peptide crosses intact skin at cosmetic concentrations to act on the NMJ is doubtful.",
@@ -8278,6 +8397,13 @@
         "base": "Used in clinical and dermatology practice as a gentle, non-reactive emollient on sensitised or post-procedure skin; supported mainly by tolerability and clinical experience rather than large trials.",
         "effect": "A comfortable, non-stinging emollient layer on reactive skin",
         "caveat": "Comfort and appearance support only — not a treatment for any condition, and not a substitute for post-procedure medical guidance."
+      },
+      {
+        "outcome": "\"Balances / controls oil production\" sebum regulation",
+        "grade": "D",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "Human measurement of squalane covers moisturisation and tolerability; sebum output has never been measured in a trial. The balancing story is mechanism only — skin sensing adequate surface lipid and easing its own production — with no outcome data behind it. What was measured is how skin felt and how much water it held, not how much oil it makes."
       }
     ],
     "legal_status": [
@@ -8358,7 +8484,7 @@
     "sale_note": "Squalane is a lawful cosmetic ingredient worldwide and one of the best-tolerated facial oils (a sebum-mimetic hydrocarbon, oxidatively stable, no documented pregnancy concerns). Vallydia uses plant-derived (sugarcane/olive) squalane as a lightweight emollient. Only cosmetic appearance/feel use is relevant to the sellable product; it is an emollient, not a treatment.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-09",
+    "last_updated": "2026-07-20",
     "in_brief": "Squalane is a lightweight, exceptionally well-tolerated emollient — the stable, hydrogenated form of squalene, a lipid naturally found in human sebum. Its strengths are practical rather than dramatic: it softens, smooths, and helps seal in moisture without a heavy or greasy feel, and because it mimics the skin's own oil it is non-comedogenic enough to suit oily and acne-prone skin, where richer plant oils often fail. It is not a structural barrier-repair ingredient (that is ceramides' role) and the antioxidant / anti-ageing claims around it are preliminary. Modern squalane is sustainably plant-derived from sugarcane or olives, chemically identical to the older shark-liver source. A reliable, gentle, all-skin-type moisturising oil — best judged as an excellent emollient rather than a treatment active.",
     "body_sections": {
       "Identity": "Squalane is a **saturated hydrocarbon oil** (C30H62) — the fully hydrogenated, shelf-stable version of **squalene**, a lipid that occurs naturally in human sebum (where it makes up roughly 10–12% of skin surface lipids). Hydrogenating squalene removes the double bonds that make the parent molecule prone to oxidation, turning an unstable natural oil into a stable, long-shelf-life cosmetic ingredient with a light, silky, non-greasy slip.\n\nBecause it is so close to a lipid the skin already makes, squalane spreads and absorbs in a way that reads as \"skin-like\" rather than heavy — which is the root of both its pleasant feel and its unusually broad tolerability.\n\n- **Squalene vs squalane** — squalene (with an \"e\") is the natural, unsaturated precursor and oxidises easily; squalane (with an \"a\") is the hydrogenated, stable form used in skincare. The distinction matters on labels.\n- **Source** — historically extracted from shark liver oil; modern cosmetic squalane is almost entirely **plant-derived** (biofermented from sugarcane, or from olives), and is chemically identical to the animal-derived material.",
@@ -8648,7 +8774,7 @@
         "grade": "D",
         "base": "Marketing claim",
         "effect": null,
-        "caveat": "Not equivalent to injected botulinum toxin; milder, temporary, surface-relaxing — honest framing needed"
+        "caveat": "The claim is not baseless: the maker documents reversible mnAChR ε-subunit antagonism modelled on Waglerin-1 (McArdle 1999), substantial in-vitro block of muscle-cell contraction, and 36-subject ~28-day cosmetic testing showing reduced wrinkle depth. But it stays milder, temporary and surface-acting — how much topical peptide reaches muscle is inherently limited, and no trial has compared it head-to-head against injected botulinum toxin. Not equivalent; honest framing needed"
       },
       {
         "outcome": "Antioxidant (secondary claim)",
@@ -8711,11 +8837,11 @@
       }
     ],
     "cosmetic_claims": null,
-    "is_cosmetic": false,
+    "is_cosmetic": true,
     "sale_note": "\"Botox from snake venom\" — a genuinely beautiful biomimetic story, and a legitimate cosmetic ingredient. Syn-Ake is a rarity in this register: a real, approved cosmetic peptide with a great origin tale and honest topical data — not a gray-market injectable. Three threads: (1) it's inspired by the venom of the Temple Viper, copying a toxin that paralyzes prey — reimagined as a needle-free wrinkle-relaxer; (2) its mechanism is elegant and specific — a reversible block of the muscle acetylcholine receptor, the same idea as Botox but topical and gentle; (3) because it's a cosmetic (topical, appearance-focused), this is exactly the kind of legal-lane ingredient a compliant storefront can actually sell.",
     "status_note": "established cosmetic active; status stable",
     "honest_note": null,
-    "last_updated": "2026-07-13",
+    "last_updated": "2026-07-20",
     "in_brief": "Syn-Ake is a synthetic cosmetic dipeptide with one of skincare's best origin stories: it mimics Waglerin-1, a muscle-paralyzing toxin from the venom of the Temple Viper, reimagined by Swiss chemists (Pentapharm, 2001; now dsm-firmenich) as a needle-free, topical \"Botox alternative.\" Its mechanism is genuinely elegant — it acts as a reversible antagonist of the muscle nicotinic acetylcholine receptor (mnAChR), binding the receptor's ε-subunit to dampen the nerve signal that makes facial muscles contract, so expression lines relax and soften. It's a legitimate, approved cosmetic ingredient (topical, not injected) with real in-vitro and in-vivo data: it reduces muscle-cell contraction substantially in vitro, and clinical cosmetic testing shows visibly reduced wrinkle depth over ~28 days, with good skin tolerance and a reversible effect. The honest framing: it's milder than Botox and works on the look of dynamic (expression) wrinkles, not deep structural ones — and, like all topical \"muscle-relaxing\" peptides, how much reaches muscle is inherently limited. For this register it's notable as a beautiful biomimetic story AND a genuine legal-lane cosmetic — the kind of ingredient that's actually sellable, honestly, with appearance claims.",
     "body_sections": {
       "Identity a **synthetic cosmetic dipeptide** engineered to **mimic Waglerin-1**, a neuromuscular-blocking toxin from snake venom — reframed as a **needle-free, topical \"Botox-like\" wrinkle-relaxing active.** It's a **legitimate, widely-used cosmetic ingredient** (not a drug, not an injectable), supplied by **dsm-firmenich** and formulated into serums/creams at low percentages. ## Mechanism (as proposed) at the neuromuscular junction, nerves release **acetylcholine**, which binds the **muscle nicotinic acetylcholine receptor (mnAChR)** to open channels, let **Na⁺** in, **depolarize** the muscle, and trigger **contraction**. Syn-Ake's active dipeptide is a **reversible antagonist** of this receptor — modeled on Waglerin-1's selective block of the receptor's **ε (epsilon) subunit** — so it **competes with acetylcholine**, reduces Na⁺ influx and depolarization, and thereby **dampens the micro-contractions** of facial mimic muscles. Fewer repeated contractions → **relaxed, smoothed expression lines**. It's conceptually the *same target logic* as Botox (both quiet the nerve-to-muscle signal) but by a **different, reversible, receptor-level mechanism**, delivered **topically** rather than injected — which is why it's **gentler and more gradual**.": "",
@@ -9746,6 +9872,13 @@
         "base": "Oral vitamin C supplementation supports normal skin function (collagen cofactor role) but oral dose does not efficiently deliver high concentrations to skin — topical route is required for cosmetic-visible effects",
         "effect": "Adequate dietary intake supports collagen homeostasis; supraphysiological supplementation does not translate to visible topical outcomes",
         "caveat": "Outside cosmetic scope; do not conflate oral nutrition data with topical serum claims"
+      },
+      {
+        "outcome": "\"Stable vitamin C\" equivalence to L-ascorbic acid",
+        "grade": "F",
+        "base": "Marketing claim",
+        "effect": null,
+        "caveat": "No human trial has placed a derivative beside L-ascorbic acid at matched concentration and endpoint; the comparison the claim rests on has never been run. Human data exists for each separately, never in the same study. Conversion to L-ascorbic acid in living skin is unquantified. Stability is real; equivalence is the inference drawn from it, and that inference is untested."
       }
     ],
     "legal_status": [
@@ -9866,10 +9999,10 @@
       ]
     },
     "is_cosmetic": true,
-    "sale_note": "Vitamin C is a lawful cosmetic ingredient worldwide. This registry entry provides independent evidence-grading as a reference.",
+    "sale_note": "This is an independent evidence reference. Vallydia does not currently sell a vitamin C product; this entry provides independent evidence-grading as a reference.",
     "status_note": null,
     "honest_note": null,
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-20",
     "in_brief": "Vitamin C (L-ascorbic acid) is one of the best-evidenced cosmetic actives — multiple independent RCTs across two decades and a 2023 systematic review consistently show visible improvement in fine wrinkles, texture, and hyperpigmentation over 3–6 months. As a cofactor for the enzymes that make collagen, its mechanism is fundamental, not marketing. Practical honest limits: L-AA is notoriously unstable (oxidises rapidly, requires low pH <3.5, airless packaging), incompatible with copper peptides in shared formulation, and effect sizes are smaller than prescription retinoids. The many \"vitamin C derivatives\" (SAP, MAP, THDA, ascorbyl glucoside, ethyl ascorbic acid, ascorbyl tetraisopalmitate) are more stable and better tolerated but require enzymatic conversion in skin — they are not automatically equivalent to L-AA at same nominal concentration and have smaller individual clinical evidence bases. Well-suited to morning routines (antioxidant photoprotection adjunct), pigmentation-focused regimens, and combinations with SPF or niacinamide.",
     "body_sections": {
       "Identity": "**vitamin C** — L-ascorbic acid — is a water-soluble organic acid, molecular formula C₆H₈O₆. Chemically, it is a lactone (a cyclic ester) of a six-carbon sugar acid derived from glucose. In humans, it is an essential nutrient (we cannot synthesise it) and is present in skin at concentrations 5–10× higher than in blood — testament to how central it is to skin function. In cosmetics, L-ascorbic acid is the most-studied and best-evidenced form, but its notorious instability drove development of a family of **derivatives** — chemically modified molecules that preserve some vitamin C activity while gaining stability or altered penetration. Common derivatives: **sodium ascorbyl phosphate (SAP)**, **magnesium ascorbyl phosphate (MAP)**, **ascorbyl glucoside**, **3-O-ethyl ascorbic acid (EAA)**, **tetrahexyldecyl ascorbate (THDA / VC-IP)**, and **ascorbyl tetraisopalmitate**. Each has a different stability, solubility, penetration profile, and — importantly — a different (smaller) clinical evidence base than L-AA itself.",
