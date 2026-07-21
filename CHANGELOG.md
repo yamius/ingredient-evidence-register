@@ -11,7 +11,7 @@ were added and 2 existing ones re-graded. No compound was added or removed; all 
 
 This is a minor version, not a patch. The promise rows were authored in the source register on
 2026-07-20 but were not captured by the 1.1.0 build, so 1.1.0 shipped 2 of them where the source
-had 21. Anyone who took 1.1.0 as the record of promise grades had an incomplete one.
+had 20. Anyone who took 1.1.0 as the record of promise grades had an incomplete one.
 
 ### Added
 - **19 marketing-claim rows across 16 ingredients** (`grades.csv`, `compounds.json`,
