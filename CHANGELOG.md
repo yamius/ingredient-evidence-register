@@ -3,6 +3,47 @@
 All notable changes to the Vallydia Ingredient-Evidence Register dataset.
 Versioning follows [Semantic Versioning](https://semver.org/): a breaking schema change bumps the major version.
 
+## [1.2.0] — 2026-07-21
+
+Adds a layer the register did not previously publish: a grade for the **marketing promise**
+attached to an ingredient, separate from the grade for the ingredient's outcomes. 19 such rows
+were added and 2 existing ones re-graded. No compound was added or removed; all 85 remain.
+
+This is a minor version, not a patch. The promise rows were authored in the source register on
+2026-07-20 but were not captured by the 1.1.0 build, so 1.1.0 shipped 2 of them where the source
+had 21. Anyone who took 1.1.0 as the record of promise grades had an incomplete one.
+
+### Added
+- **19 marketing-claim rows across 16 ingredients** (`grades.csv`, `compounds.json`,
+  `corpus.jsonl`). Each carries `base: "Marketing claim"` and grades the sentence the industry
+  uses — "Collagen-boosting", "Natural retinol", "As effective as retinol" — against the human
+  evidence for *that assertion*, not for the ingredient. Grade rows: 456 → 475.
+- Every such row states, in its `caveat`, the strongest evidence the maker relies on before
+  explaining the downgrade, so the reasoning can be checked rather than taken on trust.
+
+### Changed
+- **`syn-ake` "Botox alternative" equivalence: D → F.** A comparative claim asserts a relation
+  to another named thing, so the comparison *is* the promise; with no human head-to-head the
+  assertion is untested, not weakly supported. This aligns it with `argireline` and `snap-8`,
+  whose near-identical "Works like Botox" rows were already F on the same facts.
+- **`hyaluronic-acid` "Fills wrinkles from within" needle-free filler equivalence: D → F**, by
+  the same rule — volume restoration is documented only for injected crosslinked HA.
+- Two comparative rows were deliberately **not** changed, because the rule is about a comparison
+  never run rather than a weak one: `niacinamide` "High-strength 10%+" stays D (2%, 5% and 10%
+  were compared in humans and 10% did not beat 5%), and `snap-8` "~30% more active than
+  Argireline" stays D (a manufacturer human comparison exists, and manufacturer human data is
+  weak human evidence, not absent evidence).
+- `syn-ake` `is_cosmetic`: `false` → `true`, correcting a flag contradicted by the entry's own
+  text.
+- Editorial corrections carried through from the source register: `argireline` no longer
+  describes its trade name as "genericised" (that conflated patent expiry with trade-mark
+  genericide); `vitamin-c` and `retinol` sale notes now state plainly that no such product is
+  sold; one citation title had stray spacing repaired.
+
+### Grade distribution across the 20 marketing-claim rows
+C 1 · D 12 · F 7. Within D: 8 measured a different outcome than the claim asserts, 3 fall short
+of the promised magnitude, 1 rests on poor-quality human evidence only.
+
 ## [1.1.0] — 2026-07-21
 
 Two things landed together: the DOI layer grew, and the graded name was decoupled from
