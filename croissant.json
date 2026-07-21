@@ -90,7 +90,7 @@
       "description": "One row per compound (85): scalar core plus pipe-joined list columns.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/compounds.csv",
       "encodingFormat": "text/csv",
-      "sha256": "72cc2d828e1d6873a2510155ebad3175925b2ed144351ba8d9e2aaf31cfa1940"
+      "sha256": "d60428c686f0f1f5934f4aa693dca58b2961c5cc1cd9646ec959152803c8795f"
     },
     {
       "@type": "cr:FileObject",
@@ -117,7 +117,7 @@
       "description": "DOI provenance table (117 rows across 50 compounds).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations.csv",
       "encodingFormat": "text/csv",
-      "sha256": "248e1f1ff81f638db681e5590c0cc9ca7e62be7aae7d02155abe653058b25844"
+      "sha256": "8a98454984b2aac6adc8dea7dab5771d6ddadabe6a507c7b5690717a0ab74000"
     },
     {
       "@type": "cr:FileObject",
@@ -126,7 +126,7 @@
       "description": "The citations table enriched with scholarly cross-links (117 rows).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations_enriched.csv",
       "encodingFormat": "text/csv",
-      "sha256": "df3a8a7fc015df2c2cc638f3765249bff1d67362170f69b531725c027dadd71f"
+      "sha256": "df8a16fc03b811797a469386ea4a11e42140446e08b92554728e516a1ce8466e"
     },
     {
       "@type": "cr:FileObject",
@@ -153,7 +153,7 @@
       "description": "Manifest of the published image layer: 2D structures and factual data cards, with mandatory alt text.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/images/MANIFEST.csv",
       "encodingFormat": "text/csv",
-      "sha256": "92349044fa46447f5d69c0b362f16a87f977881e553610be3b41d9c1e17b2344"
+      "sha256": "be918fd87bfaa864a56a6c16a4798f37c916a738c84fbf0b508693cb562f0bf8"
     }
   ],
   "recordSet": [

@@ -1293,6 +1293,12 @@
         "doi": "10.1201/b18895-2",
         "resolved": "high",
         "verified_title": "Bakuchiol: A Retinol-Like Functional Compound, Modulating Multiple Retinol and Non-Retinol Targets"
+      },
+      {
+        "source": 7,
+        "doi": "10.1021/tx034082r",
+        "resolved": "high",
+        "verified_title": "Antioxidant Activity of Bakuchiol: Experimental Evidences and Theoretical Treatments on the Possible Involvement of the Terpenoid Chain"
       }
     ],
     "cosmetic_claims": {
@@ -2510,6 +2516,12 @@
         "verified_title": "Ectoine-Containing Cream in the Treatment of Mild to Moderate Atopic Dermatitis: A Randomised, Comparator-Controlled, Intra-Individual Double-Blind, Multi-Center Trial"
       },
       {
+        "source": 2,
+        "doi": "10.1155/2014/176597",
+        "resolved": "high",
+        "verified_title": "Treatment of Allergic Rhinitis with Ectoine Containing Nasal Spray and Eye Drops in Comparison with Azelastine Containing Nasal Spray and Eye Drops or with Cromoglycic Acid Containing Nasal Spray"
+      },
+      {
         "source": 3,
         "doi": "10.1155/2021/8885032",
         "resolved": "high",
@@ -2855,7 +2867,14 @@
       "Kalluri R, LeBleu VS. The biology, function, and biomedical applications of exosomes. Science. 2020; 367(6478):eaau6977.",
       "US FDA consumer/industry communications: exosome products are not FDA-approved outside clinical trials; human-derived exosomes are regulated under the HCT/P framework (21 CFR Part 1271)."
     ],
-    "citation_ids": [],
+    "citation_ids": [
+      {
+        "source": 2,
+        "doi": "10.1126/science.aau6977",
+        "resolved": "high",
+        "verified_title": "The biology , function , and biomedical applications of exosomes"
+      }
+    ],
     "cosmetic_claims": {
       "allowed": [
         "delivers antioxidants that help defend the look of skin against daily stress",
@@ -3284,6 +3303,12 @@
       "FDA. Pharmacy Compounding Advisory Committee — announced review of GHK-Cu (injectable and non-injectable routes) scheduled before end-February 2027."
     ],
     "citation_ids": [
+      {
+        "source": 0,
+        "doi": "10.1016/0014-5793(88)80509-x",
+        "resolved": "high",
+        "verified_title": "Stimulation of collagen synthesis in fibroblast cultures by the tripeptide‐copper complex glycyl‐L‐histidyl‐L‐lysine‐Cu2+"
+      },
       {
         "source": 4,
         "doi": "10.3390/ijms19071987",
@@ -4932,6 +4957,12 @@
         "doi": "10.1046/j.1467-2494.2000.00010.x",
         "resolved": "high",
         "verified_title": "Biologically active peptides: from a laboratory bench curiosity to a functional skin care product"
+      },
+      {
+        "source": 3,
+        "doi": "10.1021/mp300549d",
+        "resolved": "high",
+        "verified_title": "Collagen Stimulating Effect of Peptide Amphiphile C16–KTTKS on Human Fibroblasts"
       }
     ],
     "cosmetic_claims": {
@@ -5829,6 +5860,12 @@
         "doi": "10.1111/j.1467-2494.2004.00228.x",
         "resolved": "high",
         "verified_title": "Topical niacinamide reduces yellowing, wrinkling, red blotchiness, and hyperpigmented spots in aging facial skin<sup>1</sup>"
+      },
+      {
+        "source": 2,
+        "doi": "10.1111/j.1365-2133.2009.09477.x",
+        "resolved": "high",
+        "verified_title": "Reduction in the appearance of facial hyperpigmentation after use of moisturizers with a combination of topical niacinamide and N -acetyl glucosamine: results of a randomized, double-blind, vehicle-controlled trial"
       },
       {
         "source": 3,
@@ -7126,6 +7163,18 @@
         "doi": "10.1016/s0190-9622(86)70242-9",
         "resolved": "high",
         "verified_title": "Topical tretinoin for photoaged skin"
+      },
+      {
+        "source": 1,
+        "doi": "10.1001/jama.1988.03720040019020",
+        "resolved": "high",
+        "verified_title": "Topical Tretinoin Improves Photoaged Skin"
+      },
+      {
+        "source": 2,
+        "doi": "10.2165/00128071-200506040-00005",
+        "resolved": "high",
+        "verified_title": "Long-Term Efficacy and Safety of Tretinoin Emollient Cream 0.05% in the Treatment of Photodamaged Facial Skin"
       },
       {
         "source": 3,
