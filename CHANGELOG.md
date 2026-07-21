@@ -3,6 +3,44 @@
 All notable changes to the Vallydia Ingredient-Evidence Register dataset.
 Versioning follows [Semantic Versioning](https://semver.org/): a breaking schema change bumps the major version.
 
+## [Unreleased]
+
+### Changed
+- **The graded name is now always a nonproprietary one, and trade names moved to their own
+  field.** A grade assesses a *substance*, so it must hang on the substance's nomenclature name —
+  the INCI name for a cosmetic ingredient, the INN for a drug — never on a supplier's trademark.
+  Previously `name` led with the trade name (`Matrixyl (Palmitoyl Pentapeptide-4)`), and that
+  string was denormalized next to `grade` in `grades.csv`, `citations.csv`, `legal_status.csv`,
+  `cosmetic_claims.csv` and `corpus.jsonl`.
+
+  **Why this could not wait.** The dataset is CC-BY-4.0 and mirrored to Zenodo (DOI, permanent by
+  design), Hugging Face, Kaggle, PyPI, npm and GitHub, and the licence invites redistribution. A
+  grade published against someone's trademark can be corrected on our own site in minutes, but it
+  cannot be recalled from a DOI-pinned archive or a third-party fork. The exposure is not the
+  assessment — the grades are our own and they stand — it is the inability to *execute* a
+  correction once the string is out. So the split had to land before the next published version.
+
+  New fields on `compounds`: `inci_name`, `inn`, `trade_names` (array; pipe-joined in CSV). The
+  graded name resolves as `inci_name ?? inn ?? name`. Ten records changed: `matrixyl`,
+  `argireline`, `snap-8`, `syn-ake`, `ahk-cu`, `palmitoyl-tripeptide-1-5` (INCI), and
+  `afamelanotide`, `pramlintide`, `ss-31`, `oxytocin` (INN).
+
+  **Do not "simplify" this back.** `build/validate_dataset.py` now fails the build if a name in
+  `trade_names` reappears in the graded `name`, and `--selftest` proves that check fires. The
+  invariant is mechanical precisely because a convention would be quietly undone.
+
+  Notes on specific records:
+  - `SNAP-8` is kept in `trade_names` as Lipotec's trade designation, but it is **not a registered
+    mark** — no EUIPO or USPTO registration was found. Recorded in case the distinction matters.
+  - `Elamipretide` is an INN, not a trademark, so it is the graded name for `ss-31` and is **not**
+    in `trade_names`. That record's real marks are `Forzinity` and `Bendavia` — which a "whatever
+    is in the parentheses" rule would have missed while wrongly capturing the INN.
+  - `oxytocin` carries two marks (`Pitocin`, `Syntocinon`), not one.
+  - Slugs are unchanged and will not be renamed: they are the dataset's primary key, the API key
+    and the graph node for `related`. The exposure is in the published claim, not the URL.
+  - `title` still carries the referential display form, because it is the site page title and
+    referential use is legitimate. The *graded* field is what had to be neutral.
+
 ## [1.0.0] — 2026-07-14
 
 Initial public release: 85 compounds, evidence-graded, and published as a machine-linkable,

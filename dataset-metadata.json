@@ -21,26 +21,121 @@
       "description": "One row per compound (85): scalar core plus pipe-joined lists.",
       "schema": {
         "fields": [
-          {"name": "slug", "type": "string", "description": "Unique id and join key (e.g. ghk-cu)."},
-          {"name": "name", "type": "string", "description": "Display name."},
-          {"name": "compound_class", "type": "string", "description": "peptide | small_molecule | protein | blend | polysaccharide."},
-          {"name": "overall_grade", "type": "string", "description": "A-F summary of the leading application; empty if unassigned."},
-          {"name": "is_cosmetic", "type": "boolean", "description": "Lawful cosmetic ingredient in at least one form."},
-          {"name": "wada_prohibited", "type": "boolean", "description": "On the WADA prohibited list."},
-          {"name": "n_outcomes", "type": "integer", "description": "Number of graded outcome rows."},
-          {"name": "best_outcome_grade", "type": "string", "description": "Best non-null outcome grade; nulls ignored."},
-          {"name": "worst_outcome_grade", "type": "string", "description": "Worst non-null outcome grade; nulls ignored, never treated as F."},
-          {"name": "synonyms", "type": "string", "description": "Pipe-joined alternative names, including INCI names."},
-          {"name": "function_tags", "type": "string", "description": "Pipe-joined functional tags."},
-          {"name": "related", "type": "string", "description": "Pipe-joined slugs of related compounds."},
-          {"name": "regions", "type": "string", "description": "Pipe-joined regions present in legal_status."},
-          {"name": "n_sources", "type": "integer", "description": "Count of cited sources."},
-          {"name": "n_doi_verified", "type": "integer", "description": "Count of citations with a verified DOI; 0 = a reported gap, not an error."},
-          {"name": "last_updated", "type": "string", "description": "YYYY-MM-DD the register entry was last revised."},
-          {"name": "in_brief", "type": "string", "description": "Plain-language summary."},
-          {"name": "url", "type": "string", "description": "Canonical source page on vallydia.com."},
-          {"name": "structure_image", "type": "string", "description": "Path to the structure image, or empty."},
-          {"name": "grade_card_image", "type": "string", "description": "Path to the evidence-grade card; empty in v1.0.0."}
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Unique id and join key (e.g. ghk-cu)."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The graded name, always a nonproprietary one: the INCI name for a cosmetic ingredient, the INN for a drug. A grade assesses a substance, so it never hangs on a supplier's trademark — those live in trade_names."
+          },
+          {
+            "name": "inci_name",
+            "type": "string",
+            "description": "INCI name (cosmetic ingredient glossary); blank where not a cosmetic ingredient."
+          },
+          {
+            "name": "inn",
+            "type": "string",
+            "description": "International Nonproprietary Name (WHO) for drug substances; blank where none exists."
+          },
+          {
+            "name": "trade_names",
+            "type": "string",
+            "description": "Pipe-joined trademarked/supplier names for the same substance (e.g. Matrixyl for Palmitoyl Pentapeptide-4). Reference only."
+          },
+          {
+            "name": "compound_class",
+            "type": "string",
+            "description": "peptide | small_molecule | protein | blend | polysaccharide."
+          },
+          {
+            "name": "overall_grade",
+            "type": "string",
+            "description": "A-F summary of the leading application; empty if unassigned."
+          },
+          {
+            "name": "is_cosmetic",
+            "type": "boolean",
+            "description": "Lawful cosmetic ingredient in at least one form."
+          },
+          {
+            "name": "wada_prohibited",
+            "type": "boolean",
+            "description": "On the WADA prohibited list."
+          },
+          {
+            "name": "n_outcomes",
+            "type": "integer",
+            "description": "Number of graded outcome rows."
+          },
+          {
+            "name": "best_outcome_grade",
+            "type": "string",
+            "description": "Best non-null outcome grade; nulls ignored."
+          },
+          {
+            "name": "worst_outcome_grade",
+            "type": "string",
+            "description": "Worst non-null outcome grade; nulls ignored, never treated as F."
+          },
+          {
+            "name": "synonyms",
+            "type": "string",
+            "description": "Pipe-joined alternative names, including INCI names."
+          },
+          {
+            "name": "function_tags",
+            "type": "string",
+            "description": "Pipe-joined functional tags."
+          },
+          {
+            "name": "related",
+            "type": "string",
+            "description": "Pipe-joined slugs of related compounds."
+          },
+          {
+            "name": "regions",
+            "type": "string",
+            "description": "Pipe-joined regions present in legal_status."
+          },
+          {
+            "name": "n_sources",
+            "type": "integer",
+            "description": "Count of cited sources."
+          },
+          {
+            "name": "n_doi_verified",
+            "type": "integer",
+            "description": "Count of citations with a verified DOI; 0 = a reported gap, not an error."
+          },
+          {
+            "name": "last_updated",
+            "type": "string",
+            "description": "YYYY-MM-DD the register entry was last revised."
+          },
+          {
+            "name": "in_brief",
+            "type": "string",
+            "description": "Plain-language summary."
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "Canonical source page on vallydia.com."
+          },
+          {
+            "name": "structure_image",
+            "type": "string",
+            "description": "Path to the structure image, or empty."
+          },
+          {
+            "name": "grade_card_image",
+            "type": "string",
+            "description": "Path to the evidence-grade card; empty in v1.0.0."
+          }
         ]
       }
     },
@@ -49,14 +144,46 @@
       "description": "One row per compound x outcome (456). The analytical heart of the dataset.",
       "schema": {
         "fields": [
-          {"name": "slug", "type": "string", "description": "Join key."},
-          {"name": "name", "type": "string", "description": "Display name (denormalized)."},
-          {"name": "compound_class", "type": "string", "description": "Compound class (denormalized)."},
-          {"name": "outcome", "type": "string", "description": "The specific claim being graded."},
-          {"name": "grade", "type": "string", "description": "A-F, or empty for the 97 rows that are not efficacy claims (safety, penetration). Do not coerce empty to F."},
-          {"name": "base", "type": "string", "description": "The evidence base the grade rests on."},
-          {"name": "effect", "type": "string", "description": "What the evidence reports."},
-          {"name": "caveat", "type": "string", "description": "Why the grade is not higher."}
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Join key."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark."
+          },
+          {
+            "name": "compound_class",
+            "type": "string",
+            "description": "Compound class (denormalized)."
+          },
+          {
+            "name": "outcome",
+            "type": "string",
+            "description": "The specific claim being graded."
+          },
+          {
+            "name": "grade",
+            "type": "string",
+            "description": "A-F, or empty for the 97 rows that are not efficacy claims (safety, penetration). Do not coerce empty to F."
+          },
+          {
+            "name": "base",
+            "type": "string",
+            "description": "The evidence base the grade rests on."
+          },
+          {
+            "name": "effect",
+            "type": "string",
+            "description": "What the evidence reports."
+          },
+          {
+            "name": "caveat",
+            "type": "string",
+            "description": "Why the grade is not higher."
+          }
         ]
       }
     },
@@ -65,11 +192,31 @@
       "description": "One row per compound x region (132).",
       "schema": {
         "fields": [
-          {"name": "slug", "type": "string", "description": "Join key."},
-          {"name": "name", "type": "string", "description": "Display name (denormalized)."},
-          {"name": "region", "type": "string", "description": "INT | EU | US | UK."},
-          {"name": "status", "type": "string", "description": "Short status label."},
-          {"name": "note", "type": "string", "description": "Long-form regulatory detail. Ages; check last_updated."}
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Join key."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark."
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "description": "INT | EU | US | UK."
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "Short status label."
+          },
+          {
+            "name": "note",
+            "type": "string",
+            "description": "Long-form regulatory detail. Ages; check last_updated."
+          }
         ]
       }
     },
@@ -78,13 +225,41 @@
       "description": "DOI provenance table (117 rows across 50 compounds).",
       "schema": {
         "fields": [
-          {"name": "slug", "type": "string", "description": "Join key."},
-          {"name": "name", "type": "string", "description": "Display name (denormalized)."},
-          {"name": "source_index", "type": "integer", "description": "0-based index into that compound's sources list."},
-          {"name": "source_text", "type": "string", "description": "The free-text citation, resolved from sources[source_index]."},
-          {"name": "doi", "type": "string", "description": "DOI of the cited work."},
-          {"name": "resolved", "type": "string", "description": "Resolution confidence, e.g. high."},
-          {"name": "verified_title", "type": "string", "description": "Title as returned by the resolver."}
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Join key."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark."
+          },
+          {
+            "name": "source_index",
+            "type": "integer",
+            "description": "0-based index into that compound's sources list."
+          },
+          {
+            "name": "source_text",
+            "type": "string",
+            "description": "The free-text citation, resolved from sources[source_index]."
+          },
+          {
+            "name": "doi",
+            "type": "string",
+            "description": "DOI of the cited work."
+          },
+          {
+            "name": "resolved",
+            "type": "string",
+            "description": "Resolution confidence, e.g. high."
+          },
+          {
+            "name": "verified_title",
+            "type": "string",
+            "description": "Title as returned by the resolver."
+          }
         ]
       }
     },
@@ -93,10 +268,26 @@
       "description": "Permitted and forbidden claim wordings per cosmetic ingredient (246 rows across 21 compounds).",
       "schema": {
         "fields": [
-          {"name": "slug", "type": "string", "description": "Join key; only is_cosmetic compounds appear."},
-          {"name": "name", "type": "string", "description": "Display name (denormalized)."},
-          {"name": "claim_type", "type": "string", "description": "allowed | forbidden."},
-          {"name": "claim_text", "type": "string", "description": "The claim wording. forbidden = asserts a physiological/therapeutic action and must not be used."}
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Join key; only is_cosmetic compounds appear."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark."
+          },
+          {
+            "name": "claim_type",
+            "type": "string",
+            "description": "allowed | forbidden."
+          },
+          {
+            "name": "claim_text",
+            "type": "string",
+            "description": "The claim wording. forbidden = asserts a physiological/therapeutic action and must not be used."
+          }
         ]
       }
     },
@@ -105,20 +296,76 @@
       "description": "Chemical identifiers with confidence and provenance (85 rows; 64 confident, 21 intentionally blank).",
       "schema": {
         "fields": [
-          {"name": "slug", "type": "string", "description": "Join key."},
-          {"name": "name", "type": "string", "description": "Display name."},
-          {"name": "compound_class", "type": "string", "description": "Compound class."},
-          {"name": "cas", "type": "string", "description": "CAS registry number; blank where depositors disagree, never guessed."},
-          {"name": "pubchem_cid", "type": "string", "description": "PubChem Compound ID."},
-          {"name": "inchikey", "type": "string", "description": "InChIKey - the best cross-database join key."},
-          {"name": "inchi", "type": "string", "description": "Full InChI string."},
-          {"name": "smiles", "type": "string", "description": "Canonical SMILES; only high-confidence SMILES are rendered as images."},
-          {"name": "unii", "type": "string", "description": "FDA UNII; blank if ambiguous."},
-          {"name": "chembl_id", "type": "string", "description": "ChEMBL id where available."},
-          {"name": "drugbank_id", "type": "string", "description": "DrugBank id where available."},
-          {"name": "identifier_source", "type": "string", "description": "Provenance of the identifier match."},
-          {"name": "identifier_confidence", "type": "string", "description": "high | medium | low | none."},
-          {"name": "entity_note", "type": "string", "description": "Set when the resolved record is a real but distinct entity from the register compound (e.g. GHK-Cu resolves to the free peptide ligand, not the copper complex)."}
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Join key."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark."
+          },
+          {
+            "name": "compound_class",
+            "type": "string",
+            "description": "Compound class."
+          },
+          {
+            "name": "cas",
+            "type": "string",
+            "description": "CAS registry number; blank where depositors disagree, never guessed."
+          },
+          {
+            "name": "pubchem_cid",
+            "type": "string",
+            "description": "PubChem Compound ID."
+          },
+          {
+            "name": "inchikey",
+            "type": "string",
+            "description": "InChIKey - the best cross-database join key."
+          },
+          {
+            "name": "inchi",
+            "type": "string",
+            "description": "Full InChI string."
+          },
+          {
+            "name": "smiles",
+            "type": "string",
+            "description": "Canonical SMILES; only high-confidence SMILES are rendered as images."
+          },
+          {
+            "name": "unii",
+            "type": "string",
+            "description": "FDA UNII; blank if ambiguous."
+          },
+          {
+            "name": "chembl_id",
+            "type": "string",
+            "description": "ChEMBL id where available."
+          },
+          {
+            "name": "drugbank_id",
+            "type": "string",
+            "description": "DrugBank id where available."
+          },
+          {
+            "name": "identifier_source",
+            "type": "string",
+            "description": "Provenance of the identifier match."
+          },
+          {
+            "name": "identifier_confidence",
+            "type": "string",
+            "description": "high | medium | low | none."
+          },
+          {
+            "name": "entity_note",
+            "type": "string",
+            "description": "Set when the resolved record is a real but distinct entity from the register compound (e.g. GHK-Cu resolves to the free peptide ligand, not the copper complex)."
+          }
         ]
       }
     }

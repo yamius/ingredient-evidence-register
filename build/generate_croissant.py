@@ -91,8 +91,17 @@ TABLES = [
         "compounds", "data/compounds.csv",
         "One row per compound (85): scalar core plus pipe-joined list columns.",
         [
-            ("slug", "sc:Text", "Unique id and join key (e.g. ghk-cu)."),
-            ("name", "sc:Text", "Display name."),
+            ("slug", "sc:Text", "Unique id and join key (e.g. ghk-cu). Stable: slugs are never renamed."),
+            ("name", "sc:Text",
+             "The graded name, always a nonproprietary one: the INCI name for a cosmetic "
+             "ingredient, the INN for a drug, otherwise the register's own name. A grade "
+             "assesses a substance, so it never hangs on a supplier's trademark — those are "
+             "in trade_names."),
+            ("inci_name", "sc:Text", "INCI name (EU/US cosmetic ingredient glossary); blank where the compound is not a cosmetic ingredient."),
+            ("inn", "sc:Text", "International Nonproprietary Name (WHO) for drug substances; blank where none exists."),
+            ("trade_names", "sc:Text",
+             "Pipe-joined trademarked/supplier names for the same substance (e.g. Matrixyl for "
+             "Palmitoyl Pentapeptide-4). Reference only; blank where the substance has none."),
             ("compound_class", "sc:Text", "peptide | small_molecule | protein | blend | polysaccharide."),
             ("overall_grade", "sc:Text", "A–F summary of the leading application; empty if unassigned. No E."),
             ("is_cosmetic", "sc:Boolean", "Lawful cosmetic ingredient in at least one form."),
@@ -118,7 +127,7 @@ TABLES = [
         "One row per compound × outcome (456). The analytical heart of the dataset.",
         [
             ("slug", "sc:Text", "Join key."),
-            ("name", "sc:Text", "Display name (denormalized)."),
+            ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),
             ("compound_class", "sc:Text", "Compound class (denormalized)."),
             ("outcome", "sc:Text", "The specific claim being graded."),
             ("grade", "sc:Text", GRADE_SCALE),
@@ -132,7 +141,7 @@ TABLES = [
         "One row per compound × region (132).",
         [
             ("slug", "sc:Text", "Join key."),
-            ("name", "sc:Text", "Display name (denormalized)."),
+            ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),
             ("region", "sc:Text", "INT | EU | US | UK."),
             ("status", "sc:Text", "Short status label."),
             ("note", "sc:Text", "Long-form regulatory detail. Ages; check last_updated."),
@@ -143,7 +152,7 @@ TABLES = [
         "DOI provenance table (117 rows across 50 compounds).",
         [
             ("slug", "sc:Text", "Join key."),
-            ("name", "sc:Text", "Display name (denormalized)."),
+            ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),
             ("source_index", "sc:Integer", "0-based index into that compound's sources list."),
             ("source_text", "sc:Text", "The free-text citation, resolved from sources[source_index]."),
             ("doi", "sc:Text", "DOI of the cited work."),
@@ -156,7 +165,7 @@ TABLES = [
         "The citations table enriched with scholarly cross-links (117 rows).",
         [
             ("slug", "sc:Text", "Join key."),
-            ("name", "sc:Text", "Display name (denormalized)."),
+            ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),
             ("source_index", "sc:Integer", "0-based index into that compound's sources list."),
             ("source_text", "sc:Text", "The free-text citation, resolved from sources[source_index]."),
             ("doi", "sc:Text", "DOI of the cited work."),
@@ -174,7 +183,7 @@ TABLES = [
         "Permitted and forbidden claim wordings per cosmetic ingredient (246 rows across 21 compounds).",
         [
             ("slug", "sc:Text", "Join key; only is_cosmetic compounds appear."),
-            ("name", "sc:Text", "Display name (denormalized)."),
+            ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names."),
             ("claim_type", "sc:Text", "allowed | forbidden."),
             ("claim_text", "sc:Text", "The claim wording. forbidden = asserts a physiological/therapeutic action and must not be used."),
         ],
@@ -184,7 +193,7 @@ TABLES = [
         "Chemical identifiers with confidence and provenance (85 rows; 64 confident, 21 intentionally blank).",
         [
             ("slug", "sc:Text", "Join key."),
-            ("name", "sc:Text", "Display name."),
+            ("name", "sc:Text", "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark."),
             ("compound_class", "sc:Text", "Compound class."),
             ("cas", "sc:Text", "CAS registry number; blank where depositors disagree, never guessed."),
             ("pubchem_cid", "sc:Text", "PubChem Compound ID."),
