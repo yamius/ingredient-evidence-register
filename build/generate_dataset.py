@@ -36,14 +36,15 @@ KNOWN_FIELDS = {
     "grades_by_outcome", "legal_status", "wada", "function_tags", "related",
     "reviewer_status", "sources", "last_updated", "in_brief", "is_cosmetic",
     "sale_note", "cosmetic_claims", "citation_ids", "status_note", "honest_note",
-    "identifiers",
+    "identifiers", "inci_name", "inn", "trade_names",
 }
 REQUIRED_FIELDS = ["slug", "name", "title", "compound_class"]
 VALID_GRADES = {"A", "B", "C", "D", "F", None}
 
 # Field order for the canonical JSON records (stable diffs across versions).
 RECORD_ORDER = [
-    "slug", "name", "title", "url", "synonyms", "compound_class", "overall_grade",
+    "slug", "name", "inci_name", "inn", "trade_names", "title", "url", "synonyms",
+    "compound_class", "overall_grade",
     "grades_by_outcome", "legal_status", "wada", "function_tags", "related",
     "reviewer_status", "sources", "citation_ids", "cosmetic_claims", "is_cosmetic",
     "sale_note", "status_note", "honest_note", "last_updated", "in_brief", "body_sections",
@@ -209,9 +210,23 @@ def parse_file(path: Path, warnings: list[str]) -> dict:
         warnings.append(f"{slug}: cosmetic_claims present but is_cosmetic is not true")
 
     wada = fm.get("wada") or {}
+    # The graded name must be a nonproprietary one. A grade is an assessment of a
+    # SUBSTANCE, so it hangs on the substance's nomenclature name — INCI for cosmetic
+    # ingredients, INN for drugs — never on a supplier's trademark. `name` in the register
+    # is the referential display form ("Matrixyl (Palmitoyl Pentapeptide-4)") that titles
+    # the site page; it is deliberately NOT what the dataset leads with. See
+    # validate_dataset.py, which fails the build if a trade name reappears here.
+    inci_name = (fm.get("inci_name") or "").strip() or None
+    inn = (fm.get("inn") or "").strip() or None
+    trade_names = [str(t).strip() for t in as_list(fm.get("trade_names")) if str(t).strip()]
+    leading_name = inci_name or inn or fm.get("name")
+
     record = {
         "slug": slug,
-        "name": fm.get("name"),
+        "name": leading_name,
+        "inci_name": inci_name,
+        "inn": inn,
+        "trade_names": trade_names,
         "title": fm.get("title"),
         "url": f"{SITE}/compound/{slug}",
         "synonyms": [str(s) for s in as_list(fm.get("synonyms"))],
@@ -348,6 +363,9 @@ def flat_row(rec: dict) -> dict:
     return {
         "slug": rec["slug"],
         "name": rec["name"],
+        "inci_name": rec["inci_name"] or "",
+        "inn": rec["inn"] or "",
+        "trade_names": "|".join(rec["trade_names"]),
         "compound_class": rec["compound_class"],
         "overall_grade": rec["overall_grade"],
         "is_cosmetic": rec["is_cosmetic"],

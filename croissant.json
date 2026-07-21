@@ -90,7 +90,7 @@
       "description": "One row per compound (85): scalar core plus pipe-joined list columns.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/compounds.csv",
       "encodingFormat": "text/csv",
-      "sha256": "d60428c686f0f1f5934f4aa693dca58b2961c5cc1cd9646ec959152803c8795f"
+      "sha256": "503435719aa12d200ab0cc75e8a2be374d414efe2bf3403a19a2260a8b2a643a"
     },
     {
       "@type": "cr:FileObject",
@@ -99,7 +99,7 @@
       "description": "One row per compound × outcome (456). The analytical heart of the dataset.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/grades.csv",
       "encodingFormat": "text/csv",
-      "sha256": "33ed4262b795008271b4b4155cbf27b4d597572e6d6d45ee6ad4a9974fa54e6c"
+      "sha256": "b67db2bc0cbb5bea5b3c50d0fe35131689736035af72660f265564b9762d6441"
     },
     {
       "@type": "cr:FileObject",
@@ -108,7 +108,7 @@
       "description": "One row per compound × region (132).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/legal_status.csv",
       "encodingFormat": "text/csv",
-      "sha256": "3461c849103437901369a3d5f174d5a87f4c83d269f5215282e977e742f88ccb"
+      "sha256": "c2913ab8eca35987220e7b0b87f4b861cf3f750f4257255bd9395232e366200d"
     },
     {
       "@type": "cr:FileObject",
@@ -117,7 +117,7 @@
       "description": "DOI provenance table (117 rows across 50 compounds).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations.csv",
       "encodingFormat": "text/csv",
-      "sha256": "c0497f01c0c582c7207e6f5eebe836fd3ecb8c3ddaa0be1b6624543a294d4bc8"
+      "sha256": "f8f07c6974b044af9f730cf066d322dbc92695bd3e821e1c5dd7959982bc467a"
     },
     {
       "@type": "cr:FileObject",
@@ -126,7 +126,7 @@
       "description": "The citations table enriched with scholarly cross-links (117 rows).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/citations_enriched.csv",
       "encodingFormat": "text/csv",
-      "sha256": "df8a16fc03b811797a469386ea4a11e42140446e08b92554728e516a1ce8466e"
+      "sha256": "df3a8a7fc015df2c2cc638f3765249bff1d67362170f69b531725c027dadd71f"
     },
     {
       "@type": "cr:FileObject",
@@ -135,7 +135,7 @@
       "description": "Permitted and forbidden claim wordings per cosmetic ingredient (246 rows across 21 compounds).",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/data/cosmetic_claims.csv",
       "encodingFormat": "text/csv",
-      "sha256": "66f78e8170a6425b111e7ea06894faa9036cfe3950f17e4b5f53d18da84fbb06"
+      "sha256": "8022540d5895df370079a090e4e55dfcb84454f7fb1ffb3b4ca622327217246c"
     },
     {
       "@type": "cr:FileObject",
@@ -153,7 +153,7 @@
       "description": "Manifest of the published image layer: 2D structures and factual data cards, with mandatory alt text.",
       "contentUrl": "https://raw.githubusercontent.com/yamius/ingredient-evidence-register/main/images/MANIFEST.csv",
       "encodingFormat": "text/csv",
-      "sha256": "be918fd87bfaa864a56a6c16a4798f37c916a738c84fbf0b508693cb562f0bf8"
+      "sha256": "0f2dbec3f7334b4c59bf162d1503ce38dab10ca849d267bf436ef622d0030a38"
     }
   ],
   "recordSet": [
@@ -167,7 +167,7 @@
           "@type": "cr:Field",
           "@id": "compounds/slug",
           "name": "slug",
-          "description": "Unique id and join key (e.g. ghk-cu).",
+          "description": "Unique id and join key (e.g. ghk-cu). Stable: slugs are never renamed.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -182,7 +182,7 @@
           "@type": "cr:Field",
           "@id": "compounds/name",
           "name": "name",
-          "description": "Display name.",
+          "description": "The graded name, always a nonproprietary one: the INCI name for a cosmetic ingredient, the INN for a drug, otherwise the register's own name. A grade assesses a substance, so it never hangs on a supplier's trademark — those are in trade_names.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -190,6 +190,51 @@
             },
             "extract": {
               "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/inci_name",
+          "name": "inci_name",
+          "description": "INCI name (EU/US cosmetic ingredient glossary); blank where the compound is not a cosmetic ingredient.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "inci_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/inn",
+          "name": "inn",
+          "description": "International Nonproprietary Name (WHO) for drug substances; blank where none exists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "inn"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "compounds/trade_names",
+          "name": "trade_names",
+          "description": "Pipe-joined trademarked/supplier names for the same substance (e.g. Matrixyl for Palmitoyl Pentapeptide-4). Reference only; blank where the substance has none.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "compounds.csv"
+            },
+            "extract": {
+              "column": "trade_names"
             }
           }
         },
@@ -490,7 +535,7 @@
           "@type": "cr:Field",
           "@id": "grades/name",
           "name": "name",
-          "description": "Display name (denormalized).",
+          "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -618,7 +663,7 @@
           "@type": "cr:Field",
           "@id": "legal_status/name",
           "name": "name",
-          "description": "Display name (denormalized).",
+          "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -701,7 +746,7 @@
           "@type": "cr:Field",
           "@id": "citations/name",
           "name": "name",
-          "description": "Display name (denormalized).",
+          "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -814,7 +859,7 @@
           "@type": "cr:Field",
           "@id": "citations_enriched/name",
           "name": "name",
-          "description": "Display name (denormalized).",
+          "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1002,7 +1047,7 @@
           "@type": "cr:Field",
           "@id": "cosmetic_claims/name",
           "name": "name",
-          "description": "Display name (denormalized).",
+          "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark — see compounds.trade_names.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1070,7 +1115,7 @@
           "@type": "cr:Field",
           "@id": "identifiers/name",
           "name": "name",
-          "description": "Display name.",
+          "description": "The graded name, denormalized: nonproprietary (INCI/INN), never a trademark.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {

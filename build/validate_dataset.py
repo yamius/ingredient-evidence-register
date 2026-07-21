@@ -154,6 +154,28 @@ def validate(d: dict) -> list[str]:
     for r in d["cosmetic_claims"]:
         scan(f"{r['slug']}.claim", r["claim_text"])
 
+    # 7. trade-name separation: a grade assesses a SUBSTANCE, so the graded name must be
+    # a nonproprietary one (INCI for cosmetic ingredients, INN for drugs) and never a
+    # supplier's trademark. `name` is denormalised next to `grade` in grades.csv and into
+    # every mirror we publish — Zenodo, Hugging Face, Kaggle, npm, PyPI — and those copies
+    # cannot be recalled. This check is the mechanical guard: once a trade name is split
+    # out into trade_names, it must not reappear in the graded name. Without it the
+    # invariant is a convention, and conventions get quietly "simplified" back.
+    for c in compounds:
+        trade = c.get("trade_names") or []
+        if not isinstance(trade, list):
+            bad(f"{c['slug']}: trade_names must be a list, got {type(trade).__name__}")
+            continue
+        name = (c.get("name") or "")
+        for t in trade:
+            if re.search(rf"\b{re.escape(str(t))}\b", name, re.I):
+                bad(f"{c['slug']}: trade name {t!r} is back in the graded name {name!r} — "
+                    f"the graded name must be the INCI/INN name; keep trade names in trade_names")
+        # a record carrying either nomenclature name must lead with it
+        lead = (c.get("inci_name") or c.get("inn") or "").strip()
+        if lead and name.strip() != lead:
+            bad(f"{c['slug']}: graded name {name!r} does not match its nomenclature name {lead!r}")
+
     # soft signal (never fails the build): enrichment coverage
     if "citations_enriched" in d:
         got = sum(1 for r in d["citations_enriched"] if r.get("openalex_id") or r.get("semantic_scholar_id"))
@@ -176,6 +198,10 @@ def selftest(d: dict) -> int:
             0, {**x["identifiers"][0], "smiles": "CCO", "identifier_confidence": "none"}),
         "commerce leak": lambda x: x["compounds"][0].update(sale_note="Buy now for $9.99, SKU-123"),
         "dosing leak": lambda x: x["compounds"][0].update(in_brief="Inject 250 mcg subcutaneously daily."),
+        # the trade-name invariant: re-gluing a trademark onto the graded name must fail
+        "trade name re-glued": lambda x: x["compounds"][0].update(
+            name="Matrixyl (Palmitoyl Pentapeptide-4)", inci_name="Palmitoyl Pentapeptide-4",
+            inn=None, trade_names=["Matrixyl"]),
     }
     all_ok = True
     for label, mutate in cases.items():

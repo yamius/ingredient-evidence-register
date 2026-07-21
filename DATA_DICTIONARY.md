@@ -10,12 +10,22 @@ efficacy claim (a safety or skin-penetration row, for instance). See [METHODOLOG
 
 ## `data/compounds.jsonl` / `data/compounds.json` — canonical, lossless
 
+> **Naming.** A grade is an assessment of a *substance*, so the graded `name` is always a
+> nonproprietary one — the INCI name for a cosmetic ingredient, the INN for a drug. Trademarks
+> live in `trade_names` and carry no grade. The register's own display form (e.g.
+> `Matrixyl (Palmitoyl Pentapeptide-4)`, which titles the site page) is referential and is not
+> what the dataset leads with. `build/validate_dataset.py` fails the build if a trade name
+> reappears in `name`.
+
 One JSON object per compound. 85 records.
 
 | Field | Type | Null? | Meaning |
 |---|---|---|---|
 | `slug` | string | no | Unique id and join key. Matches the filename and the site URL. |
-| `name` | string | no | Display name, e.g. `GHK-Cu (Copper Tripeptide-1)`. |
+| `name` | string | no | The graded name — always nonproprietary: the INCI name for a cosmetic ingredient, the INN for a drug. Never a trademark; see `trade_names`. |
+| `inci_name` | string | yes | INCI name (cosmetic ingredient glossary). Null where the compound is not a cosmetic ingredient. |
+| `inn` | string | yes | International Nonproprietary Name (WHO), for drug substances. Null where none exists. |
+| `trade_names` | string[] | no | Trademarked/supplier names for the same substance, e.g. `["Matrixyl"]`. Empty where the substance has none. Reference only — no grade is ever attached to these. |
 | `title` | string | no | Page title from the register. |
 | `url` | string | no | Canonical source page: `https://vallydia.com/compound/<slug>`. |
 | `synonyms` | list[string] | no (may be empty) | Alternative names, including INCI names (prefixed `INCI:`). |
@@ -83,7 +93,10 @@ One row per compound (85). List fields are `|`-joined.
 | Column | Type | Null? | Meaning |
 |---|---|---|---|
 | `slug` | string | no | Join key. |
-| `name` | string | no | Display name. |
+| `name` | string | no | The graded name — always nonproprietary: the INCI name for a cosmetic ingredient, the INN for a drug. Never a trademark; see `trade_names`. |
+| `inci_name` | string | no | INCI name, or empty. |
+| `inn` | string | no | INN, or empty. |
+| `trade_names` | string | no | Pipe-joined trade names, or empty. |
 | `compound_class` | string | no | See above. |
 | `overall_grade` | string | yes | Empty cell = no overall grade. |
 | `is_cosmetic` | bool | no | `True` / `False`. |
@@ -110,7 +123,7 @@ One row per compound (85). List fields are `|`-joined.
 | Column | Type | Null? | Meaning |
 |---|---|---|---|
 | `slug` | string | no | Join key. |
-| `name` | string | no | Denormalized for convenience. |
+| `name` | string | no | Denormalized. Nonproprietary (INCI/INN) — never a trademark. |
 | `compound_class` | string | no | Denormalized for convenience. |
 | `outcome` | string | no | The specific claim being graded, e.g. *"Hair growth / density"*. |
 | `grade` | string | **yes** | A–F, or **empty** for the 97 rows that are not efficacy claims (safety, penetration). Do not coerce empty to `F`. |
@@ -125,7 +138,7 @@ One row per compound (85). List fields are `|`-joined.
 | Column | Type | Null? | Meaning |
 |---|---|---|---|
 | `slug` | string | no | Join key. |
-| `name` | string | no | Denormalized. |
+| `name` | string | no | Denormalized. Nonproprietary (INCI/INN) — never a trademark. |
 | `region` | string | no | `INT`, `EU`, `US`, `UK`. |
 | `status` | string | yes | Short status, e.g. *"See note"*, *"Not approved"*. |
 | `note` | string | yes | The detail — often the substance of the entry. Long free text. |
@@ -139,7 +152,7 @@ Regulatory status ages. Always read `last_updated` and `status_note` from `compo
 | Column | Type | Null? | Meaning |
 |---|---|---|---|
 | `slug` | string | no | Join key. |
-| `name` | string | no | Denormalized. |
+| `name` | string | no | Denormalized. Nonproprietary (INCI/INN) — never a trademark. |
 | `source_index` | int | no | **Index into that compound's `sources[]` list** (0-based). The build fails if it does not join. |
 | `source_text` | string | no | The free-text citation from `sources[source_index]`, resolved for you. |
 | `doi` | string | no | The DOI, e.g. `10.3390/ijms19071987`. |
@@ -153,7 +166,7 @@ Regulatory status ages. Always read `last_updated` and `status_note` from `compo
 | Column | Type | Null? | Meaning |
 |---|---|---|---|
 | `slug` | string | no | Join key. Only `is_cosmetic` compounds appear. |
-| `name` | string | no | Denormalized. |
+| `name` | string | no | Denormalized. Nonproprietary (INCI/INN) — never a trademark. |
 | `claim_type` | string | no | `allowed` or `forbidden`. |
 | `claim_text` | string | no | The claim wording. `allowed` = permissible cosmetic (appearance/feel) wording. `forbidden` = wording that asserts a physiological/therapeutic action and must **not** be used. |
 

@@ -10,7 +10,7 @@
     .b  { fill: none; stroke: currentColor; stroke-opacity:.2; stroke-width:1.5; }
   </style>
   <rect class="b" x="12" y="12" width="616" height="430" rx="16"/>
-  <text x="40" y="66" class="t">SNAP-8 (Acetyl Octapeptide-3)</text>
+  <text x="40" y="66" class="t">Acetyl Octapeptide-3</text>
   <text x="40" y="90" class="s">snap-8 · evidence by outcome</text>
   <rect x="522" y="44" width="72" height="72" rx="14" fill="#c08a1e"/><text x="558" y="92" text-anchor="middle" class="obig">C</text><text x="558" y="132" text-anchor="middle" class="olab">overall</text>
   <line x1="40" y1="120" x2="600" y2="120" stroke="currentColor" stroke-opacity=".18"/>

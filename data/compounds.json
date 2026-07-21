@@ -2,6 +2,9 @@
   {
     "slug": "5-amino-1mq",
     "name": "5-Amino-1MQ (NNMT inhibitor)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "5-Amino-1MQ — the NNMT-inhibitor fat-loss compound: elegant mechanism, animal-only evidence",
     "url": "https://vallydia.com/compound/5-amino-1mq",
     "synonyms": [
@@ -113,6 +116,9 @@
   {
     "slug": "adipotide",
     "name": "Adipotide (FTPP / Prohibitin-TP01)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Adipotide (FTPP) — the fat-vasculature-killing peptide that failed on kidney toxicity: the full story",
     "url": "https://vallydia.com/compound/adipotide",
     "synonyms": [
@@ -224,7 +230,12 @@
   },
   {
     "slug": "afamelanotide",
-    "name": "Afamelanotide (Scenesse / Melanotan-1)",
+    "name": "Afamelanotide",
+    "inci_name": null,
+    "inn": "Afamelanotide",
+    "trade_names": [
+      "Scenesse"
+    ],
     "title": "Afamelanotide (Scenesse) — the approved MC1R agonist: the same molecule as Melanotan-1, the honest evidence",
     "url": "https://vallydia.com/compound/afamelanotide",
     "synonyms": [
@@ -332,7 +343,10 @@
   },
   {
     "slug": "ahk-cu",
-    "name": "AHK-Cu (Copper Tripeptide-3)",
+    "name": "Copper Tripeptide-3",
+    "inci_name": "Copper Tripeptide-3",
+    "inn": null,
+    "trade_names": [],
     "title": "AHK-Cu — evidence, the \"hair growth\" claim trap & status",
     "url": "https://vallydia.com/compound/ahk-cu",
     "synonyms": [
@@ -437,6 +451,9 @@
   {
     "slug": "aicar",
     "name": "AICAR (Acadesine)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "AICAR (Acadesine) — the original exercise-mimetic AMPK activator: the science, the Tour de France scandal, the caveats",
     "url": "https://vallydia.com/compound/aicar",
     "synonyms": [
@@ -542,6 +559,9 @@
   {
     "slug": "alpha-arbutin",
     "name": "Alpha Arbutin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Alpha Arbutin — evidence, uses & status",
     "url": "https://vallydia.com/compound/alpha-arbutin",
     "synonyms": [
@@ -675,6 +695,9 @@
   {
     "slug": "amycretin",
     "name": "Amycretin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Amycretin — evidence, the \"CagriSema in one molecule\" story & status",
     "url": "https://vallydia.com/compound/amycretin",
     "synonyms": [
@@ -764,6 +787,9 @@
   {
     "slug": "aod-9604",
     "name": "AOD-9604 (hGH fragment 176-191 analog)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "AOD-9604 — the fat-loss peptide that failed its human trial: the honest evidence",
     "url": "https://vallydia.com/compound/aod-9604",
     "synonyms": [
@@ -865,7 +891,12 @@
   },
   {
     "slug": "argireline",
-    "name": "Argireline (Acetyl Hexapeptide-8)",
+    "name": "Acetyl Hexapeptide-8",
+    "inci_name": "Acetyl Hexapeptide-8",
+    "inn": null,
+    "trade_names": [
+      "Argireline"
+    ],
     "title": "Argireline (Acetyl Hexapeptide-8) — evidence, uses & the \"topical botox\" claim",
     "url": "https://vallydia.com/compound/argireline",
     "synonyms": [
@@ -991,6 +1022,9 @@
   {
     "slug": "azelaic-acid",
     "name": "Azelaic Acid",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Azelaic Acid — evidence, uses & status",
     "url": "https://vallydia.com/compound/azelaic-acid",
     "synonyms": [
@@ -1135,6 +1169,9 @@
   {
     "slug": "bakuchiol",
     "name": "Bakuchiol",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Bakuchiol — evidence, uses & status",
     "url": "https://vallydia.com/compound/bakuchiol",
     "synonyms": [
@@ -1341,6 +1378,9 @@
   {
     "slug": "bimagrumab",
     "name": "Bimagrumab (BYM338)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Bimagrumab — the muscle-sparing antibody: evidence, the story & status",
     "url": "https://vallydia.com/compound/bimagrumab",
     "synonyms": [
@@ -1452,6 +1492,9 @@
   {
     "slug": "bpc-157",
     "name": "BPC-157",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "BPC-157 — evidence, uses & regulatory status",
     "url": "https://vallydia.com/compound/bpc-157",
     "synonyms": [
@@ -1594,6 +1637,9 @@
   {
     "slug": "cagrilintide",
     "name": "Cagrilintide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Cagrilintide (& CagriSema) — evidence, the amylin story & status",
     "url": "https://vallydia.com/compound/cagrilintide",
     "synonyms": [
@@ -1679,6 +1725,9 @@
   {
     "slug": "ceramides",
     "name": "Ceramides",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Ceramides — evidence, uses & status",
     "url": "https://vallydia.com/compound/ceramides",
     "synonyms": [
@@ -1815,6 +1864,9 @@
   {
     "slug": "cerebrolysin",
     "name": "Cerebrolysin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Cerebrolysin — the most-studied nootropic peptide: 50 countries, contested evidence, no FDA approval",
     "url": "https://vallydia.com/compound/cerebrolysin",
     "synonyms": [
@@ -1930,6 +1982,9 @@
   {
     "slug": "cjc-1295",
     "name": "CJC-1295",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "CJC-1295 — evidence, development history & status",
     "url": "https://vallydia.com/compound/cjc-1295",
     "synonyms": [
@@ -2023,6 +2078,9 @@
   {
     "slug": "cjc-1295-ipamorelin",
     "name": "CJC-1295 + Ipamorelin (\"CJC/Ipa\")",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "CJC-1295 + Ipamorelin — the \"CJC/Ipa\" stack, evidence & status",
     "url": "https://vallydia.com/compound/cjc-1295-ipamorelin",
     "synonyms": [
@@ -2093,6 +2151,9 @@
   {
     "slug": "dasatinib-quercetin",
     "name": "Dasatinib + Quercetin / Fisetin (Senolytics)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Dasatinib + Quercetin & Fisetin — the first senolytics in human trials: how \"zombie cell\" clearance really works, and what the data show",
     "url": "https://vallydia.com/compound/dasatinib-quercetin",
     "synonyms": [
@@ -2214,6 +2275,9 @@
   {
     "slug": "dihexa",
     "name": "Dihexa (PNB-0408)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Dihexa — the \"10-million-times-BDNF\" nootropic peptide: retractions, zero human data, cancer-pathway risk",
     "url": "https://vallydia.com/compound/dihexa",
     "synonyms": [
@@ -2308,6 +2372,9 @@
   {
     "slug": "dsip",
     "name": "DSIP (Delta Sleep-Inducing Peptide / Emideltide)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "DSIP (Emideltide) — evidence, the discovery story & status",
     "url": "https://vallydia.com/compound/dsip",
     "synonyms": [
@@ -2411,6 +2478,9 @@
   {
     "slug": "ectoin",
     "name": "Ectoin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Ectoin — evidence, uses & status",
     "url": "https://vallydia.com/compound/ectoin",
     "synonyms": [
@@ -2571,6 +2641,9 @@
   {
     "slug": "eloralintide",
     "name": "Eloralintide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Eloralintide — the selective amylin agonist with ~20% weight loss: the amylin story and what it means for the class",
     "url": "https://vallydia.com/compound/eloralintide",
     "synonyms": [
@@ -2666,6 +2739,9 @@
   {
     "slug": "epitalon",
     "name": "Epitalon (Epithalon)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Epitalon (Epithalon) — evidence, telomerase claims & status",
     "url": "https://vallydia.com/compound/epitalon",
     "synonyms": [
@@ -2788,6 +2864,9 @@
   {
     "slug": "exosomes",
     "name": "Exosomes",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Exosomes — evidence, uses & status",
     "url": "https://vallydia.com/compound/exosomes",
     "synonyms": [
@@ -2910,6 +2989,9 @@
   {
     "slug": "follistatin",
     "name": "Follistatin (FST-344)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Follistatin (FST-344) — myostatin inhibition, what the evidence really shows & status",
     "url": "https://vallydia.com/compound/follistatin",
     "synonyms": [
@@ -3008,6 +3090,9 @@
   {
     "slug": "fosgonimeton",
     "name": "Fosgonimeton (ATH-1017)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Fosgonimeton (ATH-1017) — the HGF/MET Alzheimer's drug that failed: the debunk and the data-fraud backstory",
     "url": "https://vallydia.com/compound/fosgonimeton",
     "synonyms": [
@@ -3102,6 +3187,9 @@
   {
     "slug": "foxo4-dri",
     "name": "FOXO4-DRI",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "FOXO4-DRI — the senolytic \"zombie-cell\" peptide: the elegant p53 mechanism, the famous mice, and the human-data gap",
     "url": "https://vallydia.com/compound/foxo4-dri",
     "synonyms": [
@@ -3203,6 +3291,9 @@
   {
     "slug": "ghk-cu",
     "name": "GHK-Cu (Copper Tripeptide-1)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "GHK-Cu (Copper Tripeptide-1) — evidence, uses & status",
     "url": "https://vallydia.com/compound/ghk-cu",
     "synonyms": [
@@ -3362,6 +3453,9 @@
   {
     "slug": "ghrp-2",
     "name": "GHRP-2 (Pralmorelin)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "GHRP-2 (pralmorelin) — evidence, the Japan diagnostic approval & status",
     "url": "https://vallydia.com/compound/ghrp-2",
     "synonyms": [
@@ -3454,6 +3548,9 @@
   {
     "slug": "ghrp-6",
     "name": "GHRP-6",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "GHRP-6 — evidence, the ghrelin-discovery story & status",
     "url": "https://vallydia.com/compound/ghrp-6",
     "synonyms": [
@@ -3544,6 +3641,9 @@
   {
     "slug": "glutathione",
     "name": "Glutathione (GSH)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Glutathione — the \"master antioxidant\" and Asia's skin-whitening story: mechanism, evidence, and the IV-safety warnings",
     "url": "https://vallydia.com/compound/glutathione",
     "synonyms": [
@@ -3666,6 +3766,9 @@
   {
     "slug": "hexarelin",
     "name": "Hexarelin (Examorelin)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Hexarelin (examorelin) — evidence, the CD36 cardiac story & status",
     "url": "https://vallydia.com/compound/hexarelin",
     "synonyms": [
@@ -3764,6 +3867,9 @@
   {
     "slug": "humanin",
     "name": "Humanin (HN / HNG / S14G-Humanin)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Humanin — the founding mitochondrial peptide: rich biology, biomarker status, no human trials",
     "url": "https://vallydia.com/compound/humanin",
     "synonyms": [
@@ -3875,6 +3981,9 @@
   {
     "slug": "hyaluronic-acid",
     "name": "Hyaluronic Acid (Sodium Hyaluronate)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Hyaluronic Acid (Sodium Hyaluronate) — evidence, uses & status",
     "url": "https://vallydia.com/compound/hyaluronic-acid",
     "synonyms": [
@@ -4025,6 +4134,9 @@
   {
     "slug": "igf-1-lr3",
     "name": "IGF-1 LR3 (Long R3 IGF-1)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "IGF-1 LR3 — hyperplasia, what the evidence really shows & status",
     "url": "https://vallydia.com/compound/igf-1-lr3",
     "synonyms": [
@@ -4117,6 +4229,9 @@
   {
     "slug": "ipamorelin",
     "name": "Ipamorelin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Ipamorelin — evidence, development history & status",
     "url": "https://vallydia.com/compound/ipamorelin",
     "synonyms": [
@@ -4225,6 +4340,9 @@
   {
     "slug": "kisspeptin-10",
     "name": "Kisspeptin-10 (KP-10)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Kisspeptin-10 — the reproductive master-switch peptide: the chocolate name, the cancer origin, and the real trials",
     "url": "https://vallydia.com/compound/kisspeptin-10",
     "synonyms": [
@@ -4325,6 +4443,9 @@
   {
     "slug": "kojic-acid",
     "name": "Kojic Acid",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Kojic Acid — evidence, uses & status",
     "url": "https://vallydia.com/compound/kojic-acid",
     "synonyms": [
@@ -4461,6 +4582,9 @@
   {
     "slug": "kpv",
     "name": "KPV",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "KPV — the anti-inflammatory α-MSH fragment: evidence & status",
     "url": "https://vallydia.com/compound/kpv",
     "synonyms": [
@@ -4559,6 +4683,9 @@
   {
     "slug": "larazotide",
     "name": "Larazotide (AT-1001, Larazotide Acetate)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Larazotide (AT-1001) — the tight-junction \"leaky gut\" peptide that reached Phase 3 and failed: the honest story",
     "url": "https://vallydia.com/compound/larazotide",
     "synonyms": [
@@ -4667,6 +4794,9 @@
   {
     "slug": "liraglutide",
     "name": "Liraglutide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Liraglutide (Victoza / Saxenda) — evidence, the pioneer story & status",
     "url": "https://vallydia.com/compound/liraglutide",
     "synonyms": [
@@ -4764,6 +4894,9 @@
   {
     "slug": "ll-37",
     "name": "LL-37 (Cathelicidin)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "LL-37 (cathelicidin) — the double-edged antimicrobial peptide: healer, and driver of rosacea/psoriasis",
     "url": "https://vallydia.com/compound/ll-37",
     "synonyms": [
@@ -4865,7 +4998,12 @@
   },
   {
     "slug": "matrixyl",
-    "name": "Matrixyl (Palmitoyl Pentapeptide-4)",
+    "name": "Palmitoyl Pentapeptide-4",
+    "inci_name": "Palmitoyl Pentapeptide-4",
+    "inn": null,
+    "trade_names": [
+      "Matrixyl"
+    ],
     "title": "Matrixyl (Palmitoyl Pentapeptide-4) — evidence, uses & the \"collagen boosting\" claim",
     "url": "https://vallydia.com/compound/matrixyl",
     "synonyms": [
@@ -4999,6 +5137,9 @@
   {
     "slug": "mazdutide",
     "name": "Mazdutide (IBI362 / LY3305677)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Mazdutide (IBI362) — the first approved GLP-1/glucagon dual agonist: ~20% weight loss, the evidence",
     "url": "https://vallydia.com/compound/mazdutide",
     "synonyms": [
@@ -5097,6 +5238,9 @@
   {
     "slug": "melanotan-ii",
     "name": "Melanotan II",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Melanotan II — the tanning peptide: evidence, the discovery story & serious risks",
     "url": "https://vallydia.com/compound/melanotan-ii",
     "synonyms": [
@@ -5193,6 +5337,9 @@
   {
     "slug": "mgf",
     "name": "MGF / PEG-MGF (Mechano Growth Factor, IGF-1Ec)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "MGF / PEG-MGF — the mechano-growth-factor muscle peptide: real splice biology, thin human evidence",
     "url": "https://vallydia.com/compound/mgf",
     "synonyms": [
@@ -5292,6 +5439,9 @@
   {
     "slug": "mk-677",
     "name": "MK-677 (Ibutamoren)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "MK-677 (Ibutamoren) — evidence, the oral-GH story & status",
     "url": "https://vallydia.com/compound/mk-677",
     "synonyms": [
@@ -5404,6 +5554,9 @@
   {
     "slug": "mots-c",
     "name": "MOTS-c",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "MOTS-c — evidence, uses & status",
     "url": "https://vallydia.com/compound/mots-c",
     "synonyms": [
@@ -5512,6 +5665,9 @@
   {
     "slug": "nad-plus",
     "name": "NAD+ (and its precursors NMN / NR)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "NAD+ / NMN / NR — the longevity coenzyme: elegant theory, real biomarker rise, unproven human benefit",
     "url": "https://vallydia.com/compound/nad-plus",
     "synonyms": [
@@ -5613,6 +5769,9 @@
   {
     "slug": "naringenin",
     "name": "Naringenin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Naringenin — evidence, uses & status",
     "url": "https://vallydia.com/compound/naringenin",
     "synonyms": [
@@ -5754,6 +5913,9 @@
   {
     "slug": "niacinamide",
     "name": "Niacinamide (Vitamin B3)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Niacinamide (Vitamin B3) — evidence, uses & status",
     "url": "https://vallydia.com/compound/niacinamide",
     "synonyms": [
@@ -5919,6 +6081,9 @@
   {
     "slug": "noopept",
     "name": "Noopept (Omberacetam)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Noopept — evidence, why it's not a peptide & status",
     "url": "https://vallydia.com/compound/noopept",
     "synonyms": [
@@ -6035,6 +6200,9 @@
   {
     "slug": "orforglipron",
     "name": "Orforglipron",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Orforglipron — the first oral small-molecule GLP-1: evidence & status",
     "url": "https://vallydia.com/compound/orforglipron",
     "synonyms": [
@@ -6126,6 +6294,12 @@
   {
     "slug": "oxytocin",
     "name": "Oxytocin",
+    "inci_name": null,
+    "inn": "Oxytocin",
+    "trade_names": [
+      "Pitocin",
+      "Syntocinon"
+    ],
     "title": "Oxytocin — the \"love hormone\": approved for labor, unproven for bonding/autism, and the replication story",
     "url": "https://vallydia.com/compound/oxytocin",
     "synonyms": [
@@ -6234,6 +6408,12 @@
   {
     "slug": "palmitoyl-tripeptide-1-5",
     "name": "Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5",
+    "inci_name": "Palmitoyl Tripeptide-1 & Palmitoyl Tripeptide-5",
+    "inn": null,
+    "trade_names": [
+      "Biopeptide CL",
+      "SYN-COLL"
+    ],
     "title": "Palmitoyl Tripeptide-1 & -5 — evidence, collagen-signal claims & status",
     "url": "https://vallydia.com/compound/palmitoyl-tripeptide-1-5",
     "synonyms": [
@@ -6333,6 +6513,9 @@
   {
     "slug": "pdrn",
     "name": "PDRN (Polydeoxyribonucleotide)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "PDRN — evidence, uses & status",
     "url": "https://vallydia.com/compound/pdrn",
     "synonyms": [
@@ -6430,6 +6613,9 @@
   {
     "slug": "pemvidutide",
     "name": "Pemvidutide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Pemvidutide — the liver-first, muscle-sparing glucagon/GLP-1 dual: the MASH strategy and the biotech story",
     "url": "https://vallydia.com/compound/pemvidutide",
     "synonyms": [
@@ -6533,6 +6719,9 @@
   {
     "slug": "petrelintide",
     "name": "Petrelintide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Petrelintide — the next-gen amylin analog with placebo-like tolerability: the data, the market reaction, the context",
     "url": "https://vallydia.com/compound/petrelintide",
     "synonyms": [
@@ -6635,7 +6824,13 @@
   },
   {
     "slug": "pramlintide",
-    "name": "Pramlintide (Symlin)",
+    "name": "Pramlintide",
+    "inci_name": null,
+    "inn": "Pramlintide",
+    "trade_names": [
+      "Symlin",
+      "SymlinPen"
+    ],
     "title": "Pramlintide (Symlin) — the original approved amylin analog: what it does, and its limits",
     "url": "https://vallydia.com/compound/pramlintide",
     "synonyms": [
@@ -6743,6 +6938,9 @@
   {
     "slug": "pt-141",
     "name": "PT-141 (Bremelanotide)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "PT-141 (bremelanotide / Vyleesi) — evidence, the discovery story & status",
     "url": "https://vallydia.com/compound/pt-141",
     "synonyms": [
@@ -6839,6 +7037,9 @@
   {
     "slug": "rapamycin",
     "name": "Rapamycin (Sirolimus)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Rapamycin (Sirolimus) — the Easter Island mTOR inhibitor and longevity's most-studied drug: the facts and the honest evidence",
     "url": "https://vallydia.com/compound/rapamycin",
     "synonyms": [
@@ -6949,6 +7150,9 @@
   {
     "slug": "retatrutide",
     "name": "Retatrutide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Retatrutide (LY3437943) — evidence, \"triple-G\" status & the research-peptide reality",
     "url": "https://vallydia.com/compound/retatrutide",
     "synonyms": [
@@ -7034,6 +7238,9 @@
   {
     "slug": "retinol",
     "name": "Retinol (Vitamin A)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Retinol (Vitamin A) — evidence, uses & status",
     "url": "https://vallydia.com/compound/retinol",
     "synonyms": [
@@ -7257,6 +7464,9 @@
   {
     "slug": "selank",
     "name": "Selank",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Selank — evidence, the tuftsin story & status",
     "url": "https://vallydia.com/compound/selank",
     "synonyms": [
@@ -7365,6 +7575,9 @@
   {
     "slug": "semaglutide",
     "name": "Semaglutide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Semaglutide (Ozempic / Wegovy / Rybelsus) — evidence & status",
     "url": "https://vallydia.com/compound/semaglutide",
     "synonyms": [
@@ -7468,6 +7681,9 @@
   {
     "slug": "semax",
     "name": "Semax",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Semax — evidence, nootropic claims & status",
     "url": "https://vallydia.com/compound/semax",
     "synonyms": [
@@ -7583,6 +7799,9 @@
   {
     "slug": "sermorelin",
     "name": "Sermorelin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Sermorelin — evidence, FDA history & status",
     "url": "https://vallydia.com/compound/sermorelin",
     "synonyms": [
@@ -7687,6 +7906,9 @@
   {
     "slug": "slu-pp-332",
     "name": "SLU-PP-332 (ERR agonist / \"exercise mimetic\")",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "SLU-PP-332 — the ERR-agonist \"exercise mimetic\": what the mouse data show, and the translation problem",
     "url": "https://vallydia.com/compound/slu-pp-332",
     "synonyms": [
@@ -7796,6 +8018,9 @@
   {
     "slug": "slu-pp-915",
     "name": "SLU-PP-915",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "SLU-PP-915 — the orally-active \"exercise mimetic\": fixing SLU-PP-332, the doping tests, and the conflicts",
     "url": "https://vallydia.com/compound/slu-pp-915",
     "synonyms": [
@@ -7902,7 +8127,12 @@
   },
   {
     "slug": "snap-8",
-    "name": "SNAP-8 (Acetyl Octapeptide-3)",
+    "name": "Acetyl Octapeptide-3",
+    "inci_name": "Acetyl Octapeptide-3",
+    "inn": null,
+    "trade_names": [
+      "SNAP-8"
+    ],
     "title": "SNAP-8 (Acetyl Octapeptide-3) — evidence, the \"more potent than Argireline\" claim & status",
     "url": "https://vallydia.com/compound/snap-8",
     "synonyms": [
@@ -8005,6 +8235,9 @@
   {
     "slug": "squalane",
     "name": "Squalane",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Squalane — evidence, uses & status",
     "url": "https://vallydia.com/compound/squalane",
     "synonyms": [
@@ -8138,7 +8371,13 @@
   },
   {
     "slug": "ss-31",
-    "name": "SS-31 (Elamipretide)",
+    "name": "Elamipretide",
+    "inci_name": null,
+    "inn": "Elamipretide",
+    "trade_names": [
+      "Forzinity",
+      "Bendavia"
+    ],
     "title": "SS-31 (Elamipretide) — approved for Barth, failed for heart failure: the honest evidence",
     "url": "https://vallydia.com/compound/ss-31",
     "synonyms": [
@@ -8269,6 +8508,9 @@
   {
     "slug": "survodutide",
     "name": "Survodutide (BI 456906)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Survodutide (BI 456906) — the GLP-1/glucagon dual agonist built for MASH: Phase 3 evidence",
     "url": "https://vallydia.com/compound/survodutide",
     "synonyms": [
@@ -8370,7 +8612,12 @@
   },
   {
     "slug": "syn-ake",
-    "name": "Syn-Ake (Dipeptide Diaminobutyroyl Benzylamide Diacetate)",
+    "name": "Dipeptide Diaminobutyroyl Benzylamide Diacetate",
+    "inci_name": "Dipeptide Diaminobutyroyl Benzylamide Diacetate",
+    "inn": null,
+    "trade_names": [
+      "Syn-Ake"
+    ],
     "title": "Syn-Ake — the snake-venom-inspired \"needle-free Botox\" peptide: the Temple Viper story and the evidence",
     "url": "https://vallydia.com/compound/syn-ake",
     "synonyms": [
@@ -8481,6 +8728,9 @@
   {
     "slug": "tb-500",
     "name": "TB-500 (Thymosin Beta-4 fragment)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "TB-500 (Thymosin Beta-4 fragment) — evidence, uses & status",
     "url": "https://vallydia.com/compound/tb-500",
     "synonyms": [
@@ -8600,6 +8850,9 @@
   {
     "slug": "tesamorelin",
     "name": "Tesamorelin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Tesamorelin (Egrifta) — evidence, FDA approval & status",
     "url": "https://vallydia.com/compound/tesamorelin",
     "synonyms": [
@@ -8705,6 +8958,9 @@
   {
     "slug": "tesofensine",
     "name": "Tesofensine",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Tesofensine — the Alzheimer's drug repurposed for obesity: the accidental discovery and triple-monoamine mechanism",
     "url": "https://vallydia.com/compound/tesofensine",
     "synonyms": [
@@ -8814,6 +9070,9 @@
   {
     "slug": "thymalin",
     "name": "Thymalin",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Thymalin — the founding Soviet peptide bioregulator: thymus immunity, longevity claims, and the replication gap",
     "url": "https://vallydia.com/compound/thymalin",
     "synonyms": [
@@ -8933,6 +9192,9 @@
   {
     "slug": "thymosin-alpha-1",
     "name": "Thymosin Alpha-1 (Thymalfasin / Zadaxin)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Thymosin Alpha-1 (thymalfasin / Zadaxin) — evidence & status",
     "url": "https://vallydia.com/compound/thymosin-alpha-1",
     "synonyms": [
@@ -9048,6 +9310,9 @@
   {
     "slug": "tirzepatide",
     "name": "Tirzepatide",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Tirzepatide (Mounjaro / Zepbound) — evidence & status",
     "url": "https://vallydia.com/compound/tirzepatide",
     "synonyms": [
@@ -9138,6 +9403,9 @@
   {
     "slug": "tranexamic-acid",
     "name": "Tranexamic Acid",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Tranexamic Acid — evidence, uses & status",
     "url": "https://vallydia.com/compound/tranexamic-acid",
     "synonyms": [
@@ -9266,6 +9534,9 @@
   {
     "slug": "vip",
     "name": "VIP (Vasoactive Intestinal Peptide)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "VIP (Vasoactive Intestinal Peptide) — the circadian-clock hormone and its CIRS/mold-illness niche: honest evidence",
     "url": "https://vallydia.com/compound/vip",
     "synonyms": [
@@ -9386,6 +9657,9 @@
   {
     "slug": "vitamin-c",
     "name": "Vitamin C (L-Ascorbic Acid)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "Vitamin C (L-Ascorbic Acid) — evidence, uses & status",
     "url": "https://vallydia.com/compound/vitamin-c",
     "synonyms": [
@@ -9609,6 +9883,9 @@
   {
     "slug": "wolverine-stack",
     "name": "\"Wolverine\" Stack (BPC-157 + TB-500)",
+    "inci_name": null,
+    "inn": null,
+    "trade_names": [],
     "title": "The \"Wolverine\" Stack (BPC-157 + TB-500) — the popular healing combo with no combination studies: the honest evidence",
     "url": "https://vallydia.com/compound/wolverine-stack",
     "synonyms": [

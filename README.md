@@ -124,6 +124,18 @@ Two axes: **consistency of evidence × magnitude/quality of effect**.
 
 Grades are assigned **per outcome, not per compound**. `overall_grade` reflects the leading, best-supported application, graded honestly downward and never up. See [METHODOLOGY.md](METHODOLOGY.md) and [vallydia.com/methodology](https://vallydia.com/methodology).
 
+## Naming: the grade hangs on the substance, not the brand
+
+The graded `name` is always a nonproprietary one — the **INCI** name for a cosmetic ingredient, the
+**INN** for a drug. A grade is an assessment of a *substance*, so it never hangs on a supplier's
+trademark: `Palmitoyl Pentapeptide-4` is what carries the grade, while `Matrixyl` — Sederma's trade
+name for it — is recorded in `trade_names` and carries no grade. Grading the substance under its
+regulatory name is the same principle as assessing paracetamol rather than Panadol.
+
+The site page keeps the referential form in its title (`Matrixyl (Palmitoyl Pentapeptide-4)`),
+because naming a product to identify it is legitimate; the dataset simply does not lead with it.
+`build/validate_dataset.py` fails the build if a trade name reappears in the graded `name`.
+
 ## Chemical identifiers, and why some are blank
 
 Identifiers are resolved against PubChem by exact name/synonym match. **A wrong identifier is worse than a blank one in an evidence dataset**, so the rule is: no confident, unambiguous match → blank field and `identifier_confidence: none`. The 21 blanks are blends, stacks, multi-component biologics and proprietary analogs that have no single structure to point at. Where an ambiguity is real, it is recorded rather than resolved by guesswork — see `entity_note` in `identifiers.csv` (GHK-Cu is the live example: PubChem's record is the free tripeptide ligand, not the copper(II) complex, and the dataset and the image alt-text both say so).
