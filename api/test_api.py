@@ -31,7 +31,9 @@ def test_every_endpoint_carries_attribution():
 def test_list_and_filter_compounds():
     assert client.get("/compounds").json()["total"] == 85
     cos = client.get("/compounds", params={"is_cosmetic": True}).json()
-    assert cos["total"] == 21
+    # 22 since 1.2.0: syn-ake's is_cosmetic was corrected true (INCI name; its own entry
+    # calls it a lawful cosmetic ingredient), so the flag no longer contradicts the record.
+    assert cos["total"] == 22
     pep = client.get("/compounds", params={"class": "peptide"}).json()
     assert pep["total"] == 53
 

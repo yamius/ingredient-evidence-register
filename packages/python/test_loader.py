@@ -15,7 +15,7 @@ def test_compounds_load_offline():
 
 def test_grades_have_nulls_preserved():
     g = vr.load_grades(source="local")
-    assert len(g) == 456
+    assert len(g) == 475
     # null grades are kept as empty/NaN, never coerced to a letter
     assert g.grade.isna().sum() + (g.grade == "").sum() == 97
 

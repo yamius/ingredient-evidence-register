@@ -18,7 +18,7 @@ test('compounds load offline from the local checkout', async () => {
 
 test('grades parse with quoted fields intact and nulls preserved', async () => {
   const g = await loadGrades(local);
-  assert.equal(g.length, 456);
+  assert.equal(g.length, 475);
   const nulls = g.filter(r => r.grade === '').length;
   assert.equal(nulls, 97); // safety/penetration rows — never coerced to a letter
   // a caveat with an embedded comma must survive as one field
