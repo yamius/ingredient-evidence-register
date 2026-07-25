@@ -33,7 +33,7 @@ configs:
 
 # Vallydia Ingredient-Evidence Register
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21364453.svg)](https://doi.org/10.5281/zenodo.21364453)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21364452.svg)](https://doi.org/10.5281/zenodo.21364452)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 An open, evidence-graded reference dataset of **85 cosmetic and research ingredients** — peptides, small molecules, proteins and blends — published by [Vallydia](https://vallydia.com) under CC-BY-4.0.
@@ -189,7 +189,7 @@ More in [`examples/`](examples/).
 
 Cite the **concept DOI** — it always resolves to the latest version:
 
-> Bilenko, J. (2026). *Vallydia Ingredient-Evidence Register* (Version 1.0.0) [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364453
+> Bilenko, J. (2026). *Vallydia Ingredient-Evidence Register* [Data set]. Vallydia. https://doi.org/10.5281/zenodo.21364452
 
 ```bibtex
 @dataset{vallydia_ingredient_evidence_register,
@@ -197,12 +197,13 @@ Cite the **concept DOI** — it always resolves to the latest version:
   author    = {Bilenko, Jacob},
   year      = {2026},
   publisher = {Vallydia},
-  version   = {1.0.0},
-  doi       = {10.5281/zenodo.21364453},
+  doi       = {10.5281/zenodo.21364452},
   url       = {https://vallydia.com},
   note      = {CC-BY-4.0}
 }
 ```
+
+To cite a **specific version** instead, use its version DOI — e.g. v1.2.0 is [10.5281/zenodo.21474487](https://doi.org/10.5281/zenodo.21474487).
 
 ---
 

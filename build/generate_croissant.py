@@ -38,7 +38,7 @@ VERSION = "1.1.0"
 DATE_PUBLISHED = "2026-07-14"
 DATE_MODIFIED = "2026-07-21"
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
-DOI = "10.5281/zenodo.21364453"
+DOI = "10.5281/zenodo.21364452"
 DOI_URL = f"https://doi.org/{DOI}"
 # /data is live; use it as the dataset landing page (matches CITATION.cff and the
 # site's schema.org/Dataset).
